@@ -5,16 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
+    <link rel="stylesheet" href="../style/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>FAUNA MENDOCINA</h1>
-        <img src="../images/logo2b.png" alt="">
+        <h1>Fauna Mendocina</h1>
+        <img class="logo" src="../images/logo1b.png" alt="">
     </header>
     
-    <nav>
+    <nav class="menu">
         <ul>
-            <li><a href="../Fauna_Mendocina+Leonardo_Koryl.html">Inicio</a></li>
+            <li><a href="../index.html">Inicio</a></li>
             <li><a href="indice.html">Indice</a></li>
             <li><a href="galeria.html">Galeria</a></li>
             <li><a href="tablaDatos.html">Tabla de Datos</a></li>
@@ -22,7 +26,7 @@
         </ul>
     </nav>
     
-    <section>
+    <section class="cuerpo"> 
         <h2>Nuestras Redes Sociales</h2>
         <img src="../images/iconos/fb.png" alt="Imagen no Encontrada">
         <a href="http://www.facebook.com/fauna.mendocina">fauna.mendocina</a>
@@ -32,16 +36,23 @@
         <h2>ONG's</h2>
         <img src="../images/iconos/ong1.png" alt="Imagen no Encontrada">
         <a href="#">ONG-1</a>
+        <iframe src="https://www.google.com.ar/maps/embed?pb=!1m18!1m12!1m3!1d837.6278529430164!2d-68.80853640864726!3d-32.88464437184046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e0ed2fd17f653%3A0xb137fd3eaebe93c6!2sAllayme%201612%2C%20M5521%20FDV%2C%20Mendoza!5e0!3m2!1ses!2sar!4v1633571584246!5m2!1ses!2sar" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         <img src="../images/iconos/ong2.png" alt="Imagen no Encontrada">
         <a href="#">ONG-2</a>
+        <iframe src="https://www.google.com.ar/maps/embed?pb=!1m18!1m12!1m3!1d837.6278529430164!2d-68.80853640864726!3d-32.88464437184046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e0ed2fd17f653%3A0xb137fd3eaebe93c6!2sAllayme%201612%2C%20M5521%20FDV%2C%20Mendoza!5e0!3m2!1ses!2sar!4v1633571584246!5m2!1ses!2sar" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <br>
         <img src="../images/iconos/ong3.png" alt="Imagen no Encontrada">
         <a href="#">ONG-3</a>
+        <iframe src="https://www.google.com.ar/maps/embed?pb=!1m18!1m12!1m3!1d837.6278529430164!2d-68.80853640864726!3d-32.88464437184046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e0ed2fd17f653%3A0xb137fd3eaebe93c6!2sAllayme%201612%2C%20M5521%20FDV%2C%20Mendoza!5e0!3m2!1ses!2sar!4v1633571584246!5m2!1ses!2sar" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         <img src="../images/iconos/ong4.png" alt="Imagen no Encontrada">
         <a href="#">ONG-4</a>
-    
+        <iframe src="https://www.google.com.ar/maps/embed?pb=!1m18!1m12!1m3!1d837.6278529430164!2d-68.80853640864726!3d-32.88464437184046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e0ed2fd17f653%3A0xb137fd3eaebe93c6!2sAllayme%201612%2C%20M5521%20FDV%2C%20Mendoza!5e0!3m2!1ses!2sar!4v1633571584246!5m2!1ses!2sar" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <br><br><br>
+
+        <h2>Contacta con Nosotros</h2>
         <form action="" method="POST">
                 <fieldset>
-                    <legend>Datos de Contacto</legend>
+                    <legend>Informacion de Contacto</legend>
                     Nombre: <input type="text" required>
                     Apellido: <input type="text" required>
                     <br><br>
@@ -55,7 +66,8 @@
                     E-mail: <input type="email" required>
                     
                 </fieldset>
-                <p>Cuentanos de donde nos visitas:</p>
+                <br>
+                Cuentanos de donde nos visitas:
                 <label for="zona"></label>
                 <ul type="none">
                     <li><input type="radio" name="zona" value="mendoza" id="zona">Mendoza</li>
@@ -64,11 +76,13 @@
                     <li><input type="radio" name="zona" value="restmundo" id="zona">Resto del Mundo</li>
                 </ul>
                 
-                <p><input type="checkbox"> Desea recibir informacion de nuestra pagina?</p>
+                <input type="checkbox"> Desea recibir informacion de nuestra pagina?
+                <br><br>
                 <textarea name="mensaje" cols="100" rows="10">Dejanos tu Mensaje...</textarea>
-                <br>
+                <br><br>
                 <input type="reset">
-                <input type="submit">       
+                <input type="submit">
+                <br><br>       
         </form>
     </section>
 
