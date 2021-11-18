@@ -1,7 +1,7 @@
-/* Seccion comun a todas las paginas del Sitio ----> */
+/* Principio Estilo comun a todas las paginas del Sitio ----> */
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
 }
 
 html {
@@ -11,7 +11,8 @@ html {
 
 header {
     background-image: url(../images/cordillera.png);
-    background-size: cover;
+    background-size:cover;
+    height: 250px; 
 }
 
 h1 {
@@ -25,31 +26,79 @@ h1 {
     letter-spacing: 15px;
 }
 
+h2 {
+    margin-top: 50px;
+    text-transform: uppercase;
+}
 .logo {
-    height: 200px;
+    height: 160px;
+    left: 30px;
+    z-index: 2;
+    position: sticky;
+    top: 0px;
 }
 
 .menu {
-    background-image: url(../images/fondo1.jpg);
+    background-color: rgb(6, 6, 109);
     background-size: cover;
     text-align: right;
-    padding-right: 100px;
+    padding: 5px 60px 5px 10px;
+    border-top: 2px;
+    border-top-color: #ffffff;
+    border-top-style: solid;
+    border-bottom: 3px;
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    position: sticky;
+    top: 0px;
 }
 
-ul li {
-    color: black;
+.menu ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+}
+
+.menu ul li a:visited {
+    color: rgb(255, 255, 255);
+}
+
+.menu ul li {
+    color: rgb(255, 255, 255);
+    background-color: rgb(6, 6, 109);
     list-style: none;
+    font-size: 3ex;
     font-weight: bold;
+    display: inline-block;
+    width: 120px;
+    text-align: left;
+    vertical-align: middle;
+    position: relative;
+}
+
+.menu ul ul li {
+    font-size: 1.5ex;
+    padding: 10px;
+    margin: 0px;
+    width: 145px;
+}
+
+.menu ul ul {
+    display: none;
+}
+
+.menu ul li:hover ul {
+    display: block;
+    position: absolute;
+    padding: 10px;
+    margin: 0px;
+    text-align: left;
 }
 
 .cuerpo {
     background-image: url(../images/fondo1.jpg);
     background-size: contain;
     
-}
-
-.video {
-    margin: 90px;
 }
 
 .cuerpo h2 {
@@ -61,12 +110,9 @@ ul li {
     text-align: center;
 }
 
-.cuerpo p{
+.cuerpo p {
     text-indent: 50px;
-}
-button {
-    font-family: 'Crimson Text', serif;
-    font-weight: bold;
+    margin: 10px 40px;
 }
 
 aside {
@@ -78,10 +124,46 @@ footer {
     background-color: rgba(44, 44, 44, 0.521);
     text-align: center;
 }
-/* <----- Seccion comun a todas las paginas del Sitio. */
+/* <----- Final Estilo comun a todas las paginas del Sitio. */
 
-/* Seccion Modificacion tabla de datos -----> */
-table {
+/* Principio Estilo pagina: Inicio -----> */
+
+iframe.inicio {
+    margin: 30px 90px 40px 90px;
+}
+
+#presentacion img {
+    height: 250px;
+    float: left;
+    margin: 20px;
+}
+
+#introduccion .uno {
+    float: right;
+    margin: 20px;
+}
+
+#introduccion .dos {
+    height: 325px;
+    margin-top: 500px;
+    float: left;
+    margin: 20px;
+}
+
+/* <----- Final Estilo pagina: Inicio */
+
+/* Principio Estilo pagina: Indice -----> */
+
+button {
+    font-family: 'Crimson Text', serif;
+    font-weight: bold;
+}
+
+/* <----- Final Estilo pagina: Indice */
+
+/* Principio Estilo pagina: Tabla de Datos -----> */
+
+.datos1 {
     padding-left: 280px;
     padding-right: 280px;
 }
@@ -102,9 +184,13 @@ td {
 td ol {
     list-style-position:inside;
 }
+
+td ul {
+    list-style: none;
+}
 td:first-child {
     background-color: lightgray;
 }
 
 
-/* <------ Seccion Modificacion tabla de datos. */
+/* <------ Final Estilo pagina: Tabla de Datos. */
