@@ -1,0 +1,419 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: antiquewhite;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}    
+
+body {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 30vh auto auto 5vh;
+    justify-items: center;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    background-image: url(../images/cordillera.png);
+    background-size: cover;
+}
+
+h1 {
+    margin: 2vh 0px 10px 0px;
+    text-align: center;
+    font-family: 'Crimson Text', serif;
+    color: rgb(6, 6, 7);
+    -webkit-text-stroke: 0.5px rgb(255, 253, 253,0.18);
+    font-style: italic;
+    background-color:transparent;
+    font-size: 6ex;
+    letter-spacing: 5px;
+}
+
+h2 {
+    text-transform: uppercase;
+    text-shadow: 3px 3px 2px grey;
+    text-align: center;
+    padding: 50px 0px 0px 0px;
+    font-size: 6vw;
+    scroll-margin-top: 70px;
+}
+
+h3 {
+    padding: 20px 0px 5px 0px;
+    text-shadow: 2px 1px 2px grey;
+    scroll-margin-top: 100px;
+}
+
+@keyframes logo {
+    0%{width: 11vh;}
+    25%{width: 7vh;
+        left: 6.5vh;}
+    50%{width: 0vh;
+        left: 10.5vh;}
+    75%{width: 7vh;
+        left: 6.5vh;}
+    100%{width: 11vh;}
+}
+
+.logo {
+    height: 15vh;
+    width: 11vh;
+    position: absolute;
+    top: 80px;
+    left: 5vh;
+    animation-name: logo;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 5s;
+    animation-delay: 0s;
+}
+
+.menu {
+    display: none;
+}
+
+.menuChico {
+    display: flex;
+    width: 100%;
+    height: auto;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    background-color: rgb(36, 60, 88);
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+    justify-content: left;
+    grid-row: 2/2;
+    grid-column: 1/1;
+}
+
+.menuChicoTitulo {
+    height: auto;
+    width: 100vw;
+    padding: 5px 40px;
+}
+
+.menuChico ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+}
+
+.menuChico ul li a:visited {
+    color: rgb(255, 255, 255);
+}
+
+.menuChico li {
+    color: rgb(255, 255, 255);
+    background-color: rgb(36, 60, 88);
+    list-style: none;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.lista {
+    display: none;
+    list-style: none;
+    
+}
+
+.lista li {
+    height: auto;
+    width: auto;
+    padding: 5px 25px 10px 10px;
+}
+
+.lista li ul li {
+    width: 150px;
+    padding: 5px 10px 5px;
+}
+
+.lista ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.lista ul li {
+    font-size: 0.8em;
+}
+
+.menuChicoTitulo:hover .lista {
+    display: block;
+    margin-top: 15px;
+    position: relative;
+    left: -42px;
+}
+
+.cuerpo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-image: url(../images/fondo1.jpg);
+    background-size: contain;
+    border-top: 1px solid white;
+    border-bottom: 1px solid;
+    padding-bottom: 40px;
+}
+
+.cuerpo p {
+    text-indent: 20px;
+    font-size: 2ex;
+    text-align: justify;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+nav {
+    width: 100%;
+}
+
+aside {
+    display: none;
+}
+
+table {
+    margin-top: 20px;
+}
+
+dd {
+    font-style: italic;
+}
+
+tr {
+    font-size: 1em;
+}
+tr th {
+    background-color: gray;
+    font-weight: bolder;
+    height: 40px;
+    padding: 5px 10px;
+}
+
+td {
+    text-align: center;
+}
+
+td ol {
+    display: flex;
+    flex-direction: column;
+    list-style-position: inside;
+    align-items: flex-start;
+}
+
+ol li {
+    text-align: left;
+}
+
+td ul {
+    list-style: none;
+}
+
+td:first-child {
+    background-color: lightgray;
+}
+
+footer {
+    width: 100%;
+    height: 5vh;
+    text-align: center;
+    background-color: rgba(116, 101, 101, 0.521);
+}
+
+footer p {
+    width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+    body {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 20vw 80vw;
+        grid-template-rows: 30v auto auto 5vh;
+        grid-template-areas:    "header header" 
+                                "nav nav"
+                                "barraLateral cuerpo"
+                                "barraLateral footer";
+    }
+
+    header {
+        grid-area: header;
+        background-size: cover;
+    }
+    
+    h1 {
+        font-size: 8vw;
+    }
+
+    h2 {
+        font-size: 5vw;
+    }
+
+    .logo {
+        top: 10vh;
+    }
+
+    .menuChico {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        grid-area: nav;
+        height: auto;
+        width: 100%;
+        background-color: rgb(36, 60, 88);
+        border-top: 2px solid white;
+        border-bottom: 1px solid white;
+        position: sticky;
+        top: 0px;
+        justify-content: space-around;
+        z-index: 2;
+    }
+    
+    .menu .lista {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 1fr;
+        
+    }
+    
+    .menu ul li a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: rgb(255, 255, 255);
+    }
+    
+    .menu ul li a:visited {
+        color: rgb(255, 255, 255);
+    }
+    
+    .menu .lista li {
+        color: rgb(255, 255, 255);
+        background-color: rgb(36, 60, 88);
+        list-style: none;
+        font-size: 2.5ex;
+        width: 20vw;
+        height: 100%;
+        text-align: center;
+        vertical-align: middle;
+    }
+    
+    .menu .lista ul > li {
+        font-size: 1.6ex;
+        margin: 0px;
+        width: 20vw;
+        position: relative;
+        left: -10px;
+        top: 10px;
+        list-style-type: none;
+        text-align: left;
+    }
+    
+    .menu ul ul {
+        display: none;
+    }
+    
+    .menu ul li:hover {
+        background-color: rgb(46, 79, 116);
+    }
+    
+    .menu ul li:hover ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+    }
+    
+    aside {
+        display: flex;
+        flex-direction: column;
+        grid-area: barraLateral;
+        width: 100%;
+        background-image: linear-gradient(rgb(90, 102, 118),rgb(105,126,145));
+        border-bottom: 1px solid;
+        border-top: 1px solid white;
+        border-right: 2px solid white;
+        z-index: 1;
+        padding: 20px;
+    }
+
+    aside div {
+        width: 90%;
+        position: sticky;
+        top: 8vh;
+    }
+
+    aside h3 {
+        width: 100%;
+        font-size: 2.5vw;
+        text-align: center;
+    }
+
+    aside p {
+        width: 90%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .cuerpo {
+        grid-area: cuerpo;
+    }
+
+    table {
+        max-width: 900px;
+    }
+
+    footer {
+        grid-area: footer;
+        background-color: rgba(116, 101, 101, 0.521);
+        padding: 10px;
+        width: 100%;
+    }
+} 
+
+@media only screen and (min-width: 1200px) {
+    .menu {
+        justify-content: end;
+    }
+
+    .menu .lista {
+        width: 50%;
+    }
+
+    .menu .lista li {
+        width: 10vw;
+    }
+
+    .menu .lista ul > li {
+        width: 10vw;
+    }
+
+    h2 {
+        font-size: 3vw;
+        width: 100%;
+    }
+
+    h3 {
+        margin-bottom: 15px;
+    }
+
+    ol li {
+        margin-left: 20px;
+    }
+}
