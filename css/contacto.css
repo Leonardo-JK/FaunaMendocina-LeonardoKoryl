@@ -1,222 +1,97 @@
-* {
-    padding: 0px;
-    margin: 0px;
+.cuerpo__redes {
+  display: grid;
+  width: 90%;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: auto;
+  align-items: center;
+  justify-items: center;
+  margin-top: 30px;
+}
+.cuerpo__red {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cuerpo__iconosRedes {
+  width: 50px;
+  vertical-align: middle;
+  margin: 15px;
+}
+.cuerpo__ongs {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, auto);
+  column-gap: 10px;
+  justify-items: center;
+  align-items: center;
+}
+.cuerpo__ong {
+  text-align: center;
+}
+.cuerpo__ong img {
+  height: 150px;
+  width: 150px;
+  margin-top: 40px;
+  box-shadow: 15px 15px 8px grey;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+.cuerpo__ong iframe {
+  box-shadow: 10px 10px 8px grey;
+  border-radius: 10px;
+  height: 250px;
+  width: 90%;
+}
+.cuerpo__form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  align-content: center;
+}
+.cuerpo__formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.cuerpo__fieldset {
+  width: 100%;
+  padding: 20px 10px;
+}
+.cuerpo__fieldset input {
+  display: block;
+  width: 90%;
+  margin: 0px 0px 10px 30px;
+}
+.cuerpo__pregunta {
+  margin: 20px 20%;
+}
+.cuerpo__estadoCivil {
+  margin: 0px 25px 0px 40px;
+}
+.cuerpo__mensaje {
+  width: 100%;
+}
+.cuerpo__textarea {
+  width: 100%;
 }
 
-header {
-    height: 20vh;
-    background-image: url(../images/cordillera.png);
-    background-size: cover;
-    border: 1px solid;
-}
-
-.logo {
-    height: 80%;
-    align-self: center;
-}
-
-.titulo {
-    color: white;
-    -webkit-text-stroke: 2px rgb(36,60,88);
-    font-family: "Crimson";
-    font-weight:bold;
-    font-size: 3em;
-}
-
-#menu {
-    position: sticky;
-    top: 0px;
-    z-index: 4;
-}
-
-#navMenu {
-    height: auto;
-    padding-left: 20px;
-}
-
-#navMenu ul, #navButtom {
-    margin-right: 20px;
-}
-
-aside {
-    display: none;
-    background-image: linear-gradient(rgba(128, 128, 128, 0.555),rgba(87, 87, 87, 0));
-    border-right: 2px solid white;
-}
-
-aside div {
-    position: sticky;
-    top: 70px;
-}
-
-.cuerpo {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding-bottom: 40px;
-    align-items: center;
-    background-image: url(/images/fondo1.jpg);
-    background-size: contain;
-}
-
-.cuerpo p {
-    text-indent: 40px;
-    text-align: justify;
-    width: 95%;
-}
-
-.titulo2 {
-    margin: 100px 0px 0px;
-    font-size: 2em;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 2px grey;
-    text-align: center;
-    scroll-margin-top: 100px;
-}
-
-.titulo3 {
-    margin: 30px 0px 20px;
-    text-shadow: 2px 2px 2px grey;
-    scroll-margin-top: 100px;
-}
-
-.redes {
+@media only screen and (min-width: 1200px) {
+  .cuerpo__ongs {
     display: grid;
-    width: 90%;
-    grid-template-columns: 2fr 2fr;
-    grid-template-rows: auto;
-    align-items: center;
-    justify-items: center;
-    margin-top: 30px;
-}
-
-.red {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.iconosRedes {
-    width: 50px;
-    vertical-align: middle;
-    margin: 15px;
-}
-
-.ongs {
-    display:flex;
-    flex-direction: column;
-    width: 95%;
+    width: 100%;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(4,auto);
-    column-gap: 10px;
-    justify-items: center;
-    align-items: center;
+    grid-template-rows: auto auto;
+    grid-template-areas: "header header" "nav nav" "barraLateral cuerpo" "barraLateral footer";
+  }
+  .cuerpo__fieldset {
+    width: 70%;
+  }
+  .cuerpo__mensaje {
+    width: 60%;
+  }
 }
 
-.ong {
-    text-align: center;
-}
-
-.ongs img {
-    height: 150px;
-    width: 150px;
-    margin-top: 40px;
-    box-shadow: 15px 15px 8px grey;
-    margin-bottom: 20px;
-    border-radius: 10px;
-}
-
-.ongs iframe {
-    box-shadow: 10px 10px 8px grey;
-    border-radius: 10px;
-    height: 250px;
-    width: 90%;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    align-content: center;
-}
-
-.formulario {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
-fieldset {
-    width: 100%;
-    padding: 20px 10px;
-}
-
-fieldset input {
-    display: block;
-    width: 90%;
-    margin: 0px 0px 10px 30px;
-}
-.pregunta {
-    margin: 20px 20%;
-}
-
-.estadoCivil  {
-    margin: 0px 25px 0px 40px ;
-}
-
-.mensaje {
-    width: 100%;
-}
-
-textarea {
-    width: 100%;
-}
-
-.pieDePagina {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 10px;
-    background-color: rgba(116, 101, 101, 0.521);
-}
-
-@media only screen and (min-width: 768px) {
-    .titulo {
-        font-size: 4em;
-    }
-    
-    aside {
-        display: block;
-    }
-}
-
-@media only screen and (min-width: 1200px){
-    .ongs {
-        display: grid;
-        width: 100%;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto;
-        grid-template-areas:    "header header" 
-                                "nav nav"
-                                "barraLateral cuerpo"
-                                "barraLateral footer";
-    }
-    
-    .titulo {
-        font-size: 6em;
-    }
-
-    .titulo2 {
-        font-size: 3em;
-    }
-
-    fieldset {
-        width: 70%;
-    }
-
-    .mensaje {
-        width: 60%;
-    }
-    
-}
+/*# sourceMappingURL=contacto.css.map */

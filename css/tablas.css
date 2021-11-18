@@ -1,153 +1,40 @@
-* {
-    padding: 0px;
-    margin: 0px;
+.cuerpo__table {
+  margin-top: 20px;
+  font-size: 3vw;
 }
-
-header {
-    height: 20vh;
-    background-image: url(../images/cordillera.png);
-    background-size: cover;
-    border: 1px solid;
+.cuerpo__table tr {
+  width: 20%;
 }
-
-.logo {
-    height: 80%;
-    align-self: center;
+.cuerpo__table tr th {
+  background-color: gray;
+  font-weight: bolder;
+  height: 40px;
+  padding: 5px 10px;
+  width: 20%;
 }
-
-.titulo {
-    color: white;
-    -webkit-text-stroke: 2px rgb(36,60,88);
-    font-family: "Crimson";
-    font-weight:bold;
-    font-size: 3em;
+.cuerpo__table tr td {
+  text-align: center;
 }
-
-#menu {
-    position: sticky;
-    top: 0px;
-    z-index: 4;
+.cuerpo__table tr td ol {
+  display: flex;
+  flex-direction: column;
+  list-style-position: inside;
+  align-items: flex-start;
 }
-
-#navMenu {
-    height: auto;
-    padding-left: 20px;
+.cuerpo__table tr td ol li {
+  text-align: left;
 }
-
-#navMenu ul, #navButtom {
-    margin-right: 20px;
+.cuerpo__table tr td ul {
+  list-style: none;
 }
-
-aside {
-    display: none;
-    background-image: linear-gradient(rgba(128, 128, 128, 0.555),rgba(87, 87, 87, 0));
-    border-right: 2px solid white;
-}
-
-aside div {
-    position: sticky;
-    top: 70px;
-}
-
-.cuerpo {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding-bottom: 40px;
-    align-items: center;
-    background-image: url(/images/fondo1.jpg);
-    background-size: contain;
-}
-
-.cuerpo p {
-    text-indent: 40px;
-    text-align: justify;
-    width: 95%;
-}
-
-.titulo2 {
-    margin: 40px 0px 0px;
-    font-size: 2em;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 2px grey;
-    text-align: center;
-    scroll-margin-top: 130px;
-}
-
-.titulo3 {
-    margin: 30px 0px 20px;
-    text-shadow: 2px 2px 2px grey;
-    scroll-margin-top: 130px;
-}
-
-table {
-    margin-top: 20px;
-    font-size: 3vw;
-}
-
-th, tr {
-    width: 20%;
-}
-
-tr th {
-    background-color: gray;
-    font-weight: bolder;
-    height: 40px;
-    padding: 5px 10px;
-}
-
-td {
-    text-align: center;
-
-}
-
-td ol {
-    display: flex;
-    flex-direction: column;
-    list-style-position: inside;
-    align-items: flex-start;
-}
-
-ol li {
-    text-align: left;
-}
-
-td ul {
-    list-style: none;
-}
-
-td:first-child {
-    background-color: lightgray;
-}
-
-.pieDePagina {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 10px;
-    background-color: rgba(116, 101, 101, 0.521);
+.cuerpo__table tr td:first-child {
+  background-color: lightgray;
 }
 
 @media only screen and (min-width: 768px) {
-    .titulo {
-        font-size: 4em;
-    }
-    
-    aside {
-        display: block;
-    }
-
-    table {
-        font-size: 1em;
-    }
+  .cuerpo__table {
+    font-size: 1em;
+  }
 }
 
-@media only screen and (min-width: 1200px){
-    .titulo {
-        font-size: 6em;
-    }
-
-    .titulo2 {
-        font-size: 3em;
-    }
-}
+/*# sourceMappingURL=tablas.css.map */

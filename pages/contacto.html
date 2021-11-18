@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fauna Mendocina</title>
-    <link rel="stylesheet" href="../css/contacto.css">
+    <link rel="stylesheet" href="../css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&display=swap" rel="stylesheet">
@@ -15,26 +15,28 @@
 </head>
 
 <body>
-    <header class="d-flex align-items-center containe col-12">
+    <!-- Inicio Portada -->
+    <header class="header d-flex align-items-center containe col-12">
         <div class="container-fluid">
             <div class="row align-items-center">
                 <div class="col-3">
                     <div class="d-flex justify-content-center" style="height:15vh;">
-                        <img class="logo" src="../images/logo1b.png" alt="">
+                        <img class="header__logo" src="../images/logo1b.png" alt="">
                     </div>
                 </div>
                 <div class="col-9">
-                    <h1 class="titulo text-center">Fauna Mendocina</h1>
+                    <h1 class="header__titulo text-center">Fauna Mendocina</h1>
                 </div>
             </div>
         </div>
     </header>
+    <!-- Final Portada -->
 
-
+    <!-- Inicio nav con bootstrap -->
     <div id="menu">
         <nav id="navMenu" class="navbar navbar-expand-md navbar-light bg-light">
-            <a class="navbar-brand justify-self-end" href="#">Menu</a>
-            <button id="navButtom" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            <a class="navbar__link navbar-brand justify-self-end" href="#">Menu</a>
+            <button class="navbar__button navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -113,55 +115,65 @@
             </div>
         </nav>
     </div>
+    <!-- Final nav con bootstrap -->
 
+    <!-- Inicio seccion central con boostrap -->
     <div class="d-flex containe col-12">
-        <aside class="col-md-3">
+        <!-- Inicio barra lateral, debe desaparecer para dispositivos pequeños -->
+        <aside class="col-md-3 aside">
             <div>
-                <h3 class="titulo3">Informacion Util</h3>
+                <h3 class="aside_titulo">Informacion Util</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime repellendus esse labore nobis asperiores laborum molestiae cum accusamus tenetur dolorum eligendi ut dolores quia deserunt qui aspernatur, quis voluptates quasi.</p>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime repellendus esse labore nobis asperiores laborum molestiae cum accusamus tenetur dolorum eligendi ut dolores quia deserunt qui aspernatur, quis voluptates quasi.</p>
             </div>    
         </aside>
+        <!-- Final barra lateral -->
 
+        
         <section class="cuerpo contane-fluid col-md-9"> 
-            <h2 class="titulo2" id="redes">Nuestras Redes Sociales</h2>
-            <div class="redes">
-                <div class="red">
-                    <img class="iconosRedes" src="../images/iconos/fb.png" alt="Imagen no Encontrada">
+            <!-- Inicio seccion redes -->
+            <h2 class="cuerpo__titulo1" id="redes">Nuestras Redes Sociales</h2>
+            <div class="cuerpo__redes">
+                <div class="cuerpo__red">
+                    <img class="cuerpo__iconosRedes" src="../images/iconos/fb.png" alt="Imagen no Encontrada">
                     <a href="http://www.facebook.com/" target="blank">fauna.mendocina</a>
                 </div>
                 <div class="red">
-                    <img class="iconosRedes" src="../images/iconos/ig.png" alt="Imagen no Encontrada">
+                    <img class="cuerpo__iconosRedes" src="../images/iconos/ig.png" alt="Imagen no Encontrada">
                     <a href="http://www.instagram.com/" target="blank">@FaunaMendocina</a>
                 </div>
             </div>
-    
-            <h2 class="titulo2" id="ongs">ONG's</h2>
-            <div class="ongs">
-                    <div class="ong">
+            <!-- Final seccion redes -->
+            
+            <!-- Incio seccion ONGs -->
+            <h2 class="cuerpo__titulo1" id="ongs">ONG's</h2>
+            <div class="cuerpo__ongs">
+                    <div class="cuerpo__ong">
                         <a href="https://www.facebook.com/MovimientodeProteccionAnimal/" target="blank"><img src="../images/ong/moproa.png" alt="Imagen no Encontrada"></a>    
                         <iframe src="https://www.google.com.ar/maps/embed?pb=!1m18!1m12!1m3!1d837.6278529430164!2d-68.80853640864726!3d-32.88464437184046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e0ed2fd17f653%3A0xb137fd3eaebe93c6!2sAllayme%201612%2C%20M5521%20FDV%2C%20Mendoza!5e0!3m2!1ses!2sar!4v1633571584246!5m2!1ses!2sar" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
-                    <div class="ong">
+                    <div class="cuerpo__ong">
                         <a href="https://www.facebook.com/protectora2018/" target="blank"><img src="../images/ong/spayp.jpg" alt="Imagen no Encontrada"></a>
                         <iframe src="https://www.google.com.ar/maps/embed?pb=!1m18!1m12!1m3!1d837.6278529430164!2d-68.80853640864726!3d-32.88464437184046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e0ed2fd17f653%3A0xb137fd3eaebe93c6!2sAllayme%201612%2C%20M5521%20FDV%2C%20Mendoza!5e0!3m2!1ses!2sar!4v1633571584246!5m2!1ses!2sar" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>  
-                    <div class="ong">
+                    <div class="cuerpo__ong">
                         <a href="https://www.vidasilvestre.org.ar/" target="blank"><img src="../images/ong/fvsa.jpg" alt="Imagen no Encontrada"></a>
-                    <iframe src="https://www.google.com.ar/maps/embed?pb=!1m18!1m12!1m3!1d837.6278529430164!2d-68.80853640864726!3d-32.88464437184046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e0ed2fd17f653%3A0xb137fd3eaebe93c6!2sAllayme%201612%2C%20M5521%20FDV%2C%20Mendoza!5e0!3m2!1ses!2sar!4v1633571584246!5m2!1ses!2sar" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        <iframe src="https://www.google.com.ar/maps/embed?pb=!1m18!1m12!1m3!1d837.6278529430164!2d-68.80853640864726!3d-32.88464437184046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e0ed2fd17f653%3A0xb137fd3eaebe93c6!2sAllayme%201612%2C%20M5521%20FDV%2C%20Mendoza!5e0!3m2!1ses!2sar!4v1633571584246!5m2!1ses!2sar" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
             </div>
-            
-            <h2 class="titulo2" id="contactanos">Contacta con Nosotros</h2>
-            <form action="" method="POST">
-                <div class="formulario">
-                    <fieldset>
+            <!-- Final seccion ONGs -->
+
+            <!-- Inicio seccion formulario -->
+            <h2 class="cuerpo__titulo1" id="contactanos">Contacta con Nosotros</h2>
+            <form class="cuerpo__form" action="" method="POST">
+                <div class="cuerpo__formulario">
+                    <fieldset class="cuerpo__fieldset">
                         <legend>Informacion de Contacto</legend>
                         Nombre: <input type="text" required>
                         Apellido: <input type="text" required>
                         <br><br>
     
-                        <select class="estadoCivil" name="estadoCivil">
+                        <select class="cuerpo__estadoCivil" name="estadoCivil">
                             <option value="soltero">Soltero/a</option>
                             <option value="casadoo">Casado/a</option>
                             <option value="divorciado">Divorciado/a</option>
@@ -171,7 +183,7 @@
                         
                     </fieldset>
                     
-                    <div class="pregunta">
+                    <div class="cuerpo__pregunta">
                         Cuentanos de donde nos visitas: <br><br>
                         <label for="zona"></label>
                         <ul type="none">
@@ -183,8 +195,8 @@
                         <input type="checkbox"> Desea recibir informacion de nuestra pagina?
                     </div>
     
-                    <div class="mensaje">
-                        <textarea name="mensaje" rows="10" placeholder="Dejanos tu Mensaje..."></textarea>
+                    <div class="cuerpo__mensaje">
+                        <textarea class="cuerpo__textarea" name="mensaje" rows="10" placeholder="Dejanos tu Mensaje..."></textarea>
                         <br><br>
                         <input type="reset">
                         <input type="submit">
@@ -192,10 +204,12 @@
                     </div>
                 </div>       
             </form>
+            <!-- Final seccion formulario -->
         </section>
     </div>
+    <!-- Final seccion central con boostrap -->
 
-    <footer class="pieDePagina">
+    <footer class="footer">
         <p>2021 Leonardo Koryl - Proyecto Final</p>
     </footer>
 

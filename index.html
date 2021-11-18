@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fauna Mendocina</title>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&display=swap" rel="stylesheet">
@@ -15,26 +15,28 @@
 </head>
 
 <body>
-    <header class="d-flex align-items-center">
+    <!-- Inicio Portada -->
+    <header class="header d-flex align-items-center">
         <div class="container-fluid">
             <div class="row align-items-center">
                 <div class="col-3">
                     <div class="d-flex justify-content-center" style="height:15vh;">
-                        <img class="logo" src="../images/logo1b.png" alt="">
+                        <img class="header__logo" src="../images/logo1b.png" alt="">
                     </div>
                 </div>
                 <div class="col-9">
-                    <h1 class="titulo text-center">Fauna Mendocina</h1>
+                    <h1 class="header__titulo text-center">Fauna Mendocina</h1>
                 </div>
             </div>
         </div>
     </header>
+    <!-- Final Portada -->
 
-
+    <!-- Inicio nav con bootstrap -->
     <div id="menu">
-        <nav id="navMenu" class="navbar navbar-expand-md navbar-light bg-light">
-            <a class="navbar-brand justify-self-end" href="#">Menu</a>
-            <button id="navButtom" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <a class="navbar__link navbar-brand justify-self-end" href="#">Menu</a>
+            <button class="navbar__button navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -111,28 +113,31 @@
                     </li>
                 </ul>
             </div>
-    
         </nav>
     </div>
+    <!-- Final nav con bootstrap -->
 
+    <!-- Inicio seccion central con boostrap -->
     <div class="d-flex containe col-12">
-        <aside class="col-md-3">
+        <!-- Inicio barra lateral, debe desaparecer para dispositivos pequeños -->
+        <aside class="col-md-3 aside">
             <div>
-                <h3 class="titulo3">Informacion Util</h3>
+                <h3 class="aside_titulo">Informacion Util</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime repellendus esse labore nobis asperiores laborum molestiae cum accusamus tenetur dolorum eligendi ut dolores quia deserunt qui aspernatur, quis voluptates quasi.</p>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime repellendus esse labore nobis asperiores laborum molestiae cum accusamus tenetur dolorum eligendi ut dolores quia deserunt qui aspernatur, quis voluptates quasi.</p>
             </div>    
         </aside>
-    
+        <!-- Final barra lateral -->
+
         <section class="cuerpo col-md-9">
-            <div class="videosIntro">
-                <iframe class="inicio" width="560" height="315" src="https://www.youtube.com/embed/28yQGZRFqJ4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <iframe class="inicio" width="560" height="315" src="https://www.youtube.com/embed/E5ma-Y2FyCc" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="cuerpo__videosIntro">
+                <iframe class="cuerpo__iframe" width="560" height="315" src="https://www.youtube.com/embed/28yQGZRFqJ4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe class="cuerpo__iframe" width="560" height="315" src="https://www.youtube.com/embed/E5ma-Y2FyCc" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
     
-            <article id="presentacion">
-                <h2 class="titulo2">Presentacion</h2>
-                <img class="imgPresentacion" src="images/inicio/condorPresentacion.jpg" alt="">
+            <article class="cuerpo__presentacion" id="presentacion">
+                <h2 class="cuerpo__titulo1">Presentacion</h2>
+                <img class="cuerpo__imgPresentacion" src="images/inicio/condorPresentacion.jpg" alt="">
                 <p>En momentos en que distintas especies animales ganan terreno debido a la emergencia sanitaria y al aislamiento social, preventivo y obligatorio, ual tiene por objeto desarrollar estrategias de protección a partir de concientizar sobre la importancia de algunas especies en nuestra ciudad. Esta información será utilizada luego como un indicador de gestión de calidad ambiental.</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid molestias nostrum minima quas dicta, quo itaque ex illo fugit molestiae deleniti assumenda voluptatibus minus nesciunt cumque fuga facilis? Saepe, alias?
                 Et provident nam, optio dolor eligendi quis quibusdam nulla incidunt odio architecto officia ipsam adipisci necessitatibus! Quibusdam ex facilis laborum repellat reprehenderit in. Voluptatum possimus consectetur animi eligendi non quae!
@@ -146,72 +151,72 @@
                 Assumenda autem quasi laudantium quas harum, dolorem iure quidem minus iusto earum neque fugiat vel magni reiciendis aut et facere molestiae quam est quibusdam odit recusandae nostrum atque consectetur! Tempore!</p>
             </article>
     
-            <article id="introduccion">
-                <h2 class="titulo2">Introduccion</h2>
+            <article class="cuerpo__introduccion" id="introduccion">
+                <h2 class="cuerpo__titulo1">Introduccion</h2>
                 <p>La provincia de Mendoza cuenta con gran variedad de mamíferos. Entre los carnívoros pueden mencionarse el zorro —tanto gris como colorado—, zorrinos, hurones, pumas y comadrejas, cuenta además con gran variedad de mamíferos carnívoros y avícolas que se refugian en cuevas durante el día, especialmente pumas o leones de montaña. Hay ejemplares cavícolas que se refugian durante el día en cuevas, como el pichiciego mendocino. En el distrito andino se ven cóndores y en el subandino aves de rapiña: águilas y gavilanes, a lo que se suman roedores como ratones y cuises, búhos, pecho colorado, pititorras y distintos tipos de ofidios e insectos. Hacia el sur se visualizan zorrinos, vizcachas, guanacos , perdices, ñandúes, y aves como cardenales y cotorritas. También habitan la región aves acuáticas, como el cisne de cuello negro, la garza y los flamencos. Asimismo el ñandú y ñandú petiso, que es una especie de ave terrestre, típica de zona montañosa.</p>
-                <div class="intros">
+                <div class="cuerpo__intros">
                     <div>
-                        <h3 class="titulo3">Alta Montaña</h3>
-                        <div class="descripcion">
+                        <h3 class="cuerpo__titulo2">Alta Montaña</h3>
+                        <div class="cuerpo__descripcion">
                             <div>
                                 <p>Esta región, ubicada por encima de los 3.000 metros sobre el nivel del mar, y hasta los 4.500 metros, posee una fauna muy escasa, condicionada por la falta de alimentos, las temperaturas extremas y la presencia de las tormentas de nieve y viento. Entre las aves se destacan el cóndor. Los mamíferos están representados por guanacos y pumas.</p>
                             </div>
-                            <img class="imgIntroduccion" src="images/inicio/altaMontana.jfif" alt="">
+                            <img src="images/inicio/altaMontana.jfif" alt="">
                         </div>
                     </div>
                     <div>
-                        <h3 class="titulo3">Montaña</h3>
-                        <div class="descripcion">
+                        <h3 class="cuerpo__titulo2">Montaña</h3>
+                        <div class="cuerpo__descripcion">
                             <div>
                                 <p>En los terrenos ubicados a alturas menores de 3.000 metros existen numerosos valles y quebradas donde la fauna encuentra mejor refugio y más alimento que en las altas cumbres. Entre las aves características de la zona se destacan el ñandú petiso cordillerano, la perdiz serrana chica, el pato cortacorriente, el pato crestón, el cóndor, el águila mora y el aguilucho, el cernícalo, el búho virginiano.</p>
                                 <p>Los mamíferos más comunes en la zona son: guanacos, pumas, zorros colorados, cuises, ratones, liebres europeas y dos especies de murciélago, el común y el orejudo chico. también hay reptiles, como el lagarto de cola espinuda, la yarará ñata y la culebra ratonera.</p>
                             </div>
-                            <img class="imgIntroduccion" src="images/inicio/montana.jfif" alt="">
+                            <img src="images/inicio/montana.jfif" alt="">
                         </div>
                     </div>
                     <div>
-                        <h3 class="titulo3">Zona Preserrana</h3>
-                        <div class="descripcion">
+                        <h3 class="cuerpo__titulo2">Zona Preserrana</h3>
+                        <div class="cuerpo__descripcion">
                             <div>
                                 <p>Esta zona tiene una fauna similar a la del monte, pero dañada por la acción del hombre. Allí se encuentran, entre las aves, el ñandú común, el águila mora, el aguilucho, el halconcito y el chimango. Los mamíferos característicos son el puma, el zorro gris, el gato montés, el zorrino.</p>
                             </div>
-                            <img class="imgIntroduccion" src="images/inicio/piedemonte.jfif" alt="">
+                            <img src="images/inicio/piedemonte.jfif" alt="">
                         </div>
                     </div>
                     <div>
-                        <h3 class="titulo3">El Monte</h3>
-                        <div class="descripcion">
+                        <h3 class="cuerpo__titulo2">El Monte</h3>
+                        <div class="cuerpo__descripcion">
                             <div>
                                 <p>El monte comprende las extensas llanuras del este mendocino, en parte muy medanosas, con radicales salpicados de bosquecillos de algarrobo y chañar. Aquí habitan el ñandú, la perdiz de monte, la perdiz chica, la martineta, el chimango, el carancho, el aguilucho y el cernícalo. También hay mamíferos, como murciélagos, peludos, zorros grises y gatos monteses. Entre los reptiles se cuentan lagartijas, lagartos verdes, boas de las vizcacheras y tortugas terrestres.</p>
                             </div>
-                            <img class="imgIntroduccion" src="images/inicio/monte.jfif" alt="">
+                            <img src="images/inicio/monte.jfif" alt="">
                         </div>
                     </div>
                     <div>
-                        <h3 class="titulo3">Payunia</h3>
-                        <div class="descripcion">
+                        <h3 class="cuerpo__titulo2">Payunia</h3>
+                        <div class="cuerpo__descripcion">
                             <div>
                                 <p>En este paisaje árido, modelado por la actividad volcánica con vegetación adaptada a la falta de agua, las especies características son las siguientes: ñandú petiso o choique, jote cabeza negra, chimango, águila mora, aguilucho, martineta, chorlo cabezón, chingolo y calandria. Hay mamíferos como marmotas, piches patagónicos, liebres y conejos europeos, maras, vizcachas, chinchillones, cuises, tunduques, guanacos, pumas, zorrinos patagónicos o chiñes y zorros grises. Entre los reptiles están la yarará nata, la culebra ratonera, el matuasto y la lagartija. Los anfibios más comunes son el sapo y la ranita andinos.</p>
                             </div>
-                            <img class="imgIntroduccion" src="images/inicio/payunia.jpg" alt="">
+                            <img src="images/inicio/payunia.jpg" alt="">
                         </div>
                     </div>
                     <div>
-                        <h3 class="titulo3">Ambientes Acuáticos</h3>
-                        <div class="descripcion">
+                        <h3 class="cuerpo__titulo2">Ambientes Acuáticos</h3>
+                        <div class="cuerpo__descripcion">
                             <div>
                                 <p>Esta región, que comprende los pantanos, esteros y lagunas naturales, como laguna de Llancanelo, laguna Blanca, laguna de los Álamos, La salinilla, los pantanos de San Miguel, esteros del Atuel y del salado, tiene una amplia avifauna, representada por flamencos, cisnes coscorobas, cisnes cuello negro, macaes plateados, garzas brujas, garzas moras, gallaretas, patos overos, patos zambuilidores, patos capuchinos, teros comunes y reales. Entre los mamíferos se encuentra el coipo o nutria</p>
                             </div>
-                            <img class="imgIntroduccion" src="images/inicio/ambAcuaticos.jfif" alt="">
+                            <img src="images/inicio/ambAcuaticos.jfif" alt="">
                         </div>
                     </div>
                 </div>
             </article>
         </section>   
-    
     </div>
+    <!-- Final seccion central con boostrap -->
     
-    <footer class="pieDePagina">
+    <footer class="footer">
         <p>2021 Leonardo J. Koryl - Proyecto Final</p>
     </footer>
 
