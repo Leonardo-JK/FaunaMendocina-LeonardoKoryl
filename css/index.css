@@ -1,0 +1,213 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+header {
+    height: 20vh;
+    background-image: url(/images/cordillera.png);
+    background-size: cover;
+}
+
+.logo {
+    height: 80%;
+    align-self: center;
+}
+
+.titulo {
+    color: white;
+    -webkit-text-stroke: 2px rgb(36,60,88);
+    font-family: "Crimson";
+    font-weight:bold;
+    font-size: 3em;
+}
+
+#menu {
+    position: sticky;
+    top: 0px;
+    border: 1px solid;
+}
+
+#navMenu {
+    height: auto;
+    padding-left: 20px;
+}
+
+#navMenu ul, #navButtom {
+    padding-right: 20px;
+}
+
+.navbar-brand {
+    height: ;
+}
+
+aside {
+    display: none;
+    background-image: linear-gradient(rgba(128, 128, 128, 0.555),rgba(87, 87, 87, 0));
+    border-right: 2px solid white;
+}
+
+aside div {
+    position: sticky;
+    top: 70px;
+}
+
+.cuerpo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 40px;
+    align-items: center;
+    background-image: url(/images/fondo1.jpg);
+}
+
+.cuerpo p {
+    text-indent: 40px;
+    text-align: justify;
+    width: 90%;
+}
+
+.titulo2 {
+    margin: 40px 0px 30px;
+    font-size: 2em;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px grey;
+}
+
+.titulo3 {
+    margin-top: 30px;
+    text-shadow: 2px 2px 2px grey;
+}
+
+.videosIntro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+
+.inicio {
+    width: 95%;
+    margin: 10px 0px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px grey;
+}
+
+#presentacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scroll-margin-top: 60px;
+}
+
+.imgPresentacion {
+    width: 90%;
+    margin: 20px 0px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px grey;
+}
+
+#introduccion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scroll-margin-top: 60px;
+}
+
+.intros {
+    display: grid;
+    justify-content: center;
+
+    grid-template-rows: repeat(5,auto);
+    grid-template-columns: 90%;
+}
+
+.descripcion, .descripcion div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.descripcion img {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px grey;
+}
+
+.pieDePagina {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    background-color: rgba(116, 101, 101, 0.521);
+}
+
+@media only screen and (min-width: 768px) {
+    .titulo {
+        font-size: 4em;
+    }
+    
+    aside {
+        display: block;
+    }
+    .videosIntro {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .inicio {
+        display:;
+        width: 45%;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .titulo {
+        font-size: 6em;
+    }
+
+    .titulo2 {
+        font-size: 3em;
+    }
+
+    #presentacion {
+        display: inline-block;
+    }
+    
+    #presentacion .titulo2 {
+        text-align: center;
+    }
+
+    .imgPresentacion {
+        float: left;
+        margin: 0px 3% 20px 5%;
+        width: 40%;
+        border: 1px solid;
+    }
+
+    #presentacion p {
+        margin-left: 5%;
+    }
+
+    .intros div {
+        display: inline-block;
+    }
+
+    .descripcion p {
+        width: 100%;
+    }
+
+    .descripcion {
+        display: inline-block;
+    }
+
+    .descripcion div {
+        display: inline-block;
+        width: 70%;
+    }
+
+    .descripcion img {
+        display: inline-block;
+        margin-left: 1%;
+    }
+}

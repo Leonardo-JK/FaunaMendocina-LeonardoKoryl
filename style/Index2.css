@@ -1,0 +1,12 @@
+#header {
+    background-image: url(images/cordillera.png);
+    background-size: cover;
+}
+
+#logo {
+    height: 50px;
+    width: 11vh;
+    position: absolute;
+    top: 80px;
+    left: 5vh;
+}

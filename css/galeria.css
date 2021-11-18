@@ -1,0 +1,213 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+header {
+    height: 20vh;
+    background-image: url(../images/cordillera.png);
+    background-size: cover;
+    border: 1px solid;
+}
+
+.logo {
+    height: 80%;
+    align-self: center;
+}
+
+.titulo {
+    color: white;
+    -webkit-text-stroke: 2px rgb(36,60,88);
+    font-family: "Crimson";
+    font-weight:bold;
+    font-size: 3em;
+}
+
+#menu {
+    position: sticky;
+    top: 0px;
+    z-index: 4;
+}
+
+#navMenu {
+    height: auto;
+    padding-left: 20px;
+}
+
+#navMenu ul, #navButtom {
+    margin-right: 20px;
+}
+
+#botones {
+    position: sticky;
+    top: 56px;
+    z-index: 3;
+    border: 1px solid;
+}
+
+#accesos {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+#accesos ul {
+    display: flex;
+    font-size: 3vw;
+    justify-content: space-evenly;
+}
+
+#linkAcceso {
+    margin: 0px 0px;
+}
+
+aside {
+    display: none;
+    background-image: linear-gradient(rgba(128, 128, 128, 0.555),rgba(87, 87, 87, 0));
+    border-right: 2px solid white;
+}
+
+aside div {
+    position: sticky;
+    top: 70px;
+}
+
+.cuerpo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 40px;
+    align-items: center;
+    background-image: url(/images/fondo1.jpg);
+    background-size: contain;
+}
+
+.cuerpo p {
+    text-indent: 40px;
+    text-align: justify;
+    width: 95%;
+}
+
+.titulo2 {
+    margin: 40px 0px 0px;
+    font-size: 2em;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px grey;
+    text-align: center;
+    scroll-margin-top: 130px;
+}
+
+.titulo3 {
+    margin: 30px 0px 20px;
+    text-shadow: 2px 2px 2px grey;
+    scroll-margin-top: 130px;
+}
+
+.contenido {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.galeria {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    padding: 10px;
+}
+
+.galeria a {
+    text-decoration: none;
+    color: black;
+}
+
+.imagenesGaleria {
+    display: none;
+}
+
+.carousel, #carousel {
+    width: 100%;
+    max-width: 530px;
+    height: 60vw;
+    max-height: 330px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px grey;
+    align-self: center;
+}
+
+#carousel div, #carousel div img {
+    width: 100%;
+    height: 100%;
+}
+
+.pieDePagina {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    background-color: rgba(116, 101, 101, 0.521);
+}
+
+@media only screen and (min-width: 768px) {
+    .titulo {
+        font-size: 4em;
+    }
+    
+    #accesos ul {
+        font-size: 1.4em;
+    }
+
+    aside {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .titulo {
+        font-size: 6em;
+    }
+
+    .titulo2 {
+        font-size: 3em;
+    }
+}
+
+    @media only screen and (min-width:1600px) {
+    .carousel {
+        display: inline-block;
+        width: 40%;
+    }
+    
+    .carousel button {
+        display: none;
+    }
+    .galeria {
+        display: inline-block;
+    }
+
+    .imagenesGaleria {
+        display: block;
+        float:right;
+        width:55%;
+        height: auto;
+        padding:  px;
+        align-content:flex-start;
+        
+    }
+
+    .galeria img {
+        width: 22%;
+        height: 100px;
+        box-shadow: 2px 2px 2px grey;
+        border-radius: 5px;
+        margin: 5px;
+    }
+
+    .imagenesGaleria img:hover {
+        transform: scale(1.1);
+    }
+}
+
+
