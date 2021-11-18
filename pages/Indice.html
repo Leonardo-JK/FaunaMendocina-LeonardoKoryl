@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sp">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fauna Mendocina</title>
+    <meta name="description" content="Descripción general de la fauna mendocina, con imagenes.">
+    <meta name="keywords" content="fauna, mendocina, camoati, carpa, cascabel, austral, condor, coral, argentina, dientudo, gecko, salamanca, gorrion, grison, menor, halcon, peregrino, morenita, mosca, domestica, paloma, pejerrey, puma, tijereta, tortuga, terrestre, trucha, arcoiris, vinchuca, pintada, zorrillo, zorro, culpeo"> 
+    <title>Indice | Fauna Mendocina</title>
     <link rel="stylesheet" href="../css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,11 +23,14 @@
             <div class="row align-items-center">
                 <div class="col-3">
                     <div class="d-flex justify-content-center" style="height:15vh;">
-                        <img class="header__logo" src="../images/logo1b.png" alt="">
+                        <img class="header__logo" src="../images/logo1b.png" alt="Logo de Fauna Mendocina">
                     </div>
                 </div>
                 <div class="col-9">
                     <h1 class="header__titulo text-center">Fauna Mendocina</h1>
+                </div>
+                <div class="header__idioma col-1">
+                    <a href="indice.html">ES</a> / <a href="404.html">EN</a> <!--index2.html-->
                 </div>
             </div>
         </div>
@@ -36,6 +41,11 @@
     <div id="menu">
         <nav class="navbar navbar-expand-md navbar-light bg-light">
             <a class="navbar__link navbar-brand justify-self-end" href="#">Menu</a>
+            <!-- Inicio Ruta de Navegacion, para futuras aplicaciones, una vez se complejice mas la pagina-->
+            <ol id="breadcrumb" class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page">Indice</li>
+            </ol>
+            <!-- Final Ruta de Navegacion -->
             <button class="navbar__button navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -52,6 +62,8 @@
                             <li class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="../index.html#presentacion">Presentacion</a></li>
                             <li><a class="dropdown-item" href="../index.html#introduccion">Introduccion</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="mapaSitio.html">Mapa del Sitio</a></li>
                         </ul>
                     </li>
     
@@ -123,8 +135,32 @@
         <aside class="col-md-3 aside">
             <div>
                 <h3 class="aside_titulo">Informacion Util</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime repellendus esse labore nobis asperiores laborum molestiae cum accusamus tenetur dolorum eligendi ut dolores quia deserunt qui aspernatur, quis voluptates quasi.</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime repellendus esse labore nobis asperiores laborum molestiae cum accusamus tenetur dolorum eligendi ut dolores quia deserunt qui aspernatur, quis voluptates quasi.</p>
+                <ol><h4>Cosejos sobre el comportamiento frente a la fauna salvaje:</h4>
+                    <li>
+                        <dt>SI ES POSIBLE, VISITE A LOS ANIMALES EN SU HÁBITAT NATURAL</dt>
+                        <dd>Si planea la opción más cómoda de visitar un santuario o zoológico, asegúrese de que cuenta con acreditación y una administración profesional.</dd>
+                    </li>
+                    <li>
+                        <dt>VER A LOS ANIMALES COMPORTARSE NATURALMENTE</dt>
+                        <dd>Los encantadores de serpientes y los circos de monos pueden ser atractivos, pero lo que sucede detrás del telón puede horrorizarlo. Para no fomentar estas prácticas, busque un santuario de elefantes respetado o tome un paseo en jeep para admirar a los elefantes en su hábitat natural.</dd>
+                    </li>
+                    <li>
+                        <dt>SE PROHÍBE ACARICIAR</dt>
+                        <dd>Esta instrucción podría decepcionarle, pero hay que comprender los malos tratos que rodean a las instalaciones que ofrecen experiencias de participación activa o contacto cercano con los animales.</dd>
+                    </li>
+                    <li>
+                        <dt>GASTE EL DINERO DE FORMA SOSTENIBLE</dt>
+                        <dd>Si realmente le preocupa el bienestar de los animales y la sustentabilidad de la fauna silvestre, considere contratar a un grupo de expediciones en vez de organizar cada actividad usted mismo.</dd>
+                    </li>
+                    <li>
+                        <dt>RESPETE A LOS ANIMALES</dt>
+                        <dd>Es peligroso para usted y también puede causarle problemas al animal. Además, por supuesto, jamás alimente a los animales.</dd>
+                    </li>
+                    <li>
+                        <dt>ATENCIÓN CON LOS RECUERDOS</dt>
+                        <dd>Asegúrese de evaluar cuidadosamente lo que lleve consigo a casa de su aventura con la fauna silvestre. </dd>
+                    </li>
+                </ol>
             </div>   
         </aside>
         <!-- Final barra lateral -->
@@ -176,7 +212,7 @@
                         
                         <dt><h3 id="grisonMenor" class="cuerpo__titulo2">Grisón Menor</h3></dt>
                         <!-- Cada imagen debe redireccionar a la galeria propia de cada individuo -->
-                        <a href="galeria.html#grisonMenor" target="self"><img class="cuerpo__imgIndice" src="../images/mamiferos/grisonMenor/grisonMenor.jpg" alt="Imagen no encontrada"></a>
+                        <a href="galeria.html#grisonMenor" target="self"><img class="cuerpo__imgIndice" src="../images/grisonMenor.jpg" alt="Imagen no encontrada"></a>
                         <dd>
                             <p><i><b>[Galictis cuja]</b></i></p>
                             <p>Tienen un cuerpo largo y delgado, patas cortas y una cola tupida. Tienen un cuello largo y una cabeza pequeña con una frente aplanada y orejas redondeadas. Con una longitud cabeza-cuerpo de 27 a 52 cm y una cola de 14 a 19 cm de largo. Los adultos pesan entre 1,2 y 2,4 kg.</p>
@@ -185,7 +221,7 @@
                         </dd>
         
                         <dt><h3 id="guanaco" class="cuerpo__titulo2">Guanaco</h3></dt>
-                        <a href="galeria.html#guanaco"><img class="cuerpo__imgIndice" src="../images/mamiferos/guanaco/guanaco.jpg" alt="Imagen no encontrada"></a>
+                        <a href="galeria.html#guanaco"><img class="cuerpo__imgIndice" src="../images/guanaco.jpg" alt="Imagen no encontrada"></a>
                         <dd>
                             <p><i><b>[Lama guanicoe]</b></i></p>
                             <p>Al igual que la llama, el guanaco es un camélido que es incluso más escaso que la alpaca. Está revestido por un pelaje doble y grueso que lo protege. </p>
@@ -194,7 +230,7 @@
                         </dd>
         
                         <dt><h3 id="puma" class="cuerpo__titulo2">Puma</h3></dt>
-                        <a href="galeria.html#puma"><img class="cuerpo__imgIndice" src="../images/mamiferos/puma/puma.jpg" alt="Imagen no encontrada"></a>
+                        <a href="galeria.html#puma"><img class="cuerpo__imgIndice" src="../images/puma.jpg" alt="Imagen no encontrada"></a>
                         <dd>
                             <p><i><b>[Puma concolor]</b></i></p>
                             <p>Hasta finales del siglo XX se habían registrado 32 subespecies de puma, sin embargo, un estudio genético de ADN mitocondrial mostró que muchas de ellas son demasiado similares como para ser reconocidas como taxones diferentes.</p>
@@ -203,7 +239,7 @@
                         </dd>
         
                         <dt><h3 id="zorrillo" class="cuerpo__titulo2">Zorrillo</h3></dt>
-                        <a href="galeria.html#zorrillo"><img class="cuerpo__imgIndice" src="../images/mamiferos/zorrillo/zorrillo.jpg" alt="Imagen no encontrada"></a>
+                        <a href="galeria.html#zorrillo"><img class="cuerpo__imgIndice" src="../images/zorrillo.jpg" alt="Imagen no encontrada"></a>
                         <dd>
                             <p><i><b>[Conepatus humboldtii]</b></i></p>
                             <p>Su principal rasgo característico es el fuerte y fétido olor que segregan sus glándulas olfativa. Este olor es emitido cuando la mofeta se siente amenazada. Antes de la emanación, la mofeta adopta una posición corporal distinta según la especie</p>
@@ -211,7 +247,7 @@
                         </dd>
         
                         <dt><h3 id="zorroCulpeo" class="cuerpo__titulo2">Zorro Culpeo</h3></dt>
-                        <a href="galeria.html#zorroCulpeo"><img class="cuerpo__imgIndice" src="../images/mamiferos/zorroCulpeo/zorroCulpeo.jpg" alt="Imagen no encontrada"></a>
+                        <a href="galeria.html#zorroCulpeo"><img class="cuerpo__imgIndice" src="../images/zorroCulpeo.jpg" alt="Imagen no encontrada"></a>
                         <dd>
                             <p><i><b>[Lycalopex culpaeus]</b></i></p>
                             <p>Fue descrito por Molina en 1782 como Canis culpaeus. Posteriormente fue trasladado al género Lycalopex. A mediados de la década de 2010 se podía encontrar escrito como Pseudalopex culpaeus,​ sinónimo del nombre aceptado.</p>
@@ -225,7 +261,7 @@
                     <dl class="cuerpo__listasIndice">
         
                         <dt><h3 id="condor" class="cuerpo__titulo2">Cóndor</h3></dt>
-                        <a href="galeria.html#condor"><img class="cuerpo__imgIndice" src="../images/aves/condor/condor.jfif" alt="Imagen no encontrada"></a>
+                        <a href="galeria.html#condor"><img class="cuerpo__imgIndice" src="../images/condor.jpg" alt="Imagen no encontrada"></a>
                         <dd>
                             <p><i><b>[Vultur gryphus]</b></i></p>
                             <p>Es un ave grande y negra, con plumas blancas alrededor del cuello y en partes de las alas. La cabeza carece de plumas y es de color rojo, pudiendo cambiar de tonalidad de acuerdo con el estado emocional del ave. A diferencia de la mayor parte de las aves de presa, el macho es mayor que la hembra.</p>
@@ -234,7 +270,7 @@
                         </dd>
         
                         <dt><h3 id="gorrion" class="cuerpo__titulo2">Gorrion</h3></dt>
-                        <a href="galeria.html#gorrion"><img class="cuerpo__imgIndice" src="../images/aves/gorrion/gorrion.jpg" alt="Imagen no encontrada"></a>
+                        <a href="galeria.html#gorrion"><img class="cuerpo__imgIndice" src="../images/gorrion.jpg" alt="Imagen no encontrada"></a>
                         <dd>
                             <p><i><b>[Passeridae]</b></i></p>
                             <p>Suelen ser aves pequeñas, color marrón-gris con cola corta y pico rechoncho, de gran alcance. Son principalmente granívoras, aunque también consumen insectos pequeños. Unas pocas especies se alimentan alrededor de las ciudades y son capaces de comer prácticamente cualquier cosa en pequeñas cantidades.</p>
@@ -242,7 +278,7 @@
                         </dd>
         
                         <dt><h3 id="halconPeregrino" class="cuerpo__titulo2">Halcon Peregrino</h3></dt>
-                        <a href="galeria.html#halconPeregrino"><img class="cuerpo__imgIndice" src="../images/aves/halconPeregrino/halconPeregrino.jpg" alt="Imagen no encontrada"></a>
+                        <a href="galeria.html#halconPeregrino"><img class="cuerpo__imgIndice" src="../images/halconPeregrino.jpg" alt="Imagen no encontrada"></a>
                         <dd>
                             <p><i><b>[Falco peregrinus]</b></i></p>
                             <p>Es un halcón grande, del tamaño de un cuervo, con la espalda de color gris azulado y la parte inferior blanquecina con manchas oscuras; la cabeza es negra y cuenta con una amplia y característica bigotera también de color negro. Normalmente no vuela a velocidades superiores a los 100 km/h,​ pero en picada o cuando caza y efectúa un ataque en picado puede alcanzar más de 300 km/h, lo que lo convierte en el animal más rápido del mundo.</p>
@@ -250,7 +286,7 @@
                         </dd>
         
                         <dt><h3 id="paloma" class="cuerpo__titulo2">Paloma</h3></dt>
-                        <a href="galeria.html#paloma"><img class="cuerpo__imgIndice" src="../images/aves/paloma/paloma.jpg" alt="Imagen no encontrada"></a>
+                        <a href="galeria.html#paloma"><img class="cuerpo__imgIndice" src="../images/paloma.jpg" alt="Imagen no encontrada"></a>
                         <dd>
                             <p><i><b>[Columbidae]</b></i></p>
                             <p>Son aves dotadas de gran inteligencia (si se las compara con otras aves), aunque ya entre otras aves menos inteligentes se ha descubierto una importante inteligencia que ha llegado a permitir incluso una interacción entre Homo sapiens y aves, pese a que tal interacción inteligente.</p>
@@ -259,7 +295,7 @@
                         </dd>
         
                         <dt><h3 id="tijereta" class="cuerpo__titulo2">Tijereta</h3></dt>
-                        <a href="galeria.html#tijereta"><img class="cuerpo__imgIndice" src="../images/aves/tijereta/tijereta.jfif" alt="Imagen no encontrada"></a>
+                        <a href="galeria.html#tijereta"><img class="cuerpo__imgIndice" src="../images/tijereta.JPG" alt="Imagen no encontrada"></a>
                         <dd>
                             <p><i><b>[Tyrannus savana]</b></i></p>
                             <p>Es un pájaro notable por su larguísima cola compuesta por seis pares de plumas, siendo las más largas las laterales, que son las que le dan la forma característica. El plumaje, de la cabeza y el lomo, es negro, mientras que el de la garganta, el pecho y el vientre, es blanco plateado. Las plumas de la cabeza, en su parte más inferior, donde se insertan a la piel, tienen una coloración amarilla que únicamente llega a verse cuando las eriza, lo que no sucede con frecuencia.</p>
@@ -273,7 +309,7 @@
                     <dl class="cuerpo__listasIndice">
         
                         <dt><h3 id="cascabelAustral" class="cuerpo__titulo2">Cascabel Austral</h3></dt>
-                        <a href="galeria.html#cascabelAustral"><img class="cuerpo__imgIndice" src="../images/reptiles/cascabelAustral/cascabelAustral.jpg" alt="Imagen no encontrada"></a>
+                        <a href="galeria.html#cascabelAustral"><img class="cuerpo__imgIndice" src="../images/cascabelAustral.jpg" alt="Imagen no encontrada"></a>
                         <dd>
                             <p><i><b>[Crotalus durissus terrificus]</b></i></p>
                             <p>Muestra un cuerpo macizo, robusto, comprimido lateralmente y aplanado ventralmente. Puede crecer hasta una longitud máxima de alrededor de 180 cm. Cada vez que un individuo muda su piel, se forma un segmento nuevo en el apéndice caudal, también pudiendo éste, desprenderse en parte por alguna eventualidad.</p>
@@ -281,7 +317,7 @@
                         </dd>
         
                         <dt><h3 id="coralArgentina" class="cuerpo__titulo2">Coral Argentina</h3></dt>
-                        <a href="galeria.html#coralArgentina"><img class="cuerpo__imgIndice" src="../images/reptiles/coralArgentina/coralArgentina.jpg" alt="Imagen no encontrada"></a>
+                        <a href="galeria.html#coralArgentina"><img class="cuerpo__imgIndice" src="../images/coralArgentina.jpg" alt="Imagen no encontrada"></a>
                         <dd>
                             <p><i><b>[Micrurus pyrrhocryptus]</b></i></p>
                             <p>Es una especie de ofidio de potente veneno, de hábitos furtivos, pero con un potente veneno capaz de matar a un hombre adulto. Pero no posee la agresividad de otras serpientes ponzoñosas, por lo que los accidentes son muy raros.</p>
@@ -290,7 +326,7 @@
                         </dd>
         
                         <dt><h3 id="geckoSalamanca" class="cuerpo__titulo2">Gecko Salamanca</h3></dt>
-                        <a href="galeria.html#geckoSalamanca"><img class="cuerpo__imgIndice" src="../images/reptiles/geckoSalamanca/geckoSalamanca.jpg" alt="Imagen no encontrada"></a>
+                        <a href="galeria.html#geckoSalamanca"><img class="cuerpo__imgIndice" src="../images/geckoSalamanca.jpg" alt="Imagen no encontrada"></a>
                         <dd>
                             <p><i><b>[Homonota fasciata]</b></i></p>
                             <p>Es un saurio de hábitos nocturnos y de dieta insectívora que habita en el centro-sur de Sudamérica.</p>
@@ -299,7 +335,7 @@
                         </dd>
         
                         <dt><h3 id="tortugaPintada" class="cuerpo__titulo2">Tortuga Pintada</h3></dt>
-                        <a href="galeria.html#tortugaPintada"><img class="cuerpo__imgIndice" src="../images/reptiles/tortugaPintada/tortugaPintada.jpg" alt="Imagen no encontrada"></a>
+                        <a href="galeria.html#tortugaPintada"><img class="cuerpo__imgIndice" src="../images/tortugaPintada.jpg" alt="Imagen no encontrada"></a>
                         <dd>
                             <p><i><b>[Trachemys scripta]</b></i></p>
                             <p>Vive en ciénagas y otras aguas dulces. Se alimenta de diversos animales y plantas.</p>
@@ -308,7 +344,7 @@
                         </dd>
         
                         <dt><h3 id="tortugaTerrestreArgentina" class="cuerpo__titulo2">Tortuga Terrestre Argentina</h3></dt>
-                        <a href="galeria.html#tortugaTerrestreArgentina"><img class="cuerpo__imgIndice" src="../images/reptiles/tortugaTerrestreArgentina/tortugaTerrestreArgentina.JPG" alt="Imagen no encontrada"></a>
+                        <a href="galeria.html#tortugaTerrestreArgentina"><img class="cuerpo__imgIndice" src="../images/tortugaTerrestreArgentina.jpg" alt="Imagen no encontrada"></a>
                         <dd>
                             <p><i><b>[Chelonoidis chilensis]</b></i></p>
                             <p>Se distribuye desde el Gran Chaco hasta el norte de la Patagonia. Es una especie fundamentalmente herbívora, pues se alimenta con tallos y frutos de cactus, gramíneas, herbáceas y vainas de leguminosas. También, de hojas de plantas, pastos , frutas, verduras y tubérculos; complementa su dieta en escasas ocasiones con algunos invertebrados, como caracoles, babosas y lombrices.</p>
@@ -323,7 +359,7 @@
                     <dl class="cuerpo__listasIndice">
                         
                         <dt><h3 id="camoati" class="cuerpo__titulo2">Camoati</h3></dt>
-                        <a href="galeria.html#camoati"><img class="cuerpo__imgIndice" src="../images/insectos/camoati/camoati.jfif" alt="Imagen no encontrada"></a>
+                        <a href="galeria.html#camoati"><img class="cuerpo__imgIndice" src="../images/camoati.jpg" alt="Imagen no encontrada"></a>
                         <dd>
                             <p><i><b>[Polybia occidentalis]</b></i></p>
                             <p>Son avispas eusociales que forman enjambres numerosos cuyos nidos penden en su mayoría de los árboles, pero también lo hacen en rocas así como también en techos de casas y galpones. Se alimenta de néctar, insectos y fuentes de hidratos de carbono, mientras que son presa de aves; las hormigas se aprovechan de ellas y las parasitan. Las avispas obreras de P. occidentalis se pican unas a otras para comunicar que es hora de empezar a trabajar.</p>
@@ -331,7 +367,7 @@
                         </dd>
         
                         <dt><h3 id="hormigaRojaArgentina" class="cuerpo__titulo2">Hormiga Roja Argentina</h3></dt>
-                        <a href="galeria.html#hormigaRojaArgentina"><img class="cuerpo__imgIndice" src="../images/insectos/hormigaRojaArgentina/hormigaRojaArgentina.jfif" alt="Imagen no encontrada"></a>
+                        <a href="galeria.html#hormigaRojaArgentina"><img class="cuerpo__imgIndice" src="../images/hormigaRojaArgentina.jpg" alt="Imagen no encontrada"></a>
                         <dd>
                             <p><i><b>[Solenopsis invicta]</b></i></p>
                             <p>La hormiga roja de fuego es más agresiva que la mayoría de las especies de hormigas nativas y tiene una dolorosa picadura. Las hormigas responden a feromonas que son liberadas por la primera hormiga en atacar. Entonces pican a la vez, a menudo causando la muerte de animales pequeños sobrecargando su sistema inmunológico.</p>
@@ -339,7 +375,7 @@
                         </dd>
         
                         <dt><h3 id="moscaDomestica" class="cuerpo__titulo2">Mosca Doméstica</h3></dt>
-                        <a href="galeria.html#moscaDomestica"><img class="cuerpo__imgIndice" src="../images/insectos/moscaDomestica/moscaDomestica.jpg" alt="Imagen no encontrada"></a>
+                        <a href="galeria.html#moscaDomestica"><img class="cuerpo__imgIndice" src="../images/moscaDomestica.jpg" alt="Imagen no encontrada"></a>
                         <dd>
                             <p><i><b>[Musca domestica]</b></i></p>
                             <p>Es la mosca más común y habitual en la mayoría de los climas de la Tierra.</p>
@@ -348,7 +384,7 @@
                         </dd>
         
                         <dt><h3 id="mosquitoComun" class="cuerpo__titulo2">Mosquito Común</h3></dt>
-                        <a href="galeria.html#mosquitoComun"><img class="cuerpo__imgIndice" src="../images/insectos/mosquitoComun/mosquitoComun.jpg" alt="Imagen no encontrada"></a>
+                        <a href="galeria.html#mosquitoComun"><img class="cuerpo__imgIndice" src="../images/mosquitoComun.jpg" alt="Imagen no encontrada"></a>
                         <dd>
                             <p><i><b>[Culex sp.]</b></i></p>
                             <p>Su comportamiento le hace entrar habitualmente dentro de las casas y nos atacará casi siempre entre la puesta y la salida del sol debido a sus hábitos nocturnos.</p>
@@ -357,7 +393,7 @@
                         </dd>
         
                         <dt><h3 id="vinchuca" class="cuerpo__titulo2">Vinchuca</h3></dt>
-                        <a href="galeria.html#vinchuca"><img class="cuerpo__imgIndice" src="../images/insectos/vinchuca/vinchuca.jfif" alt="Imagen no encontrada"></a>
+                        <a href="galeria.html#vinchuca"><img class="cuerpo__imgIndice" src="../images/vinchuca.jpg" alt="Imagen no encontrada"></a>
                         <dd>
                             <p><i><b>[Triatoma infestans]</b></i></p>
                             <p>La vinchuca presenta diferentes formas de acuerdo a la etapa de crecimiento en que se encuentra, con un tamaño que evoluciona desde los 2 mm hasta los 2 cm o 3 cm en el estado adulto. Es de color pardo, con un reborde de bandas transversales que se alternan en colores pardos y claros. La cabeza es de forma afilada con dos ligeras protuberancias que son los ojos; tiene, como todos los insectos, seis patas y un par de antenas. Su cuerpo es chato, pero cuando se alimenta su abdomen se hincha y se levantan sus alas, que normalmente están plegadas.</p>
@@ -371,7 +407,7 @@
                     <dl class="cuerpo__listasIndice">
         
                         <dt><h3 id="carpa" class="cuerpo__titulo2">Carpa</h3></dt>
-                        <a href="galeria.html#carpa"><img class="cuerpo__imgIndice" src="../images/peces/carpa/carpa.jfif" alt="Imagen no encontrada"></a>
+                        <a href="galeria.html#carpa"><img class="cuerpo__imgIndice" src="../images/carpa.jpg" alt="Imagen no encontrada"></a>
                         <dd>
                             <p><i><b>[Cyprinus carpio]</b></i></p>
                             <p>Es nativa de cuerpos de aguas estancadas o lentas de las regiones templadas. Es un animal ubicuo, de fácil cultivo y posee la característica de ser ectotermo y euritermal. Es un animal muy resistente, capaz de vivir en aguas salobres con una temperatura entre 17 y 24 °C.</p>
@@ -379,7 +415,7 @@
                         </dd>
         
                         <dt><h3 id="dientudo" class="cuerpo__titulo2">Dientudo</h3></dt>
-                        <a href="galeria.html#dientudo"><img class="cuerpo__imgIndice" src="../images/peces/dientudo/dientudo.jfif" alt="Imagen no encontrada"></a>
+                        <a href="galeria.html#dientudo"><img class="cuerpo__imgIndice" src="../images/dientudo.jpg" alt="Imagen no encontrada"></a>
                         <dd>
                             <p><i><b>[Oligosarcus jenynsii]</b></i></p>
                             <p>Los machos pueden llegar alcanzar los 31 cm de longitud total y 330 g de peso.</p>
@@ -388,7 +424,7 @@
                         </dd>
         
                         <dt><h3 id="morenita" class="cuerpo__titulo2">Morenita</h3></dt>
-                        <a href="galeria.html#morenita"><img class="cuerpo__imgIndice" src="../images/peces/morenita/morenita.jfif" alt="Imagen no encontrada"></a>
+                        <a href="galeria.html#morenita"><img class="cuerpo__imgIndice" src="../images/morenita.jpg" alt="Imagen no encontrada"></a>
                         <dd>
                             <p><i><b>[Jenynsia lineata]</b></i></p>
                             <p>Como otras especies del género Jenynsia, se caracteriza por presentar un gonopodio tubular formado por los radios anales 3º, 6º y 7º —el cual está asociado con un ducto espermático— y por tener los ejemplares adultos dientes de oclusión tricúspide en la mandíbula. El color del cuerpo es gris-verdoso claro; en los lados muestra 6 a 8 líneas oscuras y finas, o rayas longitudinales punteadas. Las aletas son incoloras. Ambos sexos presentan la misma coloración. La hembra no fertilizada tiene un punto anaranjado situado a la derecha o la izquierda de la aleta anal. El macho es bastante más delgado y pequeño que la hembra, que mide 6,6 cm.</p>
@@ -396,7 +432,7 @@
                         </dd>
         
                         <dt><h3 id="pejerrey" class="cuerpo__titulo2">Pejerrey</h3></dt>
-                        <a href="galeria.html#pejerrey"><img class="cuerpo__imgIndice" src="../images/peces/pejerrey/pejerrey.jfif" alt="Imagen no encontrada"></a>
+                        <a href="galeria.html#pejerrey"><img class="cuerpo__imgIndice" src="../images/pejerrey.jpg" alt="Imagen no encontrada"></a>
                         <dd>
                             <p><i><b>[Odontesthes bonariensis]</b></i></p>
                             <p>Es un pez veloz, cuerpo fusiforme, ligeramente comprimido, presenta un color plateado con dos bandas más oscuras longitudinales, marcada curva ventral, cabeza fuerte, ósea en la parte superior, boca protráctil; dos aletas en el dorso (una primera pequeña con radios flexibles, la segunda más larga y radio flexible), aletas ventrales sin sierras ni espinas. Coloración plateada e iridaciones algo azulinas y franja brillante en el flanco. La cola tiene forma de horquilla. Vive sobre todo en cardúmenes.</p>
@@ -404,7 +440,7 @@
                         </dd>
         
                         <dt><h3 id="truchaArcoirirs" class="cuerpo__titulo2">Trucha Arcoiris</h3></dt>
-                        <a href="galeria.html#truchaArcoiris"><img class="cuerpo__imgIndice" src="../images/peces/truchaArcoirirs/truchaArcoiris.jfif" alt="Imagen no encontrada"></a>
+                        <a href="galeria.html#truchaArcoiris"><img class="cuerpo__imgIndice" src="../images/truchaArcoiris.jpg" alt="Imagen no encontrada"></a>
                         <dd>
                             <p><i><b>[Oncorhynchus mykiss]</b></i></p>
                             <p>La longitud máxima registrada fue de un ejemplar de 120 cm, aunque lo normal es una longitud de 60 cm. ​ Tiene de tres a cuatro espinas en la aleta dorsal. Los machos reproductores no presentan cambios en la morfología de la cabeza ni resto del cuerpo tan llamativos como los de otras especies del mismo género; variando mucho la coloración de la piel con el hábitat y el tamaño; los que residen en ríos de forma permanente son más oscuros, similares a los anádromos en edad reproductiva, mientras que los que residen en lagos son de coloración más clara.</p>

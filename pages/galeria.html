@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sp">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fauna Mendocina</title>
+    <meta name="description" content="Galeria de imagenes de la fauna mendocina con fotos de alta calidad.">
+    <meta name="keywords" content="fauna, mendocina, galeria, imagenes, camoati, carpa, cascabel, austral, condor, coral, argentina, dientudo, gecko, salamanca, gorrion, grison, menor, halcon, peregrino, morenita, mosca, domestica, paloma, pejerrey, puma, tijereta, tortuga, terrestre, trucha, arcoiris, vinchuca, pintada, zorrillo, ,zorro, culpeo">
+    <title>Galeria | Fauna Mendocina</title>
     <link rel="stylesheet" href="../css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,11 +23,14 @@
             <div class="row align-items-center">
                 <div class="col-3">
                     <div class="d-flex justify-content-center" style="height:15vh;">
-                        <img class="header__logo" src="../images/logo1b.png" alt="">
+                        <img class="header__logo" src="../images/logo1b.png" alt="Logo de Fauna Mendocina">
                     </div>
                 </div>
                 <div class="col-9">
                     <h1 class="header__titulo text-center">Fauna Mendocina</h1>
+                </div>
+                <div class="header__idioma col-1">
+                    <a href="galeria.html">ES</a> / <a href="404.html">EN</a>
                 </div>
             </div>
         </div>
@@ -36,6 +41,11 @@
     <div id="menu">
         <nav class="navbar navbar-expand-md navbar-light bg-light">
             <a class="navbar__link navbar-brand justify-self-end" href="#">Menu</a>
+            <!-- Inicio Ruta de Navegacion, para futuras aplicaciones, una vez se complejice mas la pagina-->
+            <ol id="breadcrumb" class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page">Galería</li>
+            </ol>
+            <!-- Final Ruta de Navegacion -->
             <button class="navbar__button navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -52,6 +62,8 @@
                             <li class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="../index.html#presentacion">Presentacion</a></li>
                             <li><a class="dropdown-item" href="../index.html#introduccion">Introduccion</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="mapaSitio.html">Mapa del Sitio</a></li>
                         </ul>
                     </li>
     
@@ -123,8 +135,32 @@
         <aside class="col-md-3 aside">
             <div>
                 <h3 class="aside_titulo">Informacion Util</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime repellendus esse labore nobis asperiores laborum molestiae cum accusamus tenetur dolorum eligendi ut dolores quia deserunt qui aspernatur, quis voluptates quasi.</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime repellendus esse labore nobis asperiores laborum molestiae cum accusamus tenetur dolorum eligendi ut dolores quia deserunt qui aspernatur, quis voluptates quasi.</p>
+                <ol><h4>Cosejos sobre el comportamiento frente a la fauna salvaje:</h4>
+                    <li>
+                        <dt>SI ES POSIBLE, VISITE A LOS ANIMALES EN SU HÁBITAT NATURAL</dt>
+                        <dd>Si planea la opción más cómoda de visitar un santuario o zoológico, asegúrese de que cuenta con acreditación y una administración profesional.</dd>
+                    </li>
+                    <li>
+                        <dt>VER A LOS ANIMALES COMPORTARSE NATURALMENTE</dt>
+                        <dd>Los encantadores de serpientes y los circos de monos pueden ser atractivos, pero lo que sucede detrás del telón puede horrorizarlo. Para no fomentar estas prácticas, busque un santuario de elefantes respetado o tome un paseo en jeep para admirar a los elefantes en su hábitat natural.</dd>
+                    </li>
+                    <li>
+                        <dt>SE PROHÍBE ACARICIAR</dt>
+                        <dd>Esta instrucción podría decepcionarle, pero hay que comprender los malos tratos que rodean a las instalaciones que ofrecen experiencias de participación activa o contacto cercano con los animales.</dd>
+                    </li>
+                    <li>
+                        <dt>GASTE EL DINERO DE FORMA SOSTENIBLE</dt>
+                        <dd>Si realmente le preocupa el bienestar de los animales y la sustentabilidad de la fauna silvestre, considere contratar a un grupo de expediciones en vez de organizar cada actividad usted mismo.</dd>
+                    </li>
+                    <li>
+                        <dt>RESPETE A LOS ANIMALES</dt>
+                        <dd>Es peligroso para usted y también puede causarle problemas al animal. Además, por supuesto, jamás alimente a los animales.</dd>
+                    </li>
+                    <li>
+                        <dt>ATENCIÓN CON LOS RECUERDOS</dt>
+                        <dd>Asegúrese de evaluar cuidadosamente lo que lleve consigo a casa de su aventura con la fauna silvestre. </dd>
+                    </li>
+                </ol>
             </div>    
         </aside>
         <!-- Final barra lateral -->
@@ -185,28 +221,28 @@
                             <!-- Inicio Carousel -->
                             <div id="carousel" class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="../images/mamiferos/grisonMenor/grisonMenor.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/grisonMenor.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/mamiferos/grisonMenor/grisonMenor1.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/grisonMenor1.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/mamiferos/grisonMenor/grisonMenor2.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/grisonMenor2.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/mamiferos/grisonMenor/grisonMenor3.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/grisonMenor3.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/mamiferos/grisonMenor/grisonMenor4.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/grisonMenor4.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/mamiferos/grisonMenor/grisonmenor5.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/grisonMenor5.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/mamiferos/grisonMenor/grisonMenor6.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/grisonMenor6.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/mamiferos/grisonMenor/grisonMenor7.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/grisonMenor7.jpg">
                                 </div>
                             </div>
                             <!-- Final Carousel -->
@@ -226,14 +262,14 @@
                         
                         <!-- Inicio album de fotos, solo debe aparecer para dispostivos grandes, para poder controlas el carousel -->
                         <div class="cuerpo__imagenesGaleria">
-                            <a data-bs-target="#carouselExampleFade1" data-bs-slide-to="0" ><img class="img0" src="../images/mamiferos/grisonMenor/grisonMenor.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade1" data-bs-slide-to="1" ><img class="img1" src="../images/mamiferos/grisonMenor/grisonMenor1.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade1" data-bs-slide-to="2" ><img class="img2" src="../images/mamiferos/grisonMenor/grisonMenor2.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade1" data-bs-slide-to="3" ><img class="img3" src="../images/mamiferos/grisonMenor/grisonMenor3.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade1" data-bs-slide-to="4" ><img class="img4" src="../images/mamiferos/grisonMenor/grisonMenor4.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade1" data-bs-slide-to="5" ><img class="img5" src="../images/mamiferos/grisonMenor/grisonmenor5.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade1" data-bs-slide-to="6" ><img class="img6" src="../images/mamiferos/grisonMenor/grisonMenor6.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade1" data-bs-slide-to="7" ><img class="img7" src="../images/mamiferos/grisonMenor/grisonMenor7.jfif" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade1" data-bs-slide-to="0" ><img class="img0" src="../images/grisonMenor.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade1" data-bs-slide-to="1" ><img class="img1" src="../images/grisonMenor1.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade1" data-bs-slide-to="2" ><img class="img2" src="../images/grisonMenor2.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade1" data-bs-slide-to="3" ><img class="img3" src="../images/grisonMenor3.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade1" data-bs-slide-to="4" ><img class="img4" src="../images/grisonMenor4.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade1" data-bs-slide-to="5" ><img class="img5" src="../images/grisonmenor5.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade1" data-bs-slide-to="6" ><img class="img6" src="../images/grisonMenor6.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade1" data-bs-slide-to="7" ><img class="img7" src="../images/grisonMenor7.jpg" alt="Imagen no encontrada"></a>
                         </div>
                         <!-- Final album de fotos -->
 
@@ -252,28 +288,28 @@
                         
                             <div id="carousel" class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="../images/mamiferos/guanaco/guanaco.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/guanaco.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/mamiferos/guanaco/guanaco1.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/guanaco1.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/mamiferos/guanaco/guanaco2.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/guanaco2.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/mamiferos/guanaco/guanaco3.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/guanaco3.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/mamiferos/guanaco/guanaco4.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/guanaco4.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/mamiferos/guanaco/guanaco5.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/guanaco5.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/mamiferos/guanaco/guanaco6.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/guanaco6.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/mamiferos/guanaco/guanaco7.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/guanaco7.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                             </div>
 
@@ -288,14 +324,14 @@
                         </div>  
 
                         <div class="cuerpo__imagenesGaleria">
-                            <a data-bs-target="#carouselExampleFade2" data-bs-slide-to="0"><img class="img0" src="../images/mamiferos/guanaco/guanaco.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade2" data-bs-slide-to="1"><img class="img1" src="../images/mamiferos/guanaco/guanaco1.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade2" data-bs-slide-to="2"><img class="img2" src="../images/mamiferos/guanaco/guanaco2.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade2" data-bs-slide-to="3"><img class="img3" src="../images/mamiferos/guanaco/guanaco3.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade2" data-bs-slide-to="4"><img class="img4" src="../images/mamiferos/guanaco/guanaco4.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade2" data-bs-slide-to="5"><img class="img5" src="../images/mamiferos/guanaco/guanaco5.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade2" data-bs-slide-to="6"><img class="img6" src="../images/mamiferos/guanaco/guanaco6.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade2" data-bs-slide-to="7"><img class="img7" src="../images/mamiferos/guanaco/guanaco7.jfif" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade2" data-bs-slide-to="0"><img class="img0" src="../images/guanaco.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade2" data-bs-slide-to="1"><img class="img1" src="../images/guanaco1.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade2" data-bs-slide-to="2"><img class="img2" src="../images/guanaco2.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade2" data-bs-slide-to="3"><img class="img3" src="../images/guanaco3.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade2" data-bs-slide-to="4"><img class="img4" src="../images/guanaco4.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade2" data-bs-slide-to="5"><img class="img5" src="../images/guanaco5.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade2" data-bs-slide-to="6"><img class="img6" src="../images/guanaco6.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade2" data-bs-slide-to="7"><img class="img7" src="../images/guanaco7.jpg" alt="Imagen no encontrada"></a>
                         </div>
 
                     <il><h3 id="puma" class="cuerpo__titulo2"><a href="indice.html#puma">Puma</a></h3></il>
@@ -313,28 +349,28 @@
                         
                             <div id="carousel" class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="../images/mamiferos/puma/puma.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/puma.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/mamiferos/puma/puma1.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/puma1.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/mamiferos/puma/puma2.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/puma2.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/mamiferos/puma/puma3.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/puma3.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/mamiferos/puma/puma4.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/puma4.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/mamiferos/puma/puma5.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/puma5.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/mamiferos/puma/puma6.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/puma6.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/mamiferos/puma/puma7.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/puma7.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                             </div>
 
@@ -349,14 +385,14 @@
                         </div>  
 
                         <div class="cuerpo__imagenesGaleria">
-                            <a data-bs-target="#carouselExampleFade3" data-bs-slide-to="0"><img class="img0" src="../images/mamiferos/puma/puma.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade3" data-bs-slide-to="1"><img class="img1" src="../images/mamiferos/puma/puma1.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade3" data-bs-slide-to="2"><img class="img2" src="../images/mamiferos/puma/puma2.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade3" data-bs-slide-to="3"><img class="img3" src="../images/mamiferos/puma/puma3.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade3" data-bs-slide-to="4"><img class="img4" src="../images/mamiferos/puma/puma4.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade3" data-bs-slide-to="5"><img class="img5" src="../images/mamiferos/puma/puma5.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade3" data-bs-slide-to="6"><img class="img6" src="../images/mamiferos/puma/puma6.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade3" data-bs-slide-to="7"><img class="img7" src="../images/mamiferos/puma/puma7.jfif" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade3" data-bs-slide-to="0"><img class="img0" src="../images/puma.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade3" data-bs-slide-to="1"><img class="img1" src="../images/puma1.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade3" data-bs-slide-to="2"><img class="img2" src="../images/puma2.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade3" data-bs-slide-to="3"><img class="img3" src="../images/puma3.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade3" data-bs-slide-to="4"><img class="img4" src="../images/puma4.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade3" data-bs-slide-to="5"><img class="img5" src="../images/puma5.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade3" data-bs-slide-to="6"><img class="img6" src="../images/puma6.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade3" data-bs-slide-to="7"><img class="img7" src="../images/puma7.jpg" alt="Imagen no encontrada"></a>
                         </div>
 
                     <il><h3 id="zorrillo" class="cuerpo__titulo2"><a href="indice.html#zorrillo">Zorrillo</a></h3></il>
@@ -374,28 +410,28 @@
                         
                             <div id="carousel" class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="../images/mamiferos/zorrillo/zorrillo.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/zorrillo.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/mamiferos/zorrillo/zorrillo1.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/zorrillo1.jpg" class="d-block w-100" alt="Imagen no encontrada>
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/mamiferos/zorrillo/zorrillo2.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/zorrillo2.jpg" class="d-block w-100" alt="Imagen no encontrada>
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/mamiferos/zorrillo/zorrillo3.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/zorrillo3.jpg" class="d-block w-100" alt="Imagen no encontrada>
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/mamiferos/zorrillo/zorrillo4.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/zorrillo4.jpg" class="d-block w-100" alt="Imagen no encontrada>
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/mamiferos/zorrillo/zorrillo5.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/zorrillo5.jpg" class="d-block w-100" alt="Imagen no encontrada>
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/mamiferos/zorrillo/zorrillo6.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/zorrillo6.jpg" class="d-block w-100" alt="Imagen no encontrada>
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/mamiferos/zorrillo/zorrillo7.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images//zorrillo7.jpg" class="d-block w-100" alt=Imagen no encontrada">
                                 </div>
                             </div>
 
@@ -410,14 +446,14 @@
                         </div>      
 
                         <div class="cuerpo__imagenesGaleria">
-                            <a data-bs-target="#carouselExampleFade4" data-bs-slide-to="0"><img class="img0" src="../images/mamiferos/zorrillo/zorrillo.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade4" data-bs-slide-to="1"><img class="img1" src="../images/mamiferos/zorrillo/zorrillo1.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade4" data-bs-slide-to="2"><img class="img2" src="../images/mamiferos/zorrillo/zorrillo2.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade4" data-bs-slide-to="3"><img class="img3" src="../images/mamiferos/zorrillo/zorrillo3.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade4" data-bs-slide-to="4"><img class="img4" src="../images/mamiferos/zorrillo/zorrillo4.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade4" data-bs-slide-to="5"><img class="img5" src="../images/mamiferos/zorrillo/zorrillo5.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade4" data-bs-slide-to="6"><img class="img6" src="../images/mamiferos/zorrillo/zorrillo6.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade4" data-bs-slide-to="7"><img class="img7" src="../images/mamiferos/zorrillo/zorrillo7.jfif" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade4" data-bs-slide-to="0"><img class="img0" src="../images/zorrillo.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade4" data-bs-slide-to="1"><img class="img1" src="../images/zorrillo1.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade4" data-bs-slide-to="2"><img class="img2" src="../images/zorrillo2.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade4" data-bs-slide-to="3"><img class="img3" src="../images/zorrillo3.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade4" data-bs-slide-to="4"><img class="img4" src="../images/zorrillo4.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade4" data-bs-slide-to="5"><img class="img5" src="../images/zorrillo5.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade4" data-bs-slide-to="6"><img class="img6" src="../images/zorrillo6.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade4" data-bs-slide-to="7"><img class="img7" src="../images/zorrillo7.jpg" alt="Imagen no encontrada"></a>
                         </div>
 
                     <il><h3 id="zorroCulpeo" class="cuerpo__titulo2"><a href="indice.html#zorroCulpeo">Zorro Culpeo</a></h3></il>
@@ -435,28 +471,28 @@
                         
                             <div id="carousel" class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="../images/mamiferos/zorroCulpeo/zorroCulpeo.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/zorroCulpeo.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/mamiferos/zorroCulpeo/zorroCulpeo1.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/zorroCulpeo1.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/mamiferos/zorroCulpeo/zorroCulpeo2.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/zorroCulpeo2.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/mamiferos/zorroCulpeo/zorroCulpeo3.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/zorroCulpeo3.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/mamiferos/zorroCulpeo/zorroCulpeo4.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/zorroCulpeo4.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/mamiferos/zorroCulpeo/zorroCulpeo5.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/zorroCulpeo5.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/mamiferos/zorroCulpeo/zorroCulpeo6.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/zorroCulpeo6.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/mamiferos/zorroCulpeo/zorroCulpeo7.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/zorroCulpeo7.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                             </div>
 
@@ -471,14 +507,14 @@
                         </div> 
 
                         <div class="cuerpo__imagenesGaleria">
-                            <a data-bs-target="#carouselExampleFade5" data-bs-slide-to="0"><img class="img0" src="../images/mamiferos/zorroCulpeo/zorroCulpeo.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade5" data-bs-slide-to="1"><img class="img1" src="../images/mamiferos/zorroCulpeo/zorroCulpeo1.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade5" data-bs-slide-to="2"><img class="img2" src="../images/mamiferos/zorroCulpeo/zorroCulpeo2.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade5" data-bs-slide-to="3"><img class="img3" src="../images/mamiferos/zorroCulpeo/zorroCulpeo3.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade5" data-bs-slide-to="4"><img class="img4" src="../images/mamiferos/zorroCulpeo/zorroCulpeo4.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade5" data-bs-slide-to="5"><img class="img5" src="../images/mamiferos/zorroCulpeo/zorroCulpeo5.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade5" data-bs-slide-to="6"><img class="img6" src="../images/mamiferos/zorroCulpeo/zorroCulpeo6.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade5" data-bs-slide-to="7"><img class="img7" src="../images/mamiferos/zorroCulpeo/zorroCulpeo7.jfif" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade5" data-bs-slide-to="0"><img class="img0" src="../images/zorroCulpeo.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade5" data-bs-slide-to="1"><img class="img1" src="../images/zorroCulpeo1.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade5" data-bs-slide-to="2"><img class="img2" src="../images/zorroCulpeo2.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade5" data-bs-slide-to="3"><img class="img3" src="../images/zorroCulpeo3.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade5" data-bs-slide-to="4"><img class="img4" src="../images/zorroCulpeo4.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade5" data-bs-slide-to="5"><img class="img5" src="../images/zorroCulpeo5.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade5" data-bs-slide-to="6"><img class="img6" src="../images/zorroCulpeo6.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade5" data-bs-slide-to="7"><img class="img7" src="../images/zorroCulpeo7.jpg" alt="Imagen no encontrada"></a>
                         </div>
                 </ul>
                 <h2 id="aves" class="cuerpo__titulo1">Aves</h2>
@@ -499,28 +535,28 @@
                         
                             <div id="carousel" class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="../images/aves/condor/condor.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/condor.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/aves/condor/condor1.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/condor1.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/aves/condor/condor2.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/condor2.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/aves/condor/condor3.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/condor3.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/aves/condor/condor4.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/condor4.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/aves/condor/condor5.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/condor5.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/aves/condor/condor6.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/condor6.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/aves/condor/condor7.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/condor7.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                             </div>
 
@@ -532,17 +568,17 @@
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Next</span>
                             </button>
-                        </div> 
-                    
+                        </div>
+        
                         <div class="cuerpo__imagenesGaleria">
-                            <a data-bs-target="#carouselExampleFade6" data-bs-slide-to="0"><img class="img0" src="../images/aves/condor/condor.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade6" data-bs-slide-to="1"><img class="img1" src="../images/aves/condor/condor1.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade6" data-bs-slide-to="2"><img class="img2" src="../images/aves/condor/condor2.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade6" data-bs-slide-to="3"><img class="img3" src="../images/aves/condor/condor3.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade6" data-bs-slide-to="4"><img class="img4" src="../images/aves/condor/condor4.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade6" data-bs-slide-to="5"><img class="img5" src="../images/aves/condor/condor5.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade6" data-bs-slide-to="6"><img class="img6" src="../images/aves/condor/condor6.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade6" data-bs-slide-to="7"><img class="img7" src="../images/aves/condor/condor7.jfif" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade6" data-bs-slide-to="0"><img class="img0" src="../images/condor.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade6" data-bs-slide-to="1"><img class="img1" src="../images/condor1.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade6" data-bs-slide-to="2"><img class="img2" src="../images/condor2.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade6" data-bs-slide-to="3"><img class="img3" src="../images/condor3.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade6" data-bs-slide-to="4"><img class="img4" src="../images/condor4.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade6" data-bs-slide-to="5"><img class="img5" src="../images/condor5.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade6" data-bs-slide-to="6"><img class="img6" src="../images/condor6.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade6" data-bs-slide-to="7"><img class="img7" src="../images/condor7.jpg" alt="Imagen no encontrada"></a>
                         </div>
                     <il><h3 id="gorrion" class="cuerpo__titulo2"><a href="indice.html#gorrion">Gorrión</h3></a></il>
                         
@@ -560,28 +596,28 @@
                         
                             <div id="carousel" class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="../images/aves/gorrion/gorrion.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/gorrion.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/aves/gorrion/gorrion1.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/gorrion1.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/aves/gorrion/gorrion2.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/gorrion2.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/aves/gorrion/gorrion3.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/gorrion3.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/aves/gorrion/gorrion4.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/gorrion4.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/aves/gorrion/gorrion5.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/gorrion5.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/aves/gorrion/gorrion6.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/gorrion6.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/aves/gorrion/gorrion7.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/gorrion7.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                             </div>
 
@@ -596,14 +632,14 @@
                         </div> 
                     
                         <div class="cuerpo__imagenesGaleria">
-                            <a data-bs-target="#carouselExampleFade7" data-bs-slide-to="0"><img class="img0" src="../images/aves/gorrion/gorrion.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade7" data-bs-slide-to="1"><img class="img1" src="../images/aves/gorrion/gorrion1.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade7" data-bs-slide-to="2"><img class="img2" src="../images/aves/gorrion/gorrion2.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade7" data-bs-slide-to="3"><img class="img3" src="../images/aves/gorrion/gorrion3.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade7" data-bs-slide-to="4"><img class="img4" src="../images/aves/gorrion/gorrion4.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade7" data-bs-slide-to="5"><img class="img5" src="../images/aves/gorrion/gorrion5.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade7" data-bs-slide-to="6"><img class="img6" src="../images/aves/gorrion/gorrion6.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade7" data-bs-slide-to="7"><img class="img7" src="../images/aves/gorrion/gorrion7.jfif" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade7" data-bs-slide-to="0"><img class="img0" src="../images/gorrion.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade7" data-bs-slide-to="1"><img class="img1" src="../images/gorrion1.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade7" data-bs-slide-to="2"><img class="img2" src="../images/gorrion2.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade7" data-bs-slide-to="3"><img class="img3" src="../images/gorrion3.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade7" data-bs-slide-to="4"><img class="img4" src="../images/gorrion4.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade7" data-bs-slide-to="5"><img class="img5" src="../images/gorrion5.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade7" data-bs-slide-to="6"><img class="img6" src="../images/gorrion6.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade7" data-bs-slide-to="7"><img class="img7" src="../images/gorrion7.jpg" alt="Imagen no encontrada"></a>
                         </div>
                     <il><h3 id="halconPeregrino" class="cuerpo__titulo2"><a href="indice.html#halconPeregrino">Halcón Peregrino</h3></a></il>
                         
@@ -621,28 +657,28 @@
                         
                             <div id="carousel" class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="../images/aves/halconPeregrino/halconPeregrino.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/halconPeregrino.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/aves/halconPeregrino/halconPeregrino1.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/halconPeregrino1.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/aves/halconPeregrino/halconPeregrino2.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/halconPeregrino2.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/aves/halconPeregrino/halconPeregrino3.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/halconPeregrino3.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/aves/halconPeregrino/halconPeregrino4.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/halconPeregrino4.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/aves/halconPeregrino/halconPeregrino5.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/halconPeregrino5.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/aves/halconPeregrino/halconPeregrino6.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/halconPeregrino6.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/aves/halconPeregrino/halconPeregrino7.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/halconPeregrino7.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                             </div>
 
@@ -657,14 +693,14 @@
                         </div> 
                     
                         <div class="cuerpo__imagenesGaleria">
-                            <a data-bs-target="#carouselExampleFade8" data-bs-slide-to="0"><img class="img0" src="../images/aves/halconPeregrino/halconPeregrino.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade8" data-bs-slide-to="1"><img class="img1" src="../images/aves/halconPeregrino/halconPeregrino1.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade8" data-bs-slide-to="2"><img class="img2" src="../images/aves/halconPeregrino/halconPeregrino2.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade8" data-bs-slide-to="3"><img class="img3" src="../images/aves/halconPeregrino/halconPeregrino3.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade8" data-bs-slide-to="4"><img class="img4" src="../images/aves/halconPeregrino/halconPeregrino4.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade8" data-bs-slide-to="5"><img class="img5" src="../images/aves/halconPeregrino/halconPeregrino5.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade8" data-bs-slide-to="6"><img class="img6" src="../images/aves/halconPeregrino/halconPeregrino6.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade8" data-bs-slide-to="7"><img class="img7" src="../images/aves/halconPeregrino/halconPeregrino7.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade8" data-bs-slide-to="0"><img class="img0" src="../images/halconPeregrino.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade8" data-bs-slide-to="1"><img class="img1" src="../images/halconPeregrino1.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade8" data-bs-slide-to="2"><img class="img2" src="../images/halconPeregrino2.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade8" data-bs-slide-to="3"><img class="img3" src="../images/halconPeregrino3.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade8" data-bs-slide-to="4"><img class="img4" src="../images/halconPeregrino4.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade8" data-bs-slide-to="5"><img class="img5" src="../images/halconPeregrino5.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade8" data-bs-slide-to="6"><img class="img6" src="../images/halconPeregrino6.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade8" data-bs-slide-to="7"><img class="img7" src="../images/halconPeregrino7.jpg" alt="Imagen no encontrada"></a>
                         </div>
                     <il><h3 id="paloma" class="cuerpo__titulo2"><a href="indice.html#paloma">Paloma</h3></a></il>
                         
@@ -682,28 +718,28 @@
                         
                             <div id="carousel" class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="../images/aves/paloma/paloma.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/paloma.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/aves/paloma/paloma1.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/paloma1.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/aves/paloma/paloma2.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/paloma2.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/aves/paloma/paloma3.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/paloma3.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/aves/paloma/paloma4.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/paloma4.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/aves/paloma/paloma5.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/paloma5.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/aves/paloma/paloma6.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/paloma6.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/aves/paloma/paloma7.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/paloma7.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                             </div>
 
@@ -718,14 +754,14 @@
                         </div> 
                     
                         <div class="cuerpo__imagenesGaleria">
-                            <a data-bs-target="#carouselExampleFade9" data-bs-slide-to="0"><img class="img0" src="../images/aves/paloma/paloma.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade9" data-bs-slide-to="1"><img class="img1" src="../images/aves/paloma/paloma1.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade9" data-bs-slide-to="2"><img class="img2" src="../images/aves/paloma/paloma2.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade9" data-bs-slide-to="3"><img class="img3" src="../images/aves/paloma/paloma3.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade9" data-bs-slide-to="4"><img class="img4" src="../images/aves/paloma/paloma4.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade9" data-bs-slide-to="5"><img class="img5" src="../images/aves/paloma/paloma5.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade9" data-bs-slide-to="6"><img class="img6" src="../images/aves/paloma/paloma6.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade9" data-bs-slide-to="7"><img class="img7" src="../images/aves/paloma/paloma7.jfif" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade9" data-bs-slide-to="0"><img class="img0" src="../images/paloma.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade9" data-bs-slide-to="1"><img class="img1" src="../images/paloma1.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade9" data-bs-slide-to="2"><img class="img2" src="../images/paloma2.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade9" data-bs-slide-to="3"><img class="img3" src="../images/paloma3.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade9" data-bs-slide-to="4"><img class="img4" src="../images/paloma4.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade9" data-bs-slide-to="5"><img class="img5" src="../images/paloma5.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade9" data-bs-slide-to="6"><img class="img6" src="../images/paloma6.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade9" data-bs-slide-to="7"><img class="img7" src="../images/paloma7.jpg" alt="Imagen no encontrada"></a>
                         </div>
                     <il><h3 id="tijereta" class="cuerpo__titulo2"><a href="indice.html#tijereta">Tijereta</h3></a></il>
                         
@@ -743,28 +779,28 @@
                         
                             <div id="carousel" class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="../images/aves/tijereta/tijereta.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/tijereta.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/aves/tijereta/tijereta1.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/tijereta1.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/aves/tijereta/tijereta2.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/tijereta2.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/aves/tijereta/tijereta3.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/tijereta3.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/aves/tijereta/tijereta4.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/tijereta4.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/aves/tijereta/tijereta5.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/tijereta5.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/aves/tijereta/tijereta6.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/tijereta6.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/aves/tijereta/tijereta7.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/tijereta7.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                             </div>
 
@@ -779,14 +815,14 @@
                         </div> 
                     
                         <div class="cuerpo__imagenesGaleria">
-                            <a data-bs-target="#carouselExampleFade10" data-bs-slide-to="0"><img class="img0" src="../images/aves/tijereta/tijereta.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade10" data-bs-slide-to="1"><img class="img1" src="../images/aves/tijereta/tijereta1.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade10" data-bs-slide-to="2"><img class="img2" src="../images/aves/tijereta/tijereta2.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade10" data-bs-slide-to="3"><img class="img3" src="../images/aves/tijereta/tijereta3.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade10" data-bs-slide-to="4"><img class="img4" src="../images/aves/tijereta/tijereta4.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade10" data-bs-slide-to="5"><img class="img5" src="../images/aves/tijereta/tijereta5.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade10" data-bs-slide-to="6"><img class="img6" src="../images/aves/tijereta/tijereta6.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade10" data-bs-slide-to="7"><img class="img7" src="../images/aves/tijereta/tijereta7.jfif" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade10" data-bs-slide-to="0"><img class="img0" src="../images/tijereta.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade10" data-bs-slide-to="1"><img class="img1" src="../images/tijereta1.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade10" data-bs-slide-to="2"><img class="img2" src="../images/tijereta2.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade10" data-bs-slide-to="3"><img class="img3" src="../images/tijereta3.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade10" data-bs-slide-to="4"><img class="img4" src="../images/tijereta4.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade10" data-bs-slide-to="5"><img class="img5" src="../images/tijereta5.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade10" data-bs-slide-to="6"><img class="img6" src="../images/tijereta6.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade10" data-bs-slide-to="7"><img class="img7" src="../images/tijereta7.jpg" alt="Imagen no encontrada"></a>
                         </div>
                 </ul>
                 <h2 id="repanf" class="cuerpo__titulo1">Reptiles/Anfibios</h2>
@@ -807,28 +843,28 @@
                         
                             <div id="carousel" class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="../images/reptiles/cascabelAustral/cascabelAustral.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/cascabelAustral.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/reptiles/cascabelAustral/cascabelAustral1.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/cascabelAustral1.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/reptiles/cascabelAustral/cascabelAustral2.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/cascabelAustral2.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/reptiles/cascabelAustral/cascabelAustral3.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/cascabelAustral3.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/reptiles/cascabelAustral/cascabelAustral4.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/cascabelAustral4.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/reptiles/cascabelAustral/cascabelAustral5.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/cascabelAustral5.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/reptiles/cascabelAustral/cascabelAustral6.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/cascabelAustral6.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/reptiles/cascabelAustral/cascabelAustral7.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/cascabelAustral7.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                             </div>
 
@@ -843,14 +879,14 @@
                         </div> 
 
                         <div class="cuerpo__imagenesGaleria">
-                            <a data-bs-target="#carouselExampleFade11" data-bs-slide-to="0"><img class="img0" src="../images/reptiles/cascabelAustral/cascabelAustral.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade11" data-bs-slide-to="1"><img class="img1" src="../images/reptiles/cascabelAustral/cascabelAustral1.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade11" data-bs-slide-to="2"><img class="img2" src="../images/reptiles/cascabelAustral/cascabelAustral2.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade11" data-bs-slide-to="3"><img class="img3" src="../images/reptiles/cascabelAustral/cascabelAustral3.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade11" data-bs-slide-to="4"><img class="img4" src="../images/reptiles/cascabelAustral/cascabelAustral4.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade11" data-bs-slide-to="5"><img class="img5" src="../images/reptiles/cascabelAustral/cascabelAustral5.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade11" data-bs-slide-to="6"><img class="img6" src="../images/reptiles/cascabelAustral/cascabelAustral6.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade11" data-bs-slide-to="7"><img class="img7" src="../images/reptiles/cascabelAustral/cascabelAustral7.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade11" data-bs-slide-to="0"><img class="img0" src="../images/cascabelAustral.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade11" data-bs-slide-to="1"><img class="img1" src="../images/cascabelAustral1.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade11" data-bs-slide-to="2"><img class="img2" src="../images/cascabelAustral2.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade11" data-bs-slide-to="3"><img class="img3" src="../images/cascabelAustral3.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade11" data-bs-slide-to="4"><img class="img4" src="../images/cascabelAustral4.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade11" data-bs-slide-to="5"><img class="img5" src="../images/cascabelAustral5.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade11" data-bs-slide-to="6"><img class="img6" src="../images/cascabelAustral6.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade11" data-bs-slide-to="7"><img class="img7" src="../images/cascabelAustral7.jpg" alt="Imagen no encontrada"></a>
                         </div>
                     <il><h3 id="coralArgentina" class="cuerpo__titulo2"><a href="indice.html#coralArgentina">Coral Argentina</h3></a></il>
                         
@@ -868,28 +904,28 @@
                         
                             <div id="carousel" class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="../images/reptiles/coralArgentina/coralArgentina.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/coralArgentina.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/reptiles/coralArgentina/coralArgentina1.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/coralArgentina1.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/reptiles/coralArgentina/coralArgentina2.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/coralArgentina2.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/reptiles/coralArgentina/coralArgentina3.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/coralArgentina3.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/reptiles/coralArgentina/coralArgentina4.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/coralArgentina4.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/reptiles/coralArgentina/coralArgentina5.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/coralArgentina5.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/reptiles/coralArgentina/coralArgentina6.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/coralArgentina6.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/reptiles/coralArgentina/coralArgentina7.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/coralArgentina7.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                             </div>
 
@@ -904,14 +940,14 @@
                         </div> 
                     
                         <div class="cuerpo__imagenesGaleria">
-                            <a data-bs-target="#carouselExampleFade12" data-bs-slide-to="0"><img class="img0" src="../images/reptiles/coralArgentina/coralArgentina.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade12" data-bs-slide-to="1"><img class="img1" src="../images/reptiles/coralArgentina/coralArgentina1.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade12" data-bs-slide-to="2"><img class="img2" src="../images/reptiles/coralArgentina/coralArgentina2.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade12" data-bs-slide-to="3"><img class="img3" src="../images/reptiles/coralArgentina/coralArgentina3.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade12" data-bs-slide-to="4"><img class="img4" src="../images/reptiles/coralArgentina/coralArgentina4.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade12" data-bs-slide-to="5"><img class="img5" src="../images/reptiles/coralArgentina/coralArgentina5.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade12" data-bs-slide-to="6"><img class="img6" src="../images/reptiles/coralArgentina/coralArgentina6.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade12" data-bs-slide-to="7"><img class="img7" src="../images/reptiles/coralArgentina/coralArgentina7.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade12" data-bs-slide-to="0"><img class="img0" src="../images/coralArgentina.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade12" data-bs-slide-to="1"><img class="img1" src="../images/coralArgentina1.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade12" data-bs-slide-to="2"><img class="img2" src="../images/coralArgentina2.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade12" data-bs-slide-to="3"><img class="img3" src="../images/coralArgentina3.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade12" data-bs-slide-to="4"><img class="img4" src="../images/coralArgentina4.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade12" data-bs-slide-to="5"><img class="img5" src="../images/coralArgentina5.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade12" data-bs-slide-to="6"><img class="img6" src="../images/coralArgentina6.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade12" data-bs-slide-to="7"><img class="img7" src="../images/coralArgentina7.jpg" alt="Imagen no encontrada"></a>
                         </div>
                     <il><h3 id="geckoSalamanca" class="cuerpo__titulo2"><a href="indice.html#geckoSalamanca">Gecko Salamanca</h3></a></il>
                         
@@ -929,28 +965,28 @@
                         
                             <div id="carousel" class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="../images/reptiles/geckoSalamanca/geckoSalamanca.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/geckoSalamanca.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/reptiles/geckoSalamanca/geckoSalamanca1.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/geckoSalamanca1.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/reptiles/geckoSalamanca/geckoSalamanca2.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/geckoSalamanca2.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/reptiles/geckoSalamanca/geckoSalamanca3.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/geckoSalamanca3.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/reptiles/geckoSalamanca/geckoSalamanca4.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/geckoSalamanca4.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/reptiles/geckoSalamanca/geckoSalamanca5.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/geckoSalamanca5.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/reptiles/geckoSalamanca/geckoSalamanca6.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/geckoSalamanca6.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/reptiles/geckoSalamanca/geckoSalamanca7.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/geckoSalamanca7.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                             </div>
 
@@ -965,14 +1001,14 @@
                         </div> 
                     
                         <div class="cuerpo__imagenesGaleria">
-                            <a data-bs-target="#carouselExampleFade13" data-bs-slide-to="0"><img class="img0" src="../images/reptiles/geckoSalamanca/geckoSalamanca.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade13" data-bs-slide-to="1"><img class="img1" src="../images/reptiles/geckoSalamanca/geckoSalamanca1.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade13" data-bs-slide-to="2"><img class="img2" src="../images/reptiles/geckoSalamanca/geckoSalamanca2.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade13" data-bs-slide-to="3"><img class="img3" src="../images/reptiles/geckoSalamanca/geckoSalamanca3.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade13" data-bs-slide-to="4"><img class="img4" src="../images/reptiles/geckoSalamanca/geckoSalamanca4.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade13" data-bs-slide-to="5"><img class="img5" src="../images/reptiles/geckoSalamanca/geckoSalamanca5.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade13" data-bs-slide-to="6"><img class="img6" src="../images/reptiles/geckoSalamanca/geckoSalamanca6.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade13" data-bs-slide-to="7"><img class="img7" src="../images/reptiles/geckoSalamanca/geckoSalamanca7.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade13" data-bs-slide-to="0"><img class="img0" src="../images/geckoSalamanca.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade13" data-bs-slide-to="1"><img class="img1" src="../images/geckoSalamanca1.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade13" data-bs-slide-to="2"><img class="img2" src="../images/geckoSalamanca2.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade13" data-bs-slide-to="3"><img class="img3" src="../images/geckoSalamanca3.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade13" data-bs-slide-to="4"><img class="img4" src="../images/geckoSalamanca4.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade13" data-bs-slide-to="5"><img class="img5" src="../images/geckoSalamanca5.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade13" data-bs-slide-to="6"><img class="img6" src="../images/geckoSalamanca6.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade13" data-bs-slide-to="7"><img class="img7" src="../images/geckoSalamanca7.jpg" alt="Imagen no encontrada"></a>
                         </div>
                     <il><h3 id="tortugaPintada" class="cuerpo__titulo2"><a href="indice.html#tortugaPintada">Tortuga Pintada</h3></a></il>
                         
@@ -990,28 +1026,28 @@
                         
                             <div id="carousel" class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="../images/reptiles/tortugaPintada/tortugaPintada.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/tortugaPintada.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/reptiles/tortugaPintada/tortugaPintada1.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/tortugaPintada1.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/reptiles/tortugaPintada/tortugaPintada2.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/tortugaPintada2.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/reptiles/tortugaPintada/tortugaPintada3.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/tortugaPintada3.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/reptiles/tortugaPintada/tortugaPintada4.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/tortugaPintada4.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/reptiles/tortugaPintada/tortugaPintada5.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/tortugaPintada5.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/reptiles/tortugaPintada/tortugaPintada6.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/tortugaPintada6.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/reptiles/tortugaPintada/tortugaPintada7.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/tortugaPintada7.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                             </div>
 
@@ -1026,14 +1062,14 @@
                         </div> 
                     
                         <div class="cuerpo__imagenesGaleria">
-                            <a data-bs-target="#carouselExampleFade14" data-bs-slide-to="0"><img class="img0" src="../images/reptiles/tortugaPintada/tortugaPintada.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade14" data-bs-slide-to="1"><img class="img1" src="../images/reptiles/tortugaPintada/tortugaPintada1.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade14" data-bs-slide-to="2"><img class="img2" src="../images/reptiles/tortugaPintada/tortugaPintada2.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade14" data-bs-slide-to="3"><img class="img3" src="../images/reptiles/tortugaPintada/tortugaPintada3.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade14" data-bs-slide-to="4"><img class="img4" src="../images/reptiles/tortugaPintada/tortugaPintada4.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade14" data-bs-slide-to="5"><img class="img5" src="../images/reptiles/tortugaPintada/tortugaPintada5.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade14" data-bs-slide-to="6"><img class="img6" src="../images/reptiles/tortugaPintada/tortugaPintada6.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade14" data-bs-slide-to="7"><img class="img7" src="../images/reptiles/tortugaPintada/tortugaPintada7.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade14" data-bs-slide-to="0"><img class="img0" src="../images/tortugaPintada.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade14" data-bs-slide-to="1"><img class="img1" src="../images/tortugaPintada1.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade14" data-bs-slide-to="2"><img class="img2" src="../images/tortugaPintada2.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade14" data-bs-slide-to="3"><img class="img3" src="../images/tortugaPintada3.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade14" data-bs-slide-to="4"><img class="img4" src="../images/tortugaPintada4.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade14" data-bs-slide-to="5"><img class="img5" src="../images/tortugaPintada5.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade14" data-bs-slide-to="6"><img class="img6" src="../images/tortugaPintada6.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade14" data-bs-slide-to="7"><img class="img7" src="../images/tortugaPintada7.jpg" alt="Imagen no encontrada"></a>
                         </div>
                     <il><h3 id="tortugaTerrestreArgentina" class="cuerpo__titulo2"><a href="indice.html#tortugaTerrestreArgentina">Tortuga Terrestre Argentina</h3></a></il>
                         
@@ -1051,28 +1087,28 @@
                         
                             <div id="carousel" class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="../images/reptiles/tortugaTerrestreArgentina/tortugaTerrestreArgentina.JPG" class="d-block w-100" alt="...">
+                                    <img src="../images/tortugaTerrestreArgentina.JPG" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/reptiles/tortugaTerrestreArgentina/tortugaTerrestreArgentina1.JPG" class="d-block w-100" alt="...">
+                                    <img src="../images/tortugaTerrestreArgentina1.JPG" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/reptiles/tortugaTerrestreArgentina/tortugaTerrestreArgentina2.JPG" class="d-block w-100" alt="...">
+                                    <img src="../images/tortugaTerrestreArgentina2.JPG" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/reptiles/tortugaTerrestreArgentina/tortugaTerrestreArgentina3.JPG" class="d-block w-100" alt="...">
+                                    <img src="../images/tortugaTerrestreArgentina3.JPG" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/reptiles/tortugaTerrestreArgentina/tortugaTerrestreArgentina4.JPG" class="d-block w-100" alt="...">
+                                    <img src="../images/tortugaTerrestreArgentina4.JPG" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/reptiles/tortugaTerrestreArgentina/tortugaTerrestreArgentina5.JPG" class="d-block w-100" alt="...">
+                                    <img src="../images/tortugaTerrestreArgentina5.JPG" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/reptiles/tortugaTerrestreArgentina/tortugaTerrestreArgentina6.JPG" class="d-block w-100" alt="...">
+                                    <img src="../images/tortugaTerrestreArgentina6.JPG" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/reptiles/tortugaTerrestreArgentina/tortugaTerrestreArgentina7.JPG" class="d-block w-100" alt="...">
+                                    <img src="../images/tortugaTerrestreArgentina7.JPG" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                             </div>
 
@@ -1087,14 +1123,14 @@
                         </div> 
                     
                         <div class="cuerpo__imagenesGaleria">
-                            <a data-bs-target="#carouselExampleFade15" data-bs-slide-to="0"><img class="img0" src="../images/reptiles/tortugaTerrestreArgentina/tortugaTerrestreArgentina.JPG" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade15" data-bs-slide-to="1"><img class="img1" src="../images/reptiles/tortugaTerrestreArgentina/tortugaTerrestreArgentina1.JPG" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade15" data-bs-slide-to="2"><img class="img2" src="../images/reptiles/tortugaTerrestreArgentina/tortugaTerrestreArgentina2.JPG" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade15" data-bs-slide-to="3"><img class="img3" src="../images/reptiles/tortugaTerrestreArgentina/tortugaTerrestreArgentina3.JPG" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade15" data-bs-slide-to="4"><img class="img4" src="../images/reptiles/tortugaTerrestreArgentina/tortugaTerrestreArgentina4.JPG" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade15" data-bs-slide-to="5"><img class="img5" src="../images/reptiles/tortugaTerrestreArgentina/tortugaTerrestreArgentina5.JPG" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade15" data-bs-slide-to="6"><img class="img6" src="../images/reptiles/tortugaTerrestreArgentina/tortugaTerrestreArgentina6.JPG" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade15" data-bs-slide-to="7"><img class="img7" src="../images/reptiles/tortugaTerrestreArgentina/tortugaTerrestreArgentina7.JPG" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade15" data-bs-slide-to="0"><img class="img0" src="../images/tortugaTerrestreArgentina.JPG" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade15" data-bs-slide-to="1"><img class="img1" src="../images/tortugaTerrestreArgentina1.JPG" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade15" data-bs-slide-to="2"><img class="img2" src="../images/tortugaTerrestreArgentina2.JPG" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade15" data-bs-slide-to="3"><img class="img3" src="../images/tortugaTerrestreArgentina3.JPG" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade15" data-bs-slide-to="4"><img class="img4" src="../images/tortugaTerrestreArgentina4.JPG" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade15" data-bs-slide-to="5"><img class="img5" src="../images/tortugaTerrestreArgentina5.JPG" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade15" data-bs-slide-to="6"><img class="img6" src="../images/tortugaTerrestreArgentina6.JPG" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade15" data-bs-slide-to="7"><img class="img7" src="../images/tortugaTerrestreArgentina7.JPG" alt="Imagen no encontrada"></a>
                         </div>
                 </ul>
                 <h2 id="insectos" class="cuerpo__titulo1">Insectos</h2>
@@ -1115,28 +1151,28 @@
                         
                             <div id="carousel" class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="../images/insectos/camoati/camoati.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/camoati.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/insectos/camoati/camoati1.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/camoati1.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/insectos/camoati/camoati2.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/camoati2.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/insectos/camoati/camoati3.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/camoati3.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/insectos/camoati/camoati4.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/camoati4.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/insectos/camoati/camoati5.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/camoati5.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/insectos/camoati/camoati6.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/camoati6.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/insectos/camoati/camoati7.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/camoati7.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                             </div>
 
@@ -1151,14 +1187,14 @@
                         </div> 
                     
                         <div class="cuerpo__imagenesGaleria">
-                            <a data-bs-target="#carouselExampleFade16" data-bs-slide-to="0"><img class="img0" src="../images/insectos/camoati/camoati.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade16" data-bs-slide-to="1"><img class="img1" src="../images/insectos/camoati/camoati1.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade16" data-bs-slide-to="2"><img class="img2" src="../images/insectos/camoati/camoati2.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade16" data-bs-slide-to="3"><img class="img3" src="../images/insectos/camoati/camoati3.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade16" data-bs-slide-to="4"><img class="img4" src="../images/insectos/camoati/camoati4.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade16" data-bs-slide-to="5"><img class="img5" src="../images/insectos/camoati/camoati5.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade16" data-bs-slide-to="6"><img class="img6" src="../images/insectos/camoati/camoati6.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade16" data-bs-slide-to="7"><img class="img7" src="../images/insectos/camoati/camoati7.jfif" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade16" data-bs-slide-to="0"><img class="img0" src="../images/camoati.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade16" data-bs-slide-to="1"><img class="img1" src="../images/camoati1.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade16" data-bs-slide-to="2"><img class="img2" src="../images/camoati2.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade16" data-bs-slide-to="3"><img class="img3" src="../images/camoati3.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade16" data-bs-slide-to="4"><img class="img4" src="../images/camoati4.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade16" data-bs-slide-to="5"><img class="img5" src="../images/camoati5.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade16" data-bs-slide-to="6"><img class="img6" src="../images/camoati6.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade16" data-bs-slide-to="7"><img class="img7" src="../images/camoati7.jpg" alt="Imagen no encontrada"></a>
                         </div>
                     <il><h3 id="hormigaRojaArgentina" class="cuerpo__titulo2"><a href="indice.html#hormigaRojaArgentina">Hormiga Roja Argentina</h3></a></il>
                         
@@ -1176,28 +1212,28 @@
                         
                             <div id="carousel" class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="../images/insectos/hormigaRojaArgentina/hormigaRojaArgentina.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/hormigaRojaArgentina.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/insectos/hormigaRojaArgentina/hormigaRojaArgentina1.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/hormigaRojaArgentina1.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/insectos/hormigaRojaArgentina/hormigaRojaArgentina2.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/hormigaRojaArgentina2.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/insectos/hormigaRojaArgentina/hormigaRojaArgentina3.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/hormigaRojaArgentina3.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/insectos/hormigaRojaArgentina/hormigaRojaArgentina4.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/hormigaRojaArgentina4.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/insectos/hormigaRojaArgentina/hormigaRojaArgentina5.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/hormigaRojaArgentina5.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/insectos/hormigaRojaArgentina/hormigaRojaArgentina6.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/hormigaRojaArgentina6.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/insectos/hormigaRojaArgentina/hormigaRojaArgentina7.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/hormigaRojaArgentina7.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                             </div>
 
@@ -1212,14 +1248,14 @@
                         </div> 
                     
                         <div class="cuerpo__imagenesGaleria">
-                            <a data-bs-target="#carouselExampleFade17" data-bs-slide-to="0"><img class="img0" src="../images/insectos/hormigaRojaArgentina/hormigaRojaArgentina.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade17" data-bs-slide-to="1"><img class="img1" src="../images/insectos/hormigaRojaArgentina/hormigaRojaArgentina1.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade17" data-bs-slide-to="2"><img class="img2" src="../images/insectos/hormigaRojaArgentina/hormigaRojaArgentina2.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade17" data-bs-slide-to="3"><img class="img3" src="../images/insectos/hormigaRojaArgentina/hormigaRojaArgentina3.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade17" data-bs-slide-to="4"><img class="img4" src="../images/insectos/hormigaRojaArgentina/hormigaRojaArgentina4.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade17" data-bs-slide-to="5"><img class="img5" src="../images/insectos/hormigaRojaArgentina/hormigaRojaArgentina5.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade17" data-bs-slide-to="6"><img class="img6" src="../images/insectos/hormigaRojaArgentina/hormigaRojaArgentina6.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade17" data-bs-slide-to="7"><img class="img7" src="../images/insectos/hormigaRojaArgentina/hormigaRojaArgentina7.jfif" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade17" data-bs-slide-to="0"><img class="img0" src="../images/hormigaRojaArgentina.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade17" data-bs-slide-to="1"><img class="img1" src="../images/hormigaRojaArgentina1.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade17" data-bs-slide-to="2"><img class="img2" src="../images/hormigaRojaArgentina2.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade17" data-bs-slide-to="3"><img class="img3" src="../images/hormigaRojaArgentina3.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade17" data-bs-slide-to="4"><img class="img4" src="../images/hormigaRojaArgentina4.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade17" data-bs-slide-to="5"><img class="img5" src="../images/hormigaRojaArgentina5.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade17" data-bs-slide-to="6"><img class="img6" src="../images/hormigaRojaArgentina6.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade17" data-bs-slide-to="7"><img class="img7" src="../images/hormigaRojaArgentina7.jpg" alt="Imagen no encontrada"></a>
                         </div>
                     <il><h3 id="moscaDomestica" class="cuerpo__titulo2"><a href="indice.html#moscaDomestica">Mosca Doméstica</h3></a></il>
                         
@@ -1237,28 +1273,28 @@
                         
                             <div id="carousel" class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="../images/insectos/moscaDomestica/moscaDomestica.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/moscaDomestica.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/insectos/moscaDomestica/moscaDomestica1.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/moscaDomestica1.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/insectos/moscaDomestica/moscaDomestica2.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/moscaDomestica2.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/insectos/moscaDomestica/moscaDomestica3.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/moscaDomestica3.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/insectos/moscaDomestica/moscaDomestica4.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/moscaDomestica4.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/insectos/moscaDomestica/moscaDomestica5.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/moscaDomestica5.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/insectos/moscaDomestica/moscaDomestica6.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/moscaDomestica6.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/insectos/moscaDomestica/moscaDomestica6.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/moscaDomestica7.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                             </div>
 
@@ -1273,14 +1309,14 @@
                         </div> 
 
                         <div class="cuerpo__imagenesGaleria">
-                            <a data-bs-target="#carouselExampleFade18" data-bs-slide-to="0"><img class="img0" src="../images/insectos/moscaDomestica/moscaDomestica.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade18" data-bs-slide-to="1"><img class="img1" src="../images/insectos/moscaDomestica/moscaDomestica1.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade18" data-bs-slide-to="2"><img class="img2" src="../images/insectos/moscaDomestica/moscaDomestica2.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade18" data-bs-slide-to="3"><img class="img3" src="../images/insectos/moscaDomestica/moscaDomestica3.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade18" data-bs-slide-to="4"><img class="img4" src="../images/insectos/moscaDomestica/moscaDomestica4.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade18" data-bs-slide-to="5"><img class="img5" src="../images/insectos/moscaDomestica/moscaDomestica5.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade18" data-bs-slide-to="6"><img class="img6" src="../images/insectos/moscaDomestica/moscaDomestica6.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade18" data-bs-slide-to="7"><img class="img7" src="../images/insectos/moscaDomestica/moscaDomestica7.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade18" data-bs-slide-to="0"><img class="img0" src="../images/moscaDomestica.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade18" data-bs-slide-to="1"><img class="img1" src="../images/moscaDomestica1.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade18" data-bs-slide-to="2"><img class="img2" src="../images/moscaDomestica2.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade18" data-bs-slide-to="3"><img class="img3" src="../images/moscaDomestica3.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade18" data-bs-slide-to="4"><img class="img4" src="../images/moscaDomestica4.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade18" data-bs-slide-to="5"><img class="img5" src="../images/moscaDomestica5.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade18" data-bs-slide-to="6"><img class="img6" src="../images/moscaDomestica6.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade18" data-bs-slide-to="7"><img class="img7" src="../images/moscaDomestica7.jpg" alt="Imagen no encontrada"></a>
                         </div>
                     <il><h3 id="mosquitoComun" class="cuerpo__titulo2"><a href="indice.html#mosquitoComun">Mosquito Común</h3></a></il>
                         
@@ -1298,28 +1334,28 @@
                         
                             <div id="carousel" class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="../images/insectos/mosquitoComun/mosquitoComun.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/mosquitoComun.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/insectos/mosquitoComun/mosquitoComun1.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/mosquitoComun1.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/insectos/mosquitoComun/mosquitoComun2.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/mosquitoComun2.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/insectos/mosquitoComun/mosquitoComun3.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/mosquitoComun3.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/insectos/mosquitoComun/mosquitoComun4.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/mosquitoComun4.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/insectos/mosquitoComun/mosquitoComun5.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/mosquitoComun5.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/insectos/mosquitoComun/mosquitoComun6.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/mosquitoComun6.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/insectos/mosquitoComun/mosquitoComun7.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/mosquitoComun7.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                             </div>
 
@@ -1334,14 +1370,14 @@
                         </div> 
                     
                         <div class="cuerpo__imagenesGaleria">
-                            <a data-bs-target="#carouselExampleFade19" data-bs-slide-to="0"><img class="img0" src="../images/insectos/mosquitoComun/mosquitoComun.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade19" data-bs-slide-to="1"><img class="img1" src="../images/insectos/mosquitoComun/mosquitoComun1.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade19" data-bs-slide-to="2"><img class="img2" src="../images/insectos/mosquitoComun/mosquitoComun2.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade19" data-bs-slide-to="3"><img class="img3" src="../images/insectos/mosquitoComun/mosquitoComun3.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade19" data-bs-slide-to="4"><img class="img4" src="../images/insectos/mosquitoComun/mosquitoComun4.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade19" data-bs-slide-to="5"><img class="img5" src="../images/insectos/mosquitoComun/mosquitoComun5.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade19" data-bs-slide-to="6"><img class="img6" src="../images/insectos/mosquitoComun/mosquitoComun6.jpg" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade19" data-bs-slide-to="7"><img class="img7" src="../images/insectos/mosquitoComun/mosquitoComun7.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade19" data-bs-slide-to="0"><img class="img0" src="../images/mosquitoComun.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade19" data-bs-slide-to="1"><img class="img1" src="../images/mosquitoComun1.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade19" data-bs-slide-to="2"><img class="img2" src="../images/mosquitoComun2.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade19" data-bs-slide-to="3"><img class="img3" src="../images/mosquitoComun3.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade19" data-bs-slide-to="4"><img class="img4" src="../images/mosquitoComun4.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade19" data-bs-slide-to="5"><img class="img5" src="../images/mosquitoComun5.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade19" data-bs-slide-to="6"><img class="img6" src="../images/mosquitoComun6.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade19" data-bs-slide-to="7"><img class="img7" src="../images/mosquitoComun7.jpg" alt="Imagen no encontrada"></a>
                         </div>
                     <il><h3 id="vinchuca" class="cuerpo__titulo2"><a href="indice.html#vinchuca">Vinchuca</h3></a></il>
                         
@@ -1359,28 +1395,28 @@
                         
                             <div id="carousel" class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="../images/insectos/vinchuca/vinchuca.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/vinchuca.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/insectos/vinchuca/vinchuca1.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/vinchuca1.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/insectos/vinchuca/vinchuca2.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/vinchuca2.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/insectos/vinchuca/vinchuca3.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/vinchuca3.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/insectos/vinchuca/vinchuca4.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/vinchuca4.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/insectos/vinchuca/vinchuca5.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/vinchuca5.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/insectos/vinchuca/vinchuca6.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/vinchuca6.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/insectos/vinchuca/vinchuca7.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/vinchuca7.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                             </div>
 
@@ -1395,14 +1431,14 @@
                         </div> 
                     
                         <div class="cuerpo__imagenesGaleria">
-                            <a data-bs-target="#carouselExampleFade20" data-bs-slide-to="0"><img class="img0" src="../images/insectos/vinchuca/vinchuca.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade20" data-bs-slide-to="1"><img class="img1" src="../images/insectos/vinchuca/vinchuca1.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade20" data-bs-slide-to="2"><img class="img2" src="../images/insectos/vinchuca/vinchuca2.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade20" data-bs-slide-to="3"><img class="img3" src="../images/insectos/vinchuca/vinchuca3.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade20" data-bs-slide-to="4"><img class="img4" src="../images/insectos/vinchuca/vinchuca4.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade20" data-bs-slide-to="5"><img class="img5" src="../images/insectos/vinchuca/vinchuca5.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade20" data-bs-slide-to="6"><img class="img6" src="../images/insectos/vinchuca/vinchuca6.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade20" data-bs-slide-to="7"><img class="img7" src="../images/insectos/vinchuca/vinchuca7.jfif" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade20" data-bs-slide-to="0"><img class="img0" src="../images/vinchuca.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade20" data-bs-slide-to="1"><img class="img1" src="../images/vinchuca1.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade20" data-bs-slide-to="2"><img class="img2" src="../images/vinchuca2.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade20" data-bs-slide-to="3"><img class="img3" src="../images/vinchuca3.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade20" data-bs-slide-to="4"><img class="img4" src="../images/vinchuca4.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade20" data-bs-slide-to="5"><img class="img5" src="../images/vinchuca5.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade20" data-bs-slide-to="6"><img class="img6" src="../images/vinchuca6.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade20" data-bs-slide-to="7"><img class="img7" src="../images/vinchuca7.jpg" alt="Imagen no encontrada"></a>
                         </div>
                 </ul>
                 <h2 id="peces" class="cuerpo__titulo1">Peces</h2>
@@ -1423,28 +1459,28 @@
                         
                             <div id="carousel" class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="../images/peces/carpa/carpa.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/carpa.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/peces/carpa/carpa1.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/carpa1.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/peces/carpa/carpa2.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/carpa2.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/peces/carpa/carpa3.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/carpa3.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/peces/carpa/carpa4.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/carpa4.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/peces/carpa/carpa5.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/carpa5.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/peces/carpa/carpa6.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/carpa6.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/peces/carpa/carpa7.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/carpa7.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                             </div>
 
@@ -1459,14 +1495,14 @@
                         </div> 
 
                         <div class="cuerpo__imagenesGaleria">
-                            <a data-bs-target="#carouselExampleFade21" data-bs-slide-to="0"><img class="img0" src="../images/peces/carpa/carpa.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade21" data-bs-slide-to="1"><img class="img1" src="../images/peces/carpa/carpa1.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade21" data-bs-slide-to="2"><img class="img2" src="../images/peces/carpa/carpa2.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade21" data-bs-slide-to="3"><img class="img3" src="../images/peces/carpa/carpa3.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade21" data-bs-slide-to="4"><img class="img4" src="../images/peces/carpa/carpa4.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade21" data-bs-slide-to="5"><img class="img5" src="../images/peces/carpa/carpa5.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade21" data-bs-slide-to="6"><img class="img6" src="../images/peces/carpa/carpa6.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade21" data-bs-slide-to="7"><img class="img7" src="../images/peces/carpa/carpa7.jfif" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade21" data-bs-slide-to="0"><img class="img0" src="../images/carpa.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade21" data-bs-slide-to="1"><img class="img1" src="../images/carpa1.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade21" data-bs-slide-to="2"><img class="img2" src="../images/carpa2.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade21" data-bs-slide-to="3"><img class="img3" src="../images/carpa3.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade21" data-bs-slide-to="4"><img class="img4" src="../images/carpa4.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade21" data-bs-slide-to="5"><img class="img5" src="../images/carpa5.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade21" data-bs-slide-to="6"><img class="img6" src="../images/carpa6.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade21" data-bs-slide-to="7"><img class="img7" src="../images/carpa7.jpg" alt="Imagen no encontrada"></a>
                         </div>
                     <il><h3 id="dientudo" class="cuerpo__titulo2"><a href="indice.html#dientudo">Dientudo</h3></a></il>
                         
@@ -1484,28 +1520,28 @@
                         
                             <div id="carousel" class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="../images/peces/dientudo/dientudo.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/dientudo.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/peces/dientudo/dientudo1.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/dientudo1.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/peces/dientudo/dientudo2.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/dientudo2.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/peces/dientudo/dientudo3.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/dientudo3.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/peces/dientudo/dientudo4.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/dientudo4.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/peces/dientudo/dientudo5.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/dientudo5.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/peces/dientudo/dientudo6.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/dientudo6.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/peces/dientudo/dientudo7.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/dientudo7.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                             </div>
 
@@ -1520,14 +1556,14 @@
                         </div> 
                     
                         <div class="cuerpo__imagenesGaleria">
-                            <a data-bs-target="#carouselExampleFade22" data-bs-slide-to="0"><img class="img0" src="../images/peces/dientudo/dientudo.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade22" data-bs-slide-to="1"><img class="img1" src="../images/peces/dientudo/dientudo1.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade22" data-bs-slide-to="2"><img class="img2" src="../images/peces/dientudo/dientudo2.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade22" data-bs-slide-to="3"><img class="img3" src="../images/peces/dientudo/dientudo3.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade22" data-bs-slide-to="4"><img class="img4" src="../images/peces/dientudo/dientudo4.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade22" data-bs-slide-to="5"><img class="img5" src="../images/peces/dientudo/dientudo5.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade22" data-bs-slide-to="6"><img class="img6" src="../images/peces/dientudo/dientudo6.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade22" data-bs-slide-to="7"><img class="img7" src="../images/peces/dientudo/dientudo7.jfif" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade22" data-bs-slide-to="0"><img class="img0" src="../images/dientudo.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade22" data-bs-slide-to="1"><img class="img1" src="../images/dientudo1.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade22" data-bs-slide-to="2"><img class="img2" src="../images/dientudo2.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade22" data-bs-slide-to="3"><img class="img3" src="../images/dientudo3.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade22" data-bs-slide-to="4"><img class="img4" src="../images/dientudo4.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade22" data-bs-slide-to="5"><img class="img5" src="../images/dientudo5.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade22" data-bs-slide-to="6"><img class="img6" src="../images/dientudo6.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade22" data-bs-slide-to="7"><img class="img7" src="../images/dientudo7.jpg" alt="Imagen no encontrada"></a>
                         </div> 
                     <il><h3 id="morenita" class="cuerpo__titulo2"><a href="indice.html#morenita">Morenita</h3></a></il>
                         
@@ -1545,28 +1581,28 @@
                         
                             <div id="carousel" class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="../images/peces/morenita/morenita.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/morenita.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/peces/morenita/morenita1.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/morenita1.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/peces/morenita/morenita2.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/morenita2.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/peces/morenita/morenita3.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/morenita3.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/peces/morenita/morenita4.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/morenita4.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/peces/morenita/morenita5.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/morenita5.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/peces/morenita/morenita6.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/morenita6.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/peces/morenita/morenita7.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/morenita7.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                             </div>
 
@@ -1581,14 +1617,14 @@
                         </div> 
                         
                         <div class="cuerpo__imagenesGaleria">
-                            <a data-bs-target="#carouselExampleFade23" data-bs-slide-to="0"><img class="img0" src="../images/peces/morenita/morenita.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade23" data-bs-slide-to="1"><img class="img1" src="../images/peces/morenita/morenita1.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade23" data-bs-slide-to="2"><img class="img2" src="../images/peces/morenita/morenita2.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade23" data-bs-slide-to="3"><img class="img3" src="../images/peces/morenita/morenita3.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade23" data-bs-slide-to="4"><img class="img4" src="../images/peces/morenita/morenita4.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade23" data-bs-slide-to="5"><img class="img5" src="../images/peces/morenita/morenita5.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade23" data-bs-slide-to="6"><img class="img6" src="../images/peces/morenita/morenita6.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade23" data-bs-slide-to="7"><img class="img7" src="../images/peces/morenita/morenita7.jfif" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade23" data-bs-slide-to="0"><img class="img0" src="../images/morenita.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade23" data-bs-slide-to="1"><img class="img1" src="../images/morenita1.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade23" data-bs-slide-to="2"><img class="img2" src="../images/morenita2.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade23" data-bs-slide-to="3"><img class="img3" src="../images/morenita3.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade23" data-bs-slide-to="4"><img class="img4" src="../images/morenita4.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade23" data-bs-slide-to="5"><img class="img5" src="../images/morenita5.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade23" data-bs-slide-to="6"><img class="img6" src="../images/morenita6.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade23" data-bs-slide-to="7"><img class="img7" src="../images/morenita7.jpg" alt="Imagen no encontrada"></a>
                         </div>
                     <il><h3 id="pejerrey" class="cuerpo__titulo2"><a href="indice.html#pejerrey">Pejerrey</h3></a></il>
                         
@@ -1606,28 +1642,28 @@
                         
                             <div id="carousel" class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="../images/peces/pejerrey/pejerrey.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/pejerrey.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/peces/pejerrey/pejerrey1.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/pejerrey1.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/peces/pejerrey/pejerrey2.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/pejerrey2.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/peces/pejerrey/pejerrey3.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/pejerrey3.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/peces/pejerrey/pejerrey4.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/pejerrey4.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/peces/pejerrey/pejerrey5.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/pejerrey5.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/peces/pejerrey/pejerrey6.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/pejerrey6.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/peces/pejerrey/pejerrey7.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/pejerrey7.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                             </div>
 
@@ -1642,14 +1678,14 @@
                         </div> 
                     
                         <div class="cuerpo__imagenesGaleria">
-                            <a data-bs-target="#carouselExampleFade24" data-bs-slide-to="0"><img class="img0" src="../images/peces/pejerrey/pejerrey.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade24" data-bs-slide-to="1"><img class="img1" src="../images/peces/pejerrey/pejerrey1.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade24" data-bs-slide-to="2"><img class="img2" src="../images/peces/pejerrey/pejerrey2.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade24" data-bs-slide-to="3"><img class="img3" src="../images/peces/pejerrey/pejerrey3.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade24" data-bs-slide-to="4"><img class="img4" src="../images/peces/pejerrey/pejerrey4.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade24" data-bs-slide-to="5"><img class="img5" src="../images/peces/pejerrey/pejerrey5.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade24" data-bs-slide-to="6"><img class="img6" src="../images/peces/pejerrey/pejerrey6.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade24" data-bs-slide-to="7"><img class="img7" src="../images/peces/pejerrey/pejerrey7.jfif" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade24" data-bs-slide-to="0"><img class="img0" src="../images/pejerrey.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade24" data-bs-slide-to="1"><img class="img1" src="../images/pejerrey1.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade24" data-bs-slide-to="2"><img class="img2" src="../images/pejerrey2.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade24" data-bs-slide-to="3"><img class="img3" src="../images/pejerrey3.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade24" data-bs-slide-to="4"><img class="img4" src="../images/pejerrey4.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade24" data-bs-slide-to="5"><img class="img5" src="../images/pejerrey5.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade24" data-bs-slide-to="6"><img class="img6" src="../images/pejerrey6.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade24" data-bs-slide-to="7"><img class="img7" src="../images/pejerrey7.jpg" alt="Imagen no encontrada"></a>
                         </div>
                     <il><h3 id="truchaArcoiris" class="cuerpo__titulo2"><a href="indice.html#truchaArcoiris">Trucha Arcoiris</h3></a></il>
                         
@@ -1667,28 +1703,28 @@
                         
                             <div id="carousel" class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="../images/peces/truchaArcoirirs/truchaArcoiris.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/truchaArcoiris.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/peces/truchaArcoirirs/truchaArcoiris1.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/truchaArcoiris1.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/peces/truchaArcoirirs/truchaArcoiris2.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/truchaArcoiris2.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/peces/truchaArcoirirs/truchaArcoiris3.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/truchaArcoiris3.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/peces/truchaArcoirirs/truchaArcoiris4.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/truchaArcoiris4.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/peces/truchaArcoirirs/truchaArcoiris5.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/truchaArcoiris5.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/peces/truchaArcoirirs/truchaArcoiris6.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/truchaArcoiris6.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="../images/peces/truchaArcoirirs/truchaArcoiris7.jfif" class="d-block w-100" alt="...">
+                                    <img src="../images/truchaArcoiris7.jpg" class="d-block w-100" alt="Imagen no encontrada">
                                 </div>
                             </div>
 
@@ -1703,14 +1739,14 @@
                         </div> 
                     
                         <div class="cuerpo__imagenesGaleria">
-                            <a data-bs-target="#carouselExampleFade25" data-bs-slide-to="0"><img class="img0" src="../images/peces/truchaArcoirirs/truchaArcoiris.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade25" data-bs-slide-to="1"><img class="img1" src="../images/peces/truchaArcoirirs/truchaArcoiris1.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade25" data-bs-slide-to="2"><img class="img2" src="../images/peces/truchaArcoirirs/truchaArcoiris2.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade25" data-bs-slide-to="3"><img class="img3" src="../images/peces/truchaArcoirirs/truchaArcoiris3.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade25" data-bs-slide-to="4"><img class="img4" src="../images/peces/truchaArcoirirs/truchaArcoiris4.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade25" data-bs-slide-to="5"><img class="img5" src="../images/peces/truchaArcoirirs/truchaArcoiris5.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade25" data-bs-slide-to="6"><img class="img6" src="../images/peces/truchaArcoirirs/truchaArcoiris6.jfif" alt="Imagen no encontrada"></a>
-                            <a data-bs-target="#carouselExampleFade25" data-bs-slide-to="7"><img class="img7" src="../images/peces/truchaArcoirirs/truchaArcoiris7.jfif" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade25" data-bs-slide-to="0"><img class="img0" src="../images/truchaArcoiris.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade25" data-bs-slide-to="1"><img class="img1" src="../images/truchaArcoiris1.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade25" data-bs-slide-to="2"><img class="img2" src="../images/truchaArcoiris2.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade25" data-bs-slide-to="3"><img class="img3" src="../images/truchaArcoiris3.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade25" data-bs-slide-to="4"><img class="img4" src="../images/truchaArcoiris4.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade25" data-bs-slide-to="5"><img class="img5" src="../images/truchaArcoiris5.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade25" data-bs-slide-to="6"><img class="img6" src="../images/truchaArcoiris6.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade25" data-bs-slide-to="7"><img class="img7" src="../images/truchaArcoiris7.jpg" alt="Imagen no encontrada"></a>
                         </div>
                 </ul>
             </div>

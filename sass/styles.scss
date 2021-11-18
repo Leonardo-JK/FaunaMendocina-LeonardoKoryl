@@ -8,11 +8,13 @@
 @import "../sass/views/galeria";
 @import "../sass/views/tablas";
 @import "../sass/views/contacto";
+@import "../sass/views/mapaSitio";
+@import "../sass/views/404";
 @import "../sass/components/navMenu";
 
 .header {
     height: 20vh;
-    background-image: url(/images/cordillera.png);
+    background-image: url(../images/cordillera.png);
     background-size: cover;
 
     &__logo {
@@ -27,6 +29,24 @@
         font-weight:bold;
         font-size: 3em;
     }
+
+    &__idioma {
+        position: absolute;
+        top: 15px;
+        right: 0px;
+        color: white;
+        font-weight:bolder;
+
+        a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+
+            &:hover {
+                color: grey;
+            }
+        }
+    }
 }
 
 #menu {
@@ -34,6 +54,21 @@
     top: 0px;
     border: 1px solid;
     z-index: 4;
+}
+
+.navbar {
+    display: flex;
+    border: 1px solid grey;
+
+    #breadcrumb {
+        align-self: center;
+        margin-bottom: 0px;
+        margin-left: 20px;
+    
+        ol {
+            margin-bottom: 0px;
+        }
+    }
 }
 
 .aside {
@@ -46,7 +81,7 @@
     width: 100%;
     padding-bottom: 40px;
     align-items: center;
-    background-image: url(/images/fondo1.jpg);
+    background-image: url(../images/fondo1.jpg);
 
     p {
         text-indent: 40px;
@@ -71,7 +106,7 @@
         
     &__titulo2 {
         margin-top: 30px;
-    }    
+    }
 }
 
 .footer {
@@ -79,6 +114,7 @@
     flex-direction: column;
     align-items: center;
     padding-top: 10px;
+    height: 40px;
     background-color: rgba(116, 101, 101, 0.521);
 }
 
@@ -100,6 +136,7 @@
             margin-top: 30px;
             text-shadow: 2px 2px 2px grey;
             text-align: center;
+            text-transform: uppercase;
         }
 
         div {

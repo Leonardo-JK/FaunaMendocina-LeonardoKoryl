@@ -38,14 +38,15 @@
     }
     
     &__imgIndice {
-        width: 300px;
-        height: 200px;
+        width: 320px;
+        height: auto;
         box-shadow: $sombra;
         border-radius: 10px;
         margin-bottom: 20px;
     
         &:hover {
-            transform: scale(1.1);
+            transform: scale(1.03);
+            box-shadow: 15px 15px 15px grey;
         }
     }
 
@@ -60,6 +61,17 @@
 
         &__botonBusqueda {
             width: 10vw !important;
+        }
+
+        &__imgIndice {
+                width: 450px;
+                height: auto;
+        }
+
+        &__listaIndice {
+            dd {
+                padding-top: 50px;
+            }
         }
     }
 }
