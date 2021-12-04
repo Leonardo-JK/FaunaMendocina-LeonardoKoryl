@@ -25,7 +25,17 @@
         }
         
         div {
-            width: 100%;
+            padding-left: 20px;
+            padding-right: 20px;
+            width: max-content;
+        }
+    }
+
+    &__botonBusqueda {
+        background-color: rgb(142, 175, 204) !important;
+
+        &:hover{
+            background-color: greenyellow !important;
         }
     }
 }
