@@ -3,6 +3,10 @@
     margin: 0px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 @import "../sass/views/index";
 @import "../sass/views/indice";
 @import "../sass/views/galeria";

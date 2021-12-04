@@ -3,6 +3,10 @@
   margin: 0px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .cuerpo__videosIntro {
   display: flex;
   flex-direction: column;
