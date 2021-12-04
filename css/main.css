@@ -568,7 +568,7 @@
   font-weight: bolder;
   width: 65%;
   text-align: center;
-  font-size: 1rem;
+  font-size: 0.6rem;
   margin-left: 11%;
   position: relative;
   top: 43vw;
@@ -581,7 +581,7 @@
   }
   .cuerpo404__mensaje {
     width: 500px;
-    font-size: 1.5rem;
+    font-size: 0.9rem;
     margin-left: calc(85px + 100vw - 768px);
     top: 345px;
   }
