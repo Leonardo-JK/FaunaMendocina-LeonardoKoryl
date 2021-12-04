@@ -87,7 +87,7 @@
             border-radius: 15px;
             
             &:hover {
-                box-shadow: 2px 2px 2px grey;
+                box-shadow: $sombraChica;
             }
         }
 
@@ -96,7 +96,7 @@
         }
 
         select:hover {
-            box-shadow: 2px 2px 2px grey;
+            box-shadow: $sombraChica;
         }
     }
 
@@ -130,7 +130,7 @@
             height: 35px;
 
             &:hover{
-                box-shadow: 2px 2px 2px grey;
+                box-shadow: $sombraChica
             }
         }
     }
@@ -140,7 +140,7 @@
         border-radius: 10px;
 
         &:hover{
-            box-shadow: 2px 2px 2px grey;
+            box-shadow: $sombraChica;
         }
     }
 }

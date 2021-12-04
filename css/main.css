@@ -179,7 +179,7 @@
 }
 .cuerpo__imgIndice:hover {
   transform: scale(1.03);
-  box-shadow: 15px 15px 15px grey;
+  box-shadow: 10px 10px 10px grey;
 }
 
 @media only screen and (min-width: 768px) {
@@ -363,7 +363,7 @@
 }
 .cuerpo__table {
   margin-top: 20px;
-  font-size: 3vw;
+  font-size: 0.8rem;
 }
 .cuerpo__table tr {
   width: 20%;
@@ -396,7 +396,7 @@
 
 @media only screen and (min-width: 768px) {
   .cuerpo__table {
-    font-size: 1em;
+    font-size: 1rem;
   }
 }
 .cuerpo__redes {
@@ -544,7 +544,7 @@
 .cuerpo__listaMapa li {
   list-style: none;
   padding-left: 40px;
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 
 .cuerpo404 {
@@ -568,7 +568,7 @@
   font-weight: bolder;
   width: 65%;
   text-align: center;
-  font-size: 3.3vw;
+  font-size: 1rem;
   margin-left: 11%;
   position: relative;
   top: 43vw;
@@ -581,7 +581,7 @@
   }
   .cuerpo404__mensaje {
     width: 500px;
-    font-size: 25px;
+    font-size: 1.5rem;
     margin-left: calc(85px + 100vw - 768px);
     top: 345px;
   }
@@ -628,7 +628,7 @@
   -webkit-text-stroke: 2px #243c58;
   font-family: "Crimson";
   font-weight: bold;
-  font-size: 3em;
+  font-size: 3rem;
 }
 .header__idioma {
   position: absolute;
@@ -695,7 +695,7 @@
 }
 .cuerpo__titulo1 {
   margin: 40px 0px 30px;
-  font-size: 2em;
+  font-size: 2rem;
   text-transform: uppercase;
 }
 .cuerpo__titulo2 {
@@ -713,7 +713,7 @@
 
 @media only screen and (min-width: 768px) {
   .header_titulo {
-    font-size: 4em;
+    font-size: 4rem;
   }
 
   .aside {
@@ -750,11 +750,11 @@
 }
 @media only screen and (min-width: 1200px) {
   .header__titulo {
-    font-size: 6em;
+    font-size: 6rem;
   }
 
   .cuerpo__titulo1 {
-    font-size: 3em;
+    font-size: 3rem;
   }
 }
 
