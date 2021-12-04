@@ -465,13 +465,20 @@
   width: 100%;
   padding: 20px 10px;
 }
+.cuerpo__fieldset legend {
+  text-align: center;
+}
 .cuerpo__fieldset input {
   display: block;
   width: 90%;
   margin: 0px 0px 10px 30px;
+  border-radius: 15px;
 }
 .cuerpo__fieldset input:hover {
   box-shadow: 2px 2px 2px grey;
+}
+.cuerpo__fieldset select {
+  border-radius: 10px;
 }
 .cuerpo__fieldset select:hover {
   box-shadow: 2px 2px 2px grey;
@@ -493,9 +500,22 @@
 }
 .cuerpo__mensaje {
   width: 100%;
+  text-align: center;
+}
+.cuerpo__mensaje input {
+  border-radius: 10px;
+  width: 150px;
+  height: 35px;
+}
+.cuerpo__mensaje input:hover {
+  box-shadow: 2px 2px 2px grey;
 }
 .cuerpo__textarea {
   width: 100%;
+  border-radius: 10px;
+}
+.cuerpo__textarea:hover {
+  box-shadow: 2px 2px 2px grey;
 }
 
 @media only screen and (min-width: 1200px) {

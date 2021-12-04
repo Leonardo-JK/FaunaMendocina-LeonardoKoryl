@@ -77,14 +77,22 @@
         width: 100%;
         padding: 20px 10px;
 
+        legend{
+            text-align: center;
+        }
         input {
             display: block;
             width: 90%;
             margin: 0px 0px 10px 30px;
+            border-radius: 15px;
             
             &:hover {
                 box-shadow: 2px 2px 2px grey;
             }
+        }
+
+        select {
+            border-radius: 10px;
         }
 
         select:hover {
@@ -114,10 +122,26 @@
     
     &__mensaje {
         width: 100%;
+        text-align: center;
+
+        input{
+            border-radius: 10px;
+            width: 150px;
+            height: 35px;
+
+            &:hover{
+                box-shadow: 2px 2px 2px grey;
+            }
+        }
     }
     
     &__textarea {
         width: 100%;
+        border-radius: 10px;
+
+        &:hover{
+            box-shadow: 2px 2px 2px grey;
+        }
     }
 }
 
