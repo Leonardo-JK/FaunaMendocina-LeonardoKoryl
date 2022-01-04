@@ -590,6 +590,49 @@ html {
     top: 345px;
   }
 }
+.cuerpo__botones {
+  position: sticky;
+  top: 50px;
+  z-index: 3;
+  height: 105px;
+}
+.cuerpo__accesos {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.cuerpo__accesos ul {
+  display: flex;
+  font-size: 3vw;
+  justify-content: space-evenly;
+}
+.cuerpo__accesos ul li {
+  margin: 0px 0px;
+}
+.cuerpo__accesos div {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: max-content;
+}
+.cuerpo__botonBusqueda {
+  background-color: #8eafcc !important;
+}
+.cuerpo__botonBusqueda:hover {
+  background-color: greenyellow !important;
+}
+
+@media only screen and (min-width: 768px) {
+  .cuerpo__accesos ul {
+    font-size: 1.4em;
+  }
+}
+.cuerpo__contenido {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .navbar-expand-md {
   height: 50px;
   padding-left: 20px;
@@ -728,7 +771,7 @@ html {
     background-image: linear-gradient(rgba(128, 128, 128, 0.555), rgba(87, 87, 87, 0));
     border-right: 2px solid white;
   }
-  .aside_titulo {
+  .aside__titulo {
     margin-top: 30px;
     text-shadow: 2px 2px 2px grey;
     text-align: center;
