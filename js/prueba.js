@@ -251,14 +251,147 @@ const fauna = {
             habitat: ["aguas subtropicales", "pelagico", "mar"],
             masculino: false,
         }
-    ],
-    
+    ]
 };
 
-// -> Extraigo un animal del obgeto en funcion del id ingresado
-function animalAleatorio(id){
-    for(const i of fauna.animales) {
-        if(id === fauna.animales[i].id){
+function cargarCuantoSabes(){
+    limpiar("encabezado");
+    limpiar("preguntas");
+    limpiar("respuestas");
+    limpiar("contenido");
+
+    let titulo = document.createElement("h2");
+    titulo.innerHTML = "¿Cuanto Sabes?<br><br>";
+    document.getElementById("encabezado").appendChild(titulo);
+
+    let presentacion = "Bienvenido, a continuacion te hare unas preguntas para ver cuanto has aprendido sobre nuestra fauna local. ¿Estas listo?";
+    cantPreguntas = "¿Cuantas pregunta deseas responder?";
+
+    let descripcion1 = document.createElement("p");
+    descripcion1.id = "descripcion1";
+    descripcion1.innerHTML = presentacion + "<br><br>";
+    document.getElementById("encabezado").appendChild(descripcion1);
+
+    let descripcion2 = document.createElement("p");
+    descripcion2.id = "descripcion2";
+    descripcion2.innerHTML = cantPreguntas;
+    document.getElementById("encabezado").appendChild(descripcion2);
+
+    preguntas = document.createElement("p");
+    preguntas.innerHTML = "";
+    document.getElementById("preguntas").appendChild(preguntas);
+    
+    resp.setAttribute("id", "resp");
+    document.getElementById("preguntas").appendChild(resp);
+        
+    send.innerText = "enviar";
+    send.type = "submit";
+    send.id = "send";
+    send.onclick = comenzarJuego;
+    document.getElementById("preguntas").appendChild(send);
+
+    let resultados = document.createElement("ul");
+    resultados.innerHTML = "Resultados";
+    resultados.setAttribute("id", "resultadosLista");
+    document.getElementById("respuestas").appendChild(resultados);
+
+    let resultado = document.createElement("p");
+    resultado.innerHTML = "";
+    resultado.setAttribute("id", "resultado");
+    
+}
+
+function limpiar(id){
+    let contenedor = document.getElementById(id);
+
+    while(contenedor.hasChildNodes()){
+        contenedor.removeChild(contenedor.firstChild);
+    }
+}
+
+function comenzarJuego(){
+    numero = document.getElementById("resp").value;
+    cont = 1;
+
+    send.onclick = next;
+    generarPregunta();
+
+}
+
+function next(){
+    respuesta = document.getElementById("resp").value;
+
+    if(analizarRespuesta(respuesta, caracteristica, correcto)){
+        document.getElementById("resultado").innerHTML = respuesta;
+        document.getElementById("resultadosLista").appendChild(document.getElementById("resultado"));
+    } else {
+        alert("Respuesta Incorrecta!");
+    }
+    document.getElementById("resp").value = "";
+
+    if(cont <= numero){
+        generarPregunta();
+        console.log(correcto);
+    } else {
+        preguntas.innerHTML = "Cuestionario finalizado.";
+        document.getElementById("preguntas").removeChild(document.getElementById("preguntas").lastChild);
+        document.getElementById("preguntas").removeChild(document.getElementById("preguntas").lastChild);
+    }
+}
+
+function generarPregunta(){
+    cantPreguntas = "Pregunta " + cont + " de " + numero + ".";
+    descripcion2.innerHTML = cantPreguntas;
+    document.getElementById("resp").value = "";
+
+    let id = Math.floor(Math.random() * (fauna.animales.length)) + 1; // Genera un numero aleatorio con el cual determina un animal.
+    let preg = Math.floor(Math.random() * 5) + 1;  // Genera un numero aleatorio para determinar el tipo de pregunta.
+    
+    animal = articulo(animalAleatorio(id));
+
+    // -> Genera la estructura de la pregunta y su repuesta correcta
+    switch (preg) {
+        case 1:
+            pregunta = "De que se alimenta ";
+            caracteristica = "alimento";
+            correcto = animalAleatorio(id).alimentacion;
+            break;
+            
+        case 2:
+            pregunta = "Donde habita ";
+            caracteristica = "habitat";
+            correcto = animalAleatorio(id).habitat;
+            break;
+
+        case 3:
+            pregunta = "Cuanto puede medir (en metros) ";
+            caracteristica = "tamanno";
+            correcto = animalAleatorio(id).tamanno;
+            break;
+
+        case 4:
+            pregunta = "Cuanto puede pesar (en kilogramos) ";
+            caracteristica = "peso";
+            correcto = animalAleatorio(id).peso;
+            break;
+
+        case 5:
+            pregunta = "A que familia pertenece ";
+            caracteristica = "familia";
+            correcto = animalAleatorio(id).familia;
+            break;
+    }
+    // <- 
+
+    preguntas.innerHTML = cont + ")- " + pregunta + animal + "?";
+    
+    cont++;
+}
+
+// -> Extraigo un animal del objeto en funcion del id ingresado
+function animalAleatorio(idnum){
+    for(let i = 0; i < fauna.animales.length; i++) {
+        if(idnum === fauna.animales[i].id){
             return fauna.animales[i];
         }
     }
@@ -266,162 +399,68 @@ function animalAleatorio(id){
 // <-
 
 // -> En funcion del animal ingresado, determino el articulo correspondiente para que la pregunta sea legible
-function articulo(animal){
-    if(animal.masculino){
-        return "el " + animal.nombre;
+function articulo(ani){
+    if(ani.masculino){
+        return "el " + ani.nombre;
     } else {
-        return "la " + animal.nombre;
+        return "la " + ani.nombre;
     }
 }
 // <-
 
 // -> Determina si una respuesta es correecta cuando hay muchas opciones para dicha condicion
-function respuestaString(respuesta, correcto){
-    for(const j of correcto){
-        if(respuesta === correcto[j]){
+function respuestaString(res, cor){
+    for(let j = 0; j < cor.length; j++){
+        if(res === cor[j]){
             return true;
-        }
+        } 
     }
 }
 // <-
 
 // -> Determina si una respuesta es correecta cuando esta se encuentra en un rango de valores
-function respuestaNumber(respuesta, correcto){
-    if(parseFloat(respuesta) >= correcto[0] && parseFloat(respuesta) <= correcto[1]){
+function respuestaNumber(res, cor){
+    if(parseFloat(res) >= cor[0] && parseFloat(res) <= cor[1]){
         return true;
     } 
 }
 // <-
 
 // -> Analiza la respuesta ingresada segun el tipo de solucion que tenga dicha pregunta
-function analizarRespuesta(respuesta, caracteristica, correcto){
-    
-    switch(caracteristica){
+function analizarRespuesta(res, car, cor){
+    if(res == ""){
+        return 0;
+    }
+    switch(car){
         case "alimento":
-            return respuestaString(respuesta, correcto);
+            return respuestaString(res, cor);
         case "habitat":
-            return respuestaString(respuesta, correcto);
+            return respuestaString(res, cor);
         case "tamanno":
-            return respuestaNumber(respuesta, correcto);
+            return respuestaNumber(res, cor);
         case "peso":
-            return respuestaNumber(respuesta, correcto);
+            return respuestaNumber(res, cor);
         case "familia":
-            if(respuesta == correcto){
+            if(res == cor){
                 return true;
             }
         }
 }
 // <- 
 
-// -> Carga las reglas del juego
-function cargarCuantoSabes(){
-    titulo.innerHTML = "¿Cuanto Sabes?";
-    document.getElementById("encabezado").appendChild(titulo);
-   
-    descripcion.innerHTML = "Bienvenido, a continuacion te hare unas preguntas para ver cuanto has aprendido sobre nuestra fauna local. Estas listo?";
-    document.getElementById("encabezado").appendChild(descripcion);
-    
-    input.setAttribute("type", "text");
-    input.setAttribute("id", "input");
-    document.getElementById("respuestas").appendChild(input);
-   
-    send.innerText = "Enviar";
-    document.getElementById("respuestas").appendChild(send);
-}
-// <-
 
-// -> 
-function comenzarJuego(){
-    numero = document.getElementById("Input");
-    document.querySelector("respuestas").appendChild(numero);
-}
 
-// -> Juego ¿Cuanto Sabes?
-function cuantoSabes(){
-    let respCorr = 0;
-    let msj;
-    
-    
-
-    // -> Inicia la itereacion que genera las preguntas
-    for(let p = 0; p < numero; p++){
-        let id = Math.floor(Math.random() * (fauna.animales.length)) + 1; // Genera un numero aleatorio con el cual determina un animal.
-        let preg = Math.floor(Math.random() * 5) + 1;  // Genera un numero aleatorio para determinar el tipo de pregunta.
-        let pregunta;
-        let caracteristica;
-        let respuesta;
-        let correcto;
-        let animal;
-                
-        animal = articulo(animalAleatorio(id));
-        
-        // -> Genera la estructura de la pregunta y su repuesta correcta
-        switch (preg) {
-            case 1:
-                pregunta = "De que se alimenta ";
-                caracteristica = "alimento";
-                correcto = animalAleatorio(id).alimentacion;
-                break;
-                
-            case 2:
-                pregunta = "Donde habita ";
-                caracteristica = "habitat";
-                correcto = animalAleatorio(id).habitat;
-                break;
-
-            case 3:
-                pregunta = "Cuanto puede medir (en metros) ";
-                caracteristica = "tamanno";
-                correcto = animalAleatorio(id).tamanno;
-                break;
-
-            case 4:
-                pregunta = "Cuanto puede pesar (en kilogramos) ";
-                caracteristica = "peso";
-                correcto = animalAleatorio(id).peso;
-                break;
-
-            case 5:
-                pregunta = "A que familia pertenece ";
-                caracteristica = "familia";
-                correcto = animalAleatorio(id).familia;
-                break;
-        }
-        // <- 
-        
-        respuesta = prompt((p+1) + "°) - ¿" + pregunta + animal + "?");
-
-        if(analizarRespuesta(respuesta, caracteristica, correcto)){
-            alert("Respuesta Correcta!");
-            respCorr++;
-        } else {
-            alert("Respuesta Incorrecta!");
-        }
-    }
-    // <- 
-
-    // -> Puntuacion
-    if(respCorr <= (numero * 0.7)){
-        msj = " Aun puedes mejorar!";
-    } else if(respCorr > (numero * 0.7)){
-        msj = " Bien Hecho!"
-    }
-
-    // alert("Acertaste " + respCorr + " de " + numero + msj);
-    // <-
-}
-// <-
-
-// function test(){
-//     for(i= 0; i<fauna.animales.length; i++){
-//         alert("id: " + fauna.animales[i].id + "\n" + "nombre: " + fauna.animales[i].nombre + "\n"  + "familia: " + fauna.animales[i].familia + "\n"  + "peso: " + fauna.animales[i].peso + "\n" + "tamaño: " + fauna.animales[i].tamanno + "\n" + "alimentacion: " + fauna.animales[i].alimentacion + "\n" + "habitat: " + fauna.animales[i].habitat+ "\n"  + "Masc: " + fauna.animales[i].masculino);
-//     }
-// }
-let titulo = document.createElement("h3");
-let descripcion = document.createElement("p");
-let input = document.createElement("input");
-let send = document.createElement("button");
+let cantPreguntas;
 let numero;
-let juego = document.getElementById("cuantoSabes");
-juego.onclick = cargarCuantoSabes;
-send.onclick = comenzarJuego; 
+let cont;
+let pregunta;
+let caracteristica;
+let correcto;
+let respuesta;
+let animal;
+let preguntas;
+let resp = document.createElement("input");
+let send = document.createElement("input");
+let cuantoSabes = document.getElementById("cuantoSabes");
+cuantoSabes.onclick = cargarCuantoSabes;
+
