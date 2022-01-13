@@ -632,6 +632,47 @@ html {
   flex-direction: column;
   align-items: center;
 }
+.cuerpo__contenido #encabezado {
+  width: 80%;
+}
+.cuerpo__contenido #encabezado h2 {
+  text-align: center;
+}
+.cuerpo__contenido #encabezado p {
+  font-size: 1.25rem;
+}
+.cuerpo__contenido #preguntas {
+  width: 80%;
+}
+.cuerpo__contenido #preguntas p {
+  font-size: larger;
+  text-align: center;
+  font-weight: bolder;
+}
+.cuerpo__contenido #preguntas #resp {
+  width: 40%;
+  margin-left: 25%;
+}
+.cuerpo__contenido #respuestas {
+  width: 80%;
+  margin-top: 2rem;
+}
+.cuerpo__contenido #respuestas ul {
+  text-align: left;
+  font-size: 1.4rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  list-style: none;
+}
+.cuerpo__contenido #respuestas ul .resuladoPreguntas {
+  text-decoration: none;
+  text-align: left;
+  font-size: 1.15rem;
+}
+.cuerpo__contenido #respuestas ul .resuladoPreguntas li {
+  list-style: circle;
+  margin-left: 5rem;
+}
 
 .navbar-expand-md {
   height: 50px;
