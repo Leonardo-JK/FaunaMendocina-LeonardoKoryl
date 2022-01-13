@@ -463,6 +463,7 @@ function respuestaString(res, cor){
 
 // -> Determina si una respuesta es correecta cuando esta se encuentra en un rango de valores
 function respuestaNumber(res, cor){
+    res = res.toLowerCase();
     if(parseFloat(res) >= cor[0] && parseFloat(res) <= cor[1]){
         correcto = "valores entre " + cor[0] + " y " + cor[1] + ".";
         return true;
@@ -487,6 +488,7 @@ function analizarRespuesta(res, car, cor){
         case "peso":
             return respuestaNumber(res, cor);
         case "familia":
+            res = res.toLowerCase();
             if(res == cor){
                 return true;
             }
