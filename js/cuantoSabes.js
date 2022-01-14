@@ -177,8 +177,8 @@ class Fauna {
                 familia: "insectos",
                 peso: [0.0025, 0.0035],
                 tamanno: [0.005, 0.015],
-                alimentacion: [""],
-                habitat: ["omnivora", "grasas", "proteinas", "azucares"],
+                alimentacion: ["omnivora", "grasas", "proteinas", "azucares"],
+                habitat: ["todo el territorio"],
                 masculino: false,
             },
             {
