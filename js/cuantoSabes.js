@@ -5,7 +5,7 @@ window.addEventListener('load', function() {
     request.responseType = "json";
     request.send();
     
-    const individuos = request.response;
+    const individuos = JSON.parse(request.response);
 
     // -> Restablece la pantalla y carga la presentacion del juego y la estrutura principla del mismo.
     function cargarCuantoSabes(){
