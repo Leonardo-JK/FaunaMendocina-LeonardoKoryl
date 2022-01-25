@@ -1,5 +1,12 @@
 window.addEventListener('load', function() {
+    const requestURL = "https://github.com/Leonardo-JK/CursoJS/blob/6cdb8ae25fb2a241d2ece03133bf7373e9a6837c/faunaMendocina/data/animales.json"
+    const request = new XMLHttpRequest();
+    request.open("GET", requestURL);
+    request.responseType = "json";
+    request.send();
     
+    const individuos = request.response;
+
     // -> Restablece la pantalla y carga la presentacion del juego y la estrutura principla del mismo.
     function cargarCuantoSabes(){
         // -> Limpía la pantalla.
@@ -8,6 +15,8 @@ window.addEventListener('load', function() {
         limpiar("respuestas");
         limpiar("contenido");
         // <- 
+
+        console.log(individuos);
 
         //-> Genera el encabezado del juego.
         let titulo = document.createElement("h2");
