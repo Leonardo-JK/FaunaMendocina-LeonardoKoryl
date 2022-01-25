@@ -1,5 +1,5 @@
 window.addEventListener('load', function() {
-    const requestURL = "https://github.com/Leonardo-JK/CursoJS/blob/6cdb8ae25fb2a241d2ece03133bf7373e9a6837c/faunaMendocina/data/animales.json"
+    const requestURL = "https://raw.githubusercontent.com/Leonardo-JK/CursoJS/main/faunaMendocina/data/animales.json"
     const request = new XMLHttpRequest();
     request.open("GET", requestURL);
     request.responseType = "json";
