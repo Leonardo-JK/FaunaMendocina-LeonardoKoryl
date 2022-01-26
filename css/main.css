@@ -643,15 +643,28 @@ html {
 }
 .cuerpo__contenido #preguntas {
   width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .cuerpo__contenido #preguntas p {
   font-size: larger;
   text-align: center;
   font-weight: bolder;
+  margin-bottom: 4rem;
 }
 .cuerpo__contenido #preguntas #resp {
-  width: 40%;
-  margin-left: 25%;
+  width: 70%;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+.cuerpo__contenido #preguntas #send {
+  width: 8rem;
+  border-radius: 15px;
+}
+.cuerpo__contenido #preguntas a {
+  width: 100%;
+  text-align: center;
 }
 .cuerpo__contenido #respuestas {
   width: 80%;

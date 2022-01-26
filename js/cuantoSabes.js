@@ -1,12 +1,41 @@
 window.addEventListener('load', function() {
-    const requestURL = "https://raw.githubusercontent.com/Leonardo-JK/CursoJS/main/faunaMendocina/data/animales.json"
-    const request = new XMLHttpRequest();
-    request.open("GET", requestURL);
-    request.responseType = "json";
-    request.send();
-    
-    const individuos = JSON.parse(request.response);
+    let individuos = [];
+    let espera = 0;
 
+    // -> Solicito datos desde el archivo .json
+    fetch("https://raw.githubusercontent.com/Leonardo-JK/CursoJS/main/faunaMendocina/data/animales.json")
+        .then(response => response.json())
+        .then(data => individuos = data)
+    // <-
+
+    // -> Genera un loop de espera de respuesta de datos, que se mantiene mientras no se realice ninguna accion
+    //      si el array individuos sigue vacio despues de 500 ms se vuelve a ejucutar y comienza un contador,
+    //      pasado 20 s, envia un msj de error por alert y comienza nuevamente el loop de espera por otros 
+    //      20 s. Al ejecutar la espera de esta forma evita que el hilo se bloquee como pasa con el metodo await, 
+    //      permitiendo el funcionamiento normal de la pagina.       
+    function loopEspera(){
+        if(individuos.length === 0){
+            espera++;
+            setTimeout(function() {
+                if(espera >= 20){
+                    espera = 0;
+                    error();
+                }else {
+                    loopEspera();
+                }                
+            }, 500);
+        }
+    }
+
+    function error(){
+        alert("Hubo un error al cargar los datos o el tiempo de respuesta de la base de datos fue mayor a la esperada. Por recarga la pagina o espera un poco mas.");
+        loopEspera();
+    }
+    
+    loopEspera();
+    // <-
+
+    
     // -> Restablece la pantalla y carga la presentacion del juego y la estrutura principla del mismo.
     function cargarCuantoSabes(){
         // -> Limpía la pantalla.
@@ -15,49 +44,52 @@ window.addEventListener('load', function() {
         limpiar("respuestas");
         limpiar("contenido");
         // <- 
-
-        console.log(individuos);
-
-        //-> Genera el encabezado del juego.
-        let titulo = document.createElement("h2");
-        titulo.innerHTML = "¿Cuánto Sabes?<br><br>";
-        document.getElementById("encabezado").appendChild(titulo);
-
-        let presentacion = "Bienvenido, a continuación te hare unas preguntas para ver cuánto has aprendido sobre nuestra fauna local. ¿Estás listo?";
-        cantPreguntas = "¿Cuántas preguntas deseas responder?";
-
-        let descripcion1 = document.createElement("p");
-        descripcion1.id = "descripcion1";
-        descripcion1.innerHTML = presentacion + "<br><br>";
-        document.getElementById("encabezado").appendChild(descripcion1);
-
-        let descripcion2 = document.createElement("p");
-        descripcion2.id = "descripcion2";
-        descripcion2.innerHTML = cantPreguntas;
-        document.getElementById("encabezado").appendChild(descripcion2);
-        // <- 
-
-        // -> Genera la seccion interactiva.
-        preguntas = document.createElement("p");
-        preguntas.innerHTML = "";
-        document.getElementById("preguntas").appendChild(preguntas);
         
-        resp.setAttribute("id", "resp");
-        document.getElementById("preguntas").appendChild(resp);
-            
-        send.innerText = "enviar";
-        send.type = "submit";
-        send.id = "send";
-        send.onclick = comenzarJuego;
-        document.getElementById("preguntas").appendChild(send);
-        // <-
+        if(individuos.length === 0){    // -> Si el usuario inicia el juego y los datos no se han cargado, 
+            error();                    //      envia el mensaje e inicia el loop de espera. <-
+        } else {
+            //-> Genera el encabezado del juego.
+            titulo = document.createElement("h2");
+            titulo.innerHTML = "¿Cuánto Sabes?<br><br>";
+            document.getElementById("encabezado").appendChild(titulo);
 
-        // -> Genera la lista que presentara los resultados.
-        resultados = document.createElement("ul");
-        resultados.innerHTML = "Resultados";
-        resultados.setAttribute("id", "resultadosLista");
-        document.getElementById("respuestas").appendChild(resultados);    
-        // <-
+            presentacion = "Bienvenido, a continuación te hare unas preguntas para ver cuánto has aprendido sobre nuestra fauna local. ¿Estás listo?";
+            cantPreguntas = "¿Cuántas preguntas deseas responder?";
+
+            let descripcion1 = document.createElement("p");
+            descripcion1.id = "descripcion1";
+            descripcion1.innerHTML = presentacion + "<br><br>";
+            document.getElementById("encabezado").appendChild(descripcion1);
+
+            let descripcion2 = document.createElement("p");
+            descripcion2.id = "descripcion2";
+            descripcion2.innerHTML = cantPreguntas;
+            document.getElementById("encabezado").appendChild(descripcion2);
+            // <- 
+
+            // -> Genera la seccion interactiva.
+            document.getElementById("preguntas").style.flexDirection = "column";
+            preguntas = document.createElement("p");
+            preguntas.innerHTML = "";
+            document.getElementById("preguntas").appendChild(preguntas);
+            
+            resp.setAttribute("id", "resp");
+            document.getElementById("preguntas").appendChild(resp);
+                
+            send.innerText = "enviar";
+            send.type = "submit";
+            send.id = "send";
+            send.onclick = comenzarJuego;
+            document.getElementById("preguntas").appendChild(send);
+            // <-
+
+            // -> Genera la lista que presentara los resultados.
+            resultados = document.createElement("ul");
+            resultados.innerHTML = "Resultados";
+            resultados.setAttribute("id", "resultadosLista");
+            document.getElementById("respuestas").appendChild(resultados);    
+            // <-
+        }
     }
 
     // -> Funcion para limpiar elementos.
@@ -136,7 +168,7 @@ window.addEventListener('load', function() {
         descripcion2.innerHTML = cantPreguntas;
         document.getElementById("resp").value = "";
 
-        let id = Math.floor(Math.random() * (individuos.animales.length)) + 1; // Genera un numero aleatorio con el cual determina un animal.
+        let id = Math.floor(Math.random() * (individuos.length)) + 1; // Genera un numero aleatorio con el cual determina un animal.
         let numPreg = Math.floor(Math.random() * 5) + 1;  // Genera un numero aleatorio para determinar el tipo de pregunta.
         
         animal = articulo(animalAleatorio(id));
@@ -183,7 +215,7 @@ window.addEventListener('load', function() {
 
     // -> Extrae un animal del objeto en funcion del id ingresado
     function animalAleatorio(idnum){
-        return individuos.animales.find(individuo => individuo.id === idnum);
+        return individuos.find(individuo => individuo.id === idnum);
     }
     // <-
 
@@ -250,20 +282,13 @@ window.addEventListener('load', function() {
     }
     // <- 
 
-    function cargaQueAnimalEs(){
-        // -> Limpía la pantalla.
-        limpiar("encabezado");
-        limpiar("preguntas");
-        limpiar("respuestas");
-        limpiar("contenido");
-        // <- 
-    }
-
     // -> Decalaracion de variables globales.
     let itemResultado;
     let resultados;
     let resultado;
-    let preg
+    let preg;
+    let titulo;
+    let presentacion;
     let cantPreguntas;
     let numero;
     let cont;
@@ -277,7 +302,6 @@ window.addEventListener('load', function() {
     let resp = document.createElement("input");
     let send = document.createElement("input");
     let cuantoSabes = document.getElementById("cuantoSabes");
-    let queAnimalEs = document.getElementById("queAnimalEs");
     // <-
 
     // -> Eventos que determinan lanzan los juegos.

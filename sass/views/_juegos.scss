@@ -21,20 +21,32 @@
     
         #preguntas {
             width: 80%;
-            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
             p{
                 font-size: larger;
                 text-align: center;
                 font-weight: bolder;
+                margin-bottom: 4rem;
             }
 
             #resp {
-            width: 40%;
-            margin-left: 25%;
+                width: 70%;
+                margin-bottom: 1rem;
+                border-radius: 5px;
             }
 
             #send{
+                width: 8rem;
+                border-radius: 15px;
+            }
 
+            a {
+                width: 100%;
+                text-align: center;
+                
             }
         }
 

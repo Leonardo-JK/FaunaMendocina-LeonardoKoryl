@@ -23,7 +23,10 @@
       "prados"
     ],
     "esMasculino": true,
-    "imagenes": "grisonMenor"
+    "imagenes": [
+      8,
+      "grisonMenor"
+    ]
   },
   {
     "id": 2,
@@ -49,7 +52,10 @@
       "pendientes"
     ],
     "esMasculino": true,
-    "imagenes": "guanaco"
+    "imagenes": [
+      8,
+      "guanaco"
+    ]
   },
   {
     "id": 3,
@@ -77,7 +83,10 @@
       "llanuras"
     ],
     "esMasculino": true,
-    "imagenes": "puma"
+    "imagenes": [
+      8,
+      "puma"
+    ]
   },
   {
     "id": 4,
@@ -106,7 +115,10 @@
       "llanuras"
     ],
     "esMasculino": true,
-    "imagenes": "zorrillo"
+    "imagenes": [
+      8,
+      "zorrillo"
+    ]
   },
   {
     "id": 5,
@@ -136,7 +148,10 @@
       "bosques"
     ],
     "esMasculino": true,
-    "imagenes": "zorroCulpeo"
+    "imagenes": [
+      8,
+      "zorroCulpeo"
+    ]
   },
   {
     "id": 6,
@@ -160,7 +175,10 @@
       "sierra"
     ],
     "esMasculino": true,
-    "imagenes": "condor"
+    "imagenes": [
+      8,
+      "condor"
+    ]
   },
   {
     "id": 7,
@@ -183,7 +201,10 @@
       "llanura"
     ],
     "esMasculino": true,
-    "imagenes": "gorrion"
+    "imagenes": [
+      8,
+      "gorrion"
+    ]
   },
   {
     "id": 8,
@@ -209,7 +230,10 @@
       "tundra"
     ],
     "esMasculino": true,
-    "imagenes": "halconPeregrino"
+    "imagenes": [
+      8,
+      "halconPeregrino"
+    ]
   },
   {
     "id": 9,
@@ -231,7 +255,10 @@
       "todo el territorio"
     ],
     "esMasculino": false,
-    "imagenes": "paloma"
+    "imagenes": [
+      8,
+      "paloma"
+    ]
   },
   {
     "id": 10,
@@ -257,7 +284,10 @@
       "jardines"
     ],
     "esMasculino": false,
-    "imagenes": "tijereta"
+    "imagenes": [
+      8,
+      "tijereta"
+    ]
   },
   {
     "id": 11,
@@ -282,7 +312,10 @@
       "matorrales"
     ],
     "esMasculino": false,
-    "imagenes": "cascabelAustral"
+    "imagenes": [
+      8,
+      "cascabelAustral"
+    ]
   },
   {
     "id": 12,
@@ -315,7 +348,10 @@
       "pedregales serranos"
     ],
     "esMasculino": false,
-    "imagenes": "coralArgentina"
+    "imagenes": [
+      8,
+      "coralArgentina"
+    ]
   },
   {
     "id": 13,
@@ -339,7 +375,10 @@
       "arboleadas"
     ],
     "esMasculino": true,
-    "imagenes": "geckoSalamanca"
+    "imagenes": [
+      8,
+      "geckoSalamanca"
+    ]
   },
   {
     "id": 14,
@@ -362,7 +401,10 @@
       "agua dulce"
     ],
     "esMasculino": false,
-    "imagenes": "tortugaPintada"
+    "imagenes": [
+      8,
+      "tortugaPintada"
+    ]
   },
   {
     "id": 15,
@@ -399,7 +441,10 @@
       "espinal"
     ],
     "esMasculino": false,
-    "imagenes": "tortugaTerrestreArgentina"
+    "imagenes": [
+      8,
+      "tortugaTerrestreArgentina"
+    ]
   },
   {
     "id": 16,
@@ -424,7 +469,10 @@
       "riscos"
     ],
     "esMasculino": true,
-    "imagenes": "camoati"
+    "imagenes": [
+      8,
+      "camoati"
+    ]
   },
   {
     "id": 17,
@@ -448,7 +496,10 @@
       "todo el territorio"
     ],
     "esMasculino": false,
-    "imagenes": "hormigaRojaArgentina"
+    "imagenes": [
+      8,
+      "hormigaRojaArgentina"
+    ]
   },
   {
     "id": 18,
@@ -472,7 +523,10 @@
       "todo el territorio"
     ],
     "esMasculino": false,
-    "imagenes": "moscaDomestica"
+    "imagenes": [
+      8,
+      "moscaDomestica"
+    ]
   },
   {
     "id": 19,
@@ -497,7 +551,10 @@
       "agua estancada"
     ],
     "esMasculino": true,
-    "imagenes": "mosquitoComun"
+    "imagenes": [
+      8,
+      "mosquitoComun"
+    ]
   },
   {
     "id": 20,
@@ -518,7 +575,10 @@
       "cercania a animales"
     ],
     "esMasculino": false,
-    "imagenes": "vinchuca"
+    "imagenes": [
+      8,
+      "vinchuca"
+    ]
   },
   {
     "id": 21,
@@ -545,7 +605,10 @@
       "aguas templadas"
     ],
     "esMasculino": false,
-    "imagenes": "carpa"
+    "imagenes": [
+      8,
+      "carpa"
+    ]
   },
   {
     "id": 22,
@@ -568,7 +631,10 @@
       "agua dulce"
     ],
     "esMasculino": true,
-    "imagenes": "dientudo"
+    "imagenes": [
+      8,
+      "dientudo"
+    ]
   },
   {
     "id": 23,
@@ -598,7 +664,10 @@
       "climas calidos"
     ],
     "esMasculino": false,
-    "imagenes": "morenita"
+    "imagenes": [
+      8,
+      "morenita"
+    ]
   },
   {
     "id": 24,
@@ -625,7 +694,10 @@
       "estuarios"
     ],
     "esMasculino": true,
-    "imagenes": "pejerrey"
+    "imagenes": [
+      8,
+      "pejerrey"
+    ]
   },
   {
     "id": 25,
@@ -651,6 +723,9 @@
       "mar"
     ],
     "esMasculino": false,
-    "imagenes": "truchaArcoiris"
+    "imagenes": [
+      8,
+      "truchaArcoiris"
+    ]
   }
 ]
