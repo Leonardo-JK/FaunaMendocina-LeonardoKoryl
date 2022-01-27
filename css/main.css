@@ -641,6 +641,14 @@ html {
 .cuerpo__contenido #encabezado p {
   font-size: 1.25rem;
 }
+.cuerpo__contenido #encabezado input {
+  margin-bottom: 2rem;
+  border-radius: 5px;
+}
+.cuerpo__contenido #encabezado button {
+  margin-bottom: 3rem;
+  border-radius: 5px;
+}
 .cuerpo__contenido #preguntas {
   width: 80%;
   display: flex;
@@ -668,7 +676,7 @@ html {
 }
 .cuerpo__contenido #preguntas #send {
   width: 8rem;
-  border-radius: 15px;
+  border-radius: 5px;
 }
 .cuerpo__contenido #preguntas a {
   width: 100%;
@@ -700,6 +708,7 @@ html {
 .cuerpo__contenido #preguntas #divRespuestas #send2, .cuerpo__contenido #preguntas #divRespuestas #next {
   margin: 1rem 0 0 5rem;
   width: 10rem;
+  border-radius: 5px;
 }
 .cuerpo__contenido #respuestas {
   width: 80%;

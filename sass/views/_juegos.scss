@@ -17,6 +17,16 @@
             p {
                 font-size: 1.25rem;
             }
+
+            input {
+                margin-bottom: 2rem;
+                border-radius: 5px;
+            }
+
+            button {
+                margin-bottom: 3rem;
+                border-radius: 5px;
+            }
         }
     
         #preguntas {
@@ -49,7 +59,7 @@
 
             #send{
                 width: 8rem;
-                border-radius: 15px;
+                border-radius: 5px;
             }
 
             a {
@@ -89,6 +99,7 @@
                 #send2, #next {
                     margin: 1rem 0 0 5rem;
                     width: 10rem;
+                    border-radius: 5px;
 
                 }
             }

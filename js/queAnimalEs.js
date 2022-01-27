@@ -282,7 +282,7 @@ window.addEventListener('load', function() {
         document.getElementById("next").onclick = juegoDificil;
     }
     // <-
-    
+
     // -> Verificacion de respuesta con Multiple Choice.
     function verificarOpcion() {
         respuesta = document.querySelector('input[name="opcion"]:checked').value;
@@ -378,7 +378,4 @@ window.addEventListener('load', function() {
     // -> Eventos que determinan lanzan los juegos.
     queAnimalEs.onclick = cargaQueAnimalEs;
     // <- 
-
-
-
 }, false);
