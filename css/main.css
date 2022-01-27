@@ -690,7 +690,7 @@ html {
 .cuerpo__contenido #preguntas #divRespuestas ul li input {
   margin-right: 1rem;
 }
-.cuerpo__contenido #preguntas #divRespuestas #send2 {
+.cuerpo__contenido #preguntas #divRespuestas #send2, .cuerpo__contenido #preguntas #divRespuestas #next {
   margin: 1rem 0 0 5rem;
 }
 .cuerpo__contenido #respuestas {
