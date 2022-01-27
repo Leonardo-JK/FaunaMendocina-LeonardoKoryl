@@ -656,6 +656,13 @@ html {
 }
 .cuerpo__contenido #preguntas #resp {
   width: 70%;
+  height: 2rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+.cuerpo__contenido #preguntas #resp2 {
+  width: 100%;
+  height: 2rem;
   margin-bottom: 1rem;
   border-radius: 5px;
 }
@@ -692,6 +699,7 @@ html {
 }
 .cuerpo__contenido #preguntas #divRespuestas #send2, .cuerpo__contenido #preguntas #divRespuestas #next {
   margin: 1rem 0 0 5rem;
+  width: 10rem;
 }
 .cuerpo__contenido #respuestas {
   width: 80%;
