@@ -3,7 +3,7 @@ window.addEventListener('load', function() {
     let espera = 0;
 
     // -> Solicito datos desde el archivo .json
-    fetch("https://raw.githubusercontent.com/Leonardo-JK/CursoJS/main/faunaMendocina/data/animales.json")
+    fetch("https://raw.githubusercontent.com/Leonardo-JK/FaunaMendocina-LeonardoKoryl/main/data/animales.json")
         .then(response => response.json())
         .then(data => individuos = data)
     // <-

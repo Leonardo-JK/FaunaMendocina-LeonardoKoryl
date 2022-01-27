@@ -3,7 +3,7 @@ window.addEventListener('load', function() {
     let espera = 0;
 
     // -> Solicito datos desde el archivo .json
-    fetch("https://raw.githubusercontent.com/Leonardo-JK/CursoJS/main/faunaMendocina/data/animales.json")
+    fetch("https://raw.githubusercontent.com/Leonardo-JK/FaunaMendocina-LeonardoKoryl/main/data/animales.json")
         .then(response => response.json())
         .then(data => individuos = data)
     // <-
@@ -51,7 +51,7 @@ window.addEventListener('load', function() {
             titulo.innerHTML = "¿Que animal es?<br><br>";
             document.getElementById("encabezado").appendChild(titulo);
 
-            presentacion = "Bienvenido, a continuación te mostrare unas imagenes y tu tendras que responder a que animal corresponde ¿Estás listo?";
+            presentacion = "Bienvenido, a continuación te mostrare unas imagenes y tu tendras que responder a que animal corresponde.<br> ¿Estás listo?";
             dificultad = "¿Elige la dificultad?";
 
             let descripcion1 = document.createElement("p");
@@ -65,7 +65,7 @@ window.addEventListener('load', function() {
             document.getElementById("encabezado").appendChild(descripcion2);
             // <- 
 
-            facil.innerHTML = "<strong>FACIL</strong> (Multiple Choice)";
+            facil.innerHTML = "<strong>FACIL</strong> <br>(Multiple Choice <br>con 3 oportunidades)";
             facil.href = "#";
             facil.id = "facil";
             facil.onclick = () => {
@@ -74,7 +74,16 @@ window.addEventListener('load', function() {
                                 } ;
             document.getElementById("preguntas").appendChild(facil);
 
-            dificil.innerHTML = "<strong>DIFICIL</strong> (Respuesta escrita)";
+            medio.innerHTML = "<strong>MEDIO</strong> <br>(Multiple Choice <br>sin oportunidades)";
+            medio.href = "#";
+            medio.id = "facil";
+            medio.onclick = () => {
+                                    dificultadValor = "medio";
+                                    comenzarJuego();
+                                } ;
+            document.getElementById("preguntas").appendChild(medio);
+
+            dificil.innerHTML = "<strong>DIFICIL</strong> <br>(Respuesta escrita)";
             dificil.href = "#";
             dificil.id = "dificil";
             dificil.onclick = () => {
@@ -89,6 +98,8 @@ window.addEventListener('load', function() {
 
     function comenzarJuego(){
         document.getElementById("preguntas").style.flexDirection = "row";
+        document.getElementById("encabezado").removeChild(document.getElementById("encabezado").lastChild);
+        document.getElementById("preguntas").removeChild(document.getElementById("preguntas").lastChild);
         document.getElementById("preguntas").removeChild(document.getElementById("preguntas").lastChild);
         document.getElementById("preguntas").removeChild(document.getElementById("preguntas").lastChild);
 
@@ -111,12 +122,95 @@ window.addEventListener('load', function() {
     }
 
     function juegoFacil(){
-        let id = Math.floor(Math.random() * (individuos.length)) + 1;
-        let img = Math.floor(Math.random() * (individuos[(id-1)].imagenes[0]));
+        let id = Math.floor(Math.random() * (individuos.length)) + 1;   // -> Genera un numero random para determinar el animal. <-
+        let img = Math.floor(Math.random() * (individuos[(id-1)].imagenes[0])); // -> Genera un numero random para genera una imagen del animal. <-
+
+        animal = animalAleatorio(id);
 
         let imagen = document.createElement("img");
-        imagen.src = "";
+        imagen.src = "../img/" + animal.imagenes[1] + img + ".jpg";
+
+        document.getElementById("divImagen").appendChild(imagen);
+
+        let opciones = document.createElement("ul");
+        opciones.id = "opciones";
+        opciones.style.listStyle = "none";
+        document.getElementById("divRespuestas").appendChild(opciones);
+        
+        let opcionCorrecta = Math.floor(Math.random() * 5);
+
+        for(let i = 0; i < 5; i++){
+            id = Math.floor(Math.random() * (individuos.length)) + 1;
+            let opcionIncorrecta = animalAleatorio(id);
+
+            let opcion = document.createElement("li");
+            opcion.id = "opcion" + i;
+            document.getElementById("opciones").appendChild(opcion);
+            let input = document.createElement("input");
+            input.type = "radio";
+            input.name = "opcion";
+            
+            let label = document.createElement("label");
+                      
+            
+
+            if(i === opcionCorrecta){
+                input.id = animal.nombre;
+                input.value = animal.nombre;
+                label.setAttribute("for", animal.nombre);
+                label.innerHTML = animal.nombre;
+            } else {
+                input.id = opcionIncorrecta.nombre;
+                input.value = opcionIncorrecta.nombre;
+                label.setAttribute("for", opcionIncorrecta.nombre);
+                label.innerHTML = opcionIncorrecta.nombre;
+            }
+
+            console.log(input.id);
+            document.getElementById("opcion" + i).appendChild(input);
+            document.getElementById("opcion" + i).appendChild(label);
+
+            send.type = "submit";
+            send.id = "send2";
+            document.getElementById("divRespuestas").appendChild(send);
+            
+        }
+
+        document.getElementById("send2").onclick = verificar;
     }
+    
+    function verificar() {
+        respuesta = document.querySelector('input[name="opcion"]:checked').value;
+        
+        if(dificultadValor === "facil" && cont < 3){
+            cont++;
+            color(respuesta);
+        } else if(dificultadValor === "medio" || cont === 3){
+            color(respuesta)
+            document.querySelector('input[name="opcion"]').setAttribute("disabled");
+        } else if(dificultadValor === "dificil"){
+
+        }
+
+        function color(r){
+            if(r === animal.nombre){
+                document.querySelector('label[for="' + document.querySelector('input[name="opcion"]:checked').id + '"]').style.color = "#27ad27";
+                document.querySelector('label[for="' + document.querySelector('input[name="opcion"]:checked').id + '"]').style.fontWeight = "Bolder";
+            } else {
+                document.querySelector('label[for="' + document.querySelector('input[name="opcion"]:checked').id + '"]').style.color = "red";
+                document.querySelector('label[for="' + document.querySelector('input[name="opcion"]:checked').id + '"]').style.fontWeight = "Bolder";
+            }
+        }
+        
+    }
+    
+    // -> Extrae un animal del objeto en funcion del id ingresado
+    
+    function
+     animalAleatorio(idnum){
+        return individuos.find(individuo => individuo.id === idnum);
+    }
+    // <-
 
     // -> Funcion para limpiar elementos.
     function limpiar(id){
@@ -140,7 +234,7 @@ window.addEventListener('load', function() {
     let divImagen;
     let divRespuestas;
     let numero;
-    let cont;
+    let cont = 0;
     let pregunta;
     let caracteristica;
     let correcto;
@@ -151,6 +245,7 @@ window.addEventListener('load', function() {
     let resp = document.createElement("input");
     let send = document.createElement("input");
     let facil = document.createElement("a");
+    let medio = document.createElement("a");
     let dificil = this.document.createElement("a");
     let queAnimalEs = document.getElementById("queAnimalEs");
     //
