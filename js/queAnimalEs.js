@@ -145,6 +145,39 @@ window.addEventListener('load', function() {
             let final = document.createElement("p");
             final.innerHTML = "Fin del jugo. <br> Has respondido correctamente el " + resultado + " % de las imagenes.";
             limpiar("preguntas");
+            
+            let lStorage = JSON.parse(localStorage.usuariosFM);
+            // ARREGLAR 
+            //
+            // COLOCAR BIEN LOS PUNTAJES.
+            //
+            //
+            //
+
+            for(const u of lStorage){
+                
+                if(u.usuario === sessionStorage.usuarioActivo){
+                    u.cont++;
+                    if(resultado > u.puntajeQAEF){
+                        document.getElementById("mensaje1").innerHTML = "Felicidades has mejorado desde tu ultima vez."
+                        document.getElementById("mensaje2").innerHTML = "Sigue asi."
+                        document.querySelector(".popup").style.visibility = "visible";
+                    } else if(resultado === u.puntajeQAEF){
+                        document.getElementById("mensaje1").innerHTML = "Has mantenido tu puntaje."
+                        document.getElementById("mensaje2").innerHTML = "Felicidades."
+                        document.querySelector(".popup").style.visibility = "visible";
+                    } else if(resultado < u.puntajeQAEF){
+                        document.getElementById("mensaje1").innerHTML = "Has obtenido un puntaje menor al anterior."
+                        document.getElementById("mensaje2").innerHTML = "Aun puedes mejorar."
+                        document.querySelector(".popup").style.visibility = "visible";
+                    }
+                    
+                    u.puntajeQAEF = resultado;
+                }
+                break;
+            }
+
+            localStorage.usuariosFM = JSON.stringify(lStorage);
             document.getElementById("preguntas").appendChild(final); // <-
         } else {
             let id = Math.floor(Math.random() * (individuos.length)) + 1;   // -> Genera un numero random para determinar el animal por id. <-
@@ -229,10 +262,35 @@ window.addEventListener('load', function() {
         solucion.innerHTML = "";
         document.getElementById("divRespuestas").appendChild(solucion);        
 
-        if(pregunta === 3){    // -> Verifica la cantidad de preguntas realizada y si llega al final, muestra el resultado.
+        if(pregunta === 10){    // -> Verifica la cantidad de preguntas realizada y si llega al final, muestra el resultado.
             resultado = respCorr / pregunta * 100;
             solucion.innerHTML = "Fin del juego. <br> Has respondido correctamente el " + resultado + " % de las imagenes.";
             limpiar("preguntas");
+            let lStorage = JSON.parse(localStorage.usuariosFM);
+            
+            for(const u of lStorage){
+                if(u.usuario === sessionStorage.usuarioActivo){
+                    u.cont++;
+                    if(resultado > u.puntaje){
+                        document.getElementById("mensaje1").innerHTML = "Felicidades has mejorado desde tu ultima vez."
+                        document.getElementById("mensaje2").innerHTML = "Sigue asi."
+                        document.querySelector(".popup").style.visibility = "visible";
+                    } else if(resultado === u.puntaje){
+                        document.getElementById("mensaje1").innerHTML = "Has mantenido tu puntaje."
+                        document.getElementById("mensaje2").innerHTML = "Felicidades."
+                        document.querySelector(".popup").style.visibility = "visible";
+                    } else if(resultado < u.puntaje){
+                        document.getElementById("mensaje1").innerHTML = "Has obtenido un puntaje menor al anterior."
+                        document.getElementById("mensaje2").innerHTML = "Aun puedes mejorar."
+                        document.querySelector(".popup").style.visibility = "visible";
+                    }
+                    
+                    u.puntaje = resultado;
+                }
+                break;
+            }
+
+            localStorage.usuariosFM = JSON.stringify(lStorage);
             document.getElementById("preguntas").appendChild(solucion); // <-
         } else {
             let id = Math.floor(Math.random() * (individuos.length)) + 1;   // -> Genera un numero random para determinar el animal por id. <-
