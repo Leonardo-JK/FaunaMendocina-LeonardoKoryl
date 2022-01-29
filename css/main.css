@@ -731,6 +731,18 @@ html {
   list-style: circle;
   margin-left: 5rem;
 }
+.cuerpo__contenido #sesion p {
+  font-size: 1.25rem;
+}
+.cuerpo__contenido #sesion input {
+  margin-bottom: 2rem;
+  border-radius: 5px;
+}
+.cuerpo__contenido #sesion button {
+  padding: 0 0.5rem;
+  margin-bottom: 3rem;
+  border-radius: 5px;
+}
 .cuerpo__contenido .popup {
   position: fixed;
   width: 100%;

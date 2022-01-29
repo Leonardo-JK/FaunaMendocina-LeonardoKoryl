@@ -130,6 +130,22 @@
             }
         }
 
+        #sesion {
+            p {
+                font-size: 1.25rem;
+            }
+
+            input {
+                margin-bottom: 2rem;
+                border-radius: 5px;
+            }
+
+            button {
+                padding: 0 0.5rem;
+                margin-bottom: 3rem;
+                border-radius: 5px;
+            }
+        }
         .popup {
             position: fixed;
             width: 100%;

@@ -155,9 +155,39 @@ window.addEventListener('load', function() {
         if(cont <= numero){
             generarPregunta();
         } else {
-            preguntas.innerHTML = "Cuestionario finalizado.<br>Has respondido correctamente el " + (respCorr * 100 / numero) + "% de las preguntas.";
+            let res = (respCorr * 100 / numero);
+            preguntas.innerHTML = "Cuestionario finalizado.<br>Has respondido correctamente el " + res + "% de las preguntas.";
             document.getElementById("preguntas").removeChild(document.getElementById("preguntas").lastChild);
             document.getElementById("preguntas").removeChild(document.getElementById("preguntas").lastChild);
+
+            if(res > JSON.parse(sessionStorage.usuarioActivo).puntajeCS){
+                document.getElementById("mensaje1").innerHTML = "Felicidades has mejorado desde tu ultima vez."
+                document.getElementById("mensaje2").innerHTML = "Sigue asi."
+                document.querySelector(".popup").style.visibility = "visible";
+            } else if(res === JSON.parse(sessionStorage.usuarioActivo).puntajeCS){
+                document.getElementById("mensaje1").innerHTML = "Has mantenido tu puntaje."
+                document.getElementById("mensaje2").innerHTML = "Felicidades."
+                document.querySelector(".popup").style.visibility = "visible";
+            } else if(res < JSON.parse(sessionStorage.usuarioActivo).puntajeCS && resultado > 0){
+                document.getElementById("mensaje1").innerHTML = "Has obtenido un puntaje menor al anterior."
+                document.getElementById("mensaje2").innerHTML = "Aun puedes mejorar."
+                document.querySelector(".popup").style.visibility = "visible";
+            } else if(res === 0){
+                document.getElementById("mensaje1").innerHTML = "No has acertado ninguna respuesta."
+                document.getElementById("mensaje2").innerHTML = "Aun puedes mejorar."
+                document.querySelector(".popup").style.visibility = "visible";
+            }
+            
+            if(JSON.parse(sessionStorage.usuarioActivo).usuario === "invitado"){
+                let sStorage = JSON.parse(sessionStorage.usuarioActivo);
+                sStorage.puntajeCS = res;
+                sessionStorage.usuarioActivo = JSON.stringify(sStorage);
+            } else {
+                let i = JSON.parse(sessionStorage.usuarioActivo).id - 1;
+                let lStorage = JSON.parse(localStorage.usuariosFM);
+                lStorage[i].puntajeCS = res;
+                localStorage.usuariosFM = JSON.stringify(lStorage);
+            }
         }
     }
     // <-

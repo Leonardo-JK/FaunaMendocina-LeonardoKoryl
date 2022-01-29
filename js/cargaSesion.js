@@ -1,5 +1,5 @@
 window.addEventListener('load', function() {
-    if(localStorage.usuariosFM === null){
+    if(localStorage.usuariosFM === undefined){
         localStorage.setItem("usuariosFM", JSON.stringify([]));
     }
 
@@ -9,11 +9,11 @@ window.addEventListener('load', function() {
     let passDiv = document.createElement("div");
     let ingresoDiv = document.createElement("div");
     
-    document.getElementById("encabezado").appendChild(userDiv);
+    document.getElementById("sesion").appendChild(userDiv);
     userDiv.id = "userDiv";
-    document.getElementById("encabezado").appendChild(passDiv);
+    document.getElementById("sesion").appendChild(passDiv);
     passDiv.id = "passDiv";
-    document.getElementById("encabezado").appendChild(ingresoDiv);
+    document.getElementById("sesion").appendChild(ingresoDiv);
     ingresoDiv.id = "ingresoDiv";
     let userTag = document.createElement("p");
     userTag.innerHTML = "User"
@@ -45,9 +45,9 @@ window.addEventListener('load', function() {
     registro.innerText = "Registrarse";
     
 
-    document.getElementById("encabezado").style.display = "flex";
-    document.getElementById("encabezado").style.flexDirection = "column";
-    document.getElementById("encabezado").style.alignItems = "center";
+    document.getElementById("sesion").style.display = "flex";
+    document.getElementById("sesion").style.flexDirection = "column";
+    document.getElementById("sesion").style.alignItems = "center";
 
     document.getElementById("ingresoDiv").style.display = "flex";
     document.getElementById("ingresoDiv").style.flexDirection = "column";
@@ -62,7 +62,13 @@ window.addEventListener('load', function() {
     document.getElementById("ingresoDiv").appendChild(registro);
 
     ingresar.onclick = verificarUsuario;
-    ingresarInv.onclick = () => {sessionStorage.setItem("usuarioActivo", "usuarioInvitado");}
+    ingresarInv.onclick = () => {sessionStorage.setItem("user", JSON.stringify({usuario: "invitado", puntajeQAEF: 0, puntajeQAEM: 0, puntajeQAED: 0, puntajeCS: 0}));
+                                    sessionStorage.usuarioActivo = sessionStorage.user;
+                                    document.getElementById("queAnimalEs").setAttribute("href", "#");
+                                    document.getElementById("cuantoSabes").setAttribute("href", "#");
+                                    document.getElementById("sesion").style.visibility = "hidden";
+                                    console.log(JSON.parse(sessionStorage.usuarioActivo));
+                                }
     registro.onclick = registrar;
 
     document.querySelector(".popup__close").onclick = () => {
@@ -74,22 +80,33 @@ window.addEventListener('load', function() {
         document.getElementById("cuantoSabes").setAttribute("href", "#");
     }
 
+    function extraerUsuario(user, array){
+        for(const u of array){
+            if(user === u.usuario){
+                userTemp = u;
+                return;
+            }
+        }
+    }
+
     function verificarUsuario(){
         let user = userInput.value;
         let passw = passInput.value;
 
         let lStorage = JSON.parse(localStorage.usuariosFM);
 
-        for(const u of lStorage){
-            if(user === u.usuario && passw === u.password){
-                sessionStorage.setItem("usuarioActivo", user);
-                document.getElementById("mensaje1").innerHTML = "Bienvenido " + user;
+        extraerUsuario(user, lStorage);
+
+        if(user === userTemp.usuario && passw === userTemp.password){
+                sessionStorage.setItem("usuarioActivo", JSON.stringify(userTemp));
+                document.getElementById("mensaje1").innerHTML = "Bienvenido " + userTemp.usuario;
                 document.getElementById("mensaje2").innerHTML = "";
                 document.querySelector(".popup").style.visibility = "visible";
+                document.getElementById("sesion").style.visibility = "hidden";
                 document.getElementById("queAnimalEs").setAttribute("href", "#");
                 document.getElementById("cuantoSabes").setAttribute("href", "#");
                 return;
-            }        
+            
         }
         document.getElementById("mensaje1").innerHTML = "Usuario o contraseña invalidos."
         document.getElementById("mensaje2").innerHTML = "Intentenlo de nuevo o registre un nuevo usuario."
@@ -112,21 +129,22 @@ window.addEventListener('load', function() {
         for(const u of lStorage){
             if(user === u.usuario){
                 document.getElementById("mensaje1").innerHTML = "Usuario ya registrado."
+                document.getElementById("mensaje2").innerHTML = "Elija otro nombre de usuario."
                 document.querySelector(".popup").style.visibility = "visible";
                 return;
             }
         }
 
-        lStorage.push({usuario: user, password: passw, puntajeQAEF: 0, puntajeQAEM: 0, puntajeQAED: 0, puntajeCS: 0});
+        lStorage.push({id: (lStorage.length + 1), usuario: user, password: passw, puntajeQAEF: 0, puntajeQAEM: 0, puntajeQAED: 0, puntajeCS: 0});
         localStorage.usuariosFM = JSON.stringify(lStorage);
 
-        document.getElementById("mensaje1").innerHTML = "Usuario registrado.";
+        document.getElementById("mensaje1").innerHTML = "Usuario registrado correctamente.";
         document.getElementById("mensaje2").innerHTML = ""
         document.querySelector(".popup").style.visibility = "visible";
 
     }
 
-    
+    let userTemp;
 
     console.log(sessionStorage.usuarioActivo);
     console.log(JSON.parse(localStorage.usuariosFM))
