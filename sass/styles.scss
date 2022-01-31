@@ -3,6 +3,10 @@
     margin: 0px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 @import "../sass/views/index";
 @import "../sass/views/indice";
 @import "../sass/views/galeria";
@@ -10,11 +14,12 @@
 @import "../sass/views/contacto";
 @import "../sass/views/mapaSitio";
 @import "../sass/views/404";
+@import "../sass/views/juegos";
 @import "../sass/components/navMenu";
 
 .header {
     height: 20vh;
-    background-image: url(../images/cordillera.png);
+    background-image: url(../img/cordillera.png);
     background-size: cover;
 
     &__logo {
@@ -27,7 +32,7 @@
         -webkit-text-stroke: 2px rgb(36,60,88);
         font-family: "Crimson";
         font-weight:bold;
-        font-size: 3em;
+        font-size: 3rem;
     }
 
     &__idioma {
@@ -81,7 +86,7 @@
     width: 100%;
     padding-bottom: 40px;
     align-items: center;
-    background-image: url(../images/fondo1.jpg);
+    background-image: url(../img/fondo1.jpg);
 
     p {
         text-indent: 40px;
@@ -91,7 +96,7 @@
 
     @for $i from 1 through 2 {
         &__titulo#{$i} {
-            text-shadow: 2px 2px 2px grey;
+            text-shadow: $sombraChica;
             text-align: center;
             scroll-margin-top: ($alturaBotones + $alturaNavbar + 10px);
             
@@ -100,7 +105,7 @@
 
     &__titulo1 {
         margin: 40px 0px 30px;
-        font-size: 2em;
+        font-size: 2rem;
         text-transform: uppercase;
     }
         
@@ -120,7 +125,7 @@
 
 @media only screen and (min-width: 768px) {
     .header_titulo {
-        font-size: 4em;
+        font-size: 4rem;
     }
     
     .aside {
@@ -132,9 +137,9 @@
         background-image: linear-gradient(rgba(128, 128, 128, 0.555),rgba(87, 87, 87, 0));
         border-right: 2px solid white;
 
-        &_titulo {
+        &__titulo {
             margin-top: 30px;
-            text-shadow: 2px 2px 2px grey;
+            text-shadow: $sombraChica;
             text-align: center;
             text-transform: uppercase;
         }
@@ -164,10 +169,10 @@
 
 @media only screen and (min-width: 1200px){
     .header__titulo {
-        font-size: 6em;
+        font-size: 6rem;
     }
 
     .cuerpo__titulo1 {
-        font-size: 3em;
+        font-size: 3rem;
     }
 }
