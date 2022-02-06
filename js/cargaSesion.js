@@ -27,7 +27,6 @@ window.addEventListener('load', function() {
     passTag.style.textIndent = 0;
     let userInput = document.createElement("input");
     userInput.id = "userInput";
-    userInput.required = true;
     userInput.type ="text";
     let passInput = document.createElement("input");
     passInput.id = "passInput";
@@ -67,6 +66,10 @@ window.addEventListener('load', function() {
                                     document.getElementById("queAnimalEs").setAttribute("href", "#");
                                     document.getElementById("cuantoSabes").setAttribute("href", "#");
                                     document.getElementById("sesion").style.visibility = "hidden";
+                                    let elije = document.createElement("h2")
+                                    elije.innerHTML = "Elije el juego"
+                                    document.getElementById("encabezado").appendChild(elije);
+                                    document.createElement("h2").innerHTML = "Elije el juego";
                                     console.log(JSON.parse(sessionStorage.usuarioActivo));
                                 }
     registro.onclick = registrar;
@@ -74,11 +77,6 @@ window.addEventListener('load', function() {
     document.querySelector(".popup__close").onclick = () => {
         document.querySelector(".popup").style.visibility = "hidden";
     };
-
-    if(sessionStorage.usuarioActivo != ""){
-        document.getElementById("queAnimalEs").setAttribute("href", "#");
-        document.getElementById("cuantoSabes").setAttribute("href", "#");
-    }
 
     function extraerUsuario(user, array){
         for(const u of array){
@@ -126,27 +124,29 @@ window.addEventListener('load', function() {
 
         let lStorage = JSON.parse(localStorage.usuariosFM);
 
-        for(const u of lStorage){
-            if(user === u.usuario){
-                document.getElementById("mensaje1").innerHTML = "Usuario ya registrado."
-                document.getElementById("mensaje2").innerHTML = "Elija otro nombre de usuario."
-                document.querySelector(".popup").style.visibility = "visible";
-                return;
+        if(user === "" || passw === ""){
+            document.getElementById("mensaje1").innerHTML = "Por favor ingrese un usuario y contraseña validos";
+            document.getElementById("mensaje2").innerHTML = ""
+            document.querySelector(".popup").style.visibility = "visible";
+        } else {
+            for(const u of lStorage){
+                if(user === u.usuario){
+                    document.getElementById("mensaje1").innerHTML = "Usuario ya registrado."
+                    document.getElementById("mensaje2").innerHTML = "Elija otro nombre de usuario."
+                    document.querySelector(".popup").style.visibility = "visible";
+                    return;
+                }
             }
+
+            lStorage.push({id: (lStorage.length + 1), usuario: user, password: passw, puntajeQAEF: 0, puntajeQAEM: 0, puntajeQAED: 0, puntajeCS: 0});
+            localStorage.usuariosFM = JSON.stringify(lStorage);
+
+            document.getElementById("mensaje1").innerHTML = "Usuario registrado correctamente.";
+            document.getElementById("mensaje2").innerHTML = ""
+            document.querySelector(".popup").style.visibility = "visible";
         }
-
-        lStorage.push({id: (lStorage.length + 1), usuario: user, password: passw, puntajeQAEF: 0, puntajeQAEM: 0, puntajeQAED: 0, puntajeCS: 0});
-        localStorage.usuariosFM = JSON.stringify(lStorage);
-
-        document.getElementById("mensaje1").innerHTML = "Usuario registrado correctamente.";
-        document.getElementById("mensaje2").innerHTML = ""
-        document.querySelector(".popup").style.visibility = "visible";
-
     }
 
     let userTemp;
-
-    console.log(sessionStorage.usuarioActivo);
-    console.log(JSON.parse(localStorage.usuariosFM))
 
 }, false);
