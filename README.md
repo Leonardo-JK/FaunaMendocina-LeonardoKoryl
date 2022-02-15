@@ -10,7 +10,7 @@ Título del Proyecto: Fauna Mendocina.
 
 Este sitio consiste en el Proyecto Final del curso de Desarrollo Web de Coder House. 
 
-La idea principal es la de crear una página informativa sobre la fauna mendocina, consta de 5 página:
+La idea principal es la de crear una página informativa sobre la fauna mendocina, consta de 6 página:
   
   Inicio: 
     - Presentación general del sitio y brinda una introducción al mismo.
@@ -29,6 +29,14 @@ La idea principal es la de crear una página informativa sobre la fauna mendocin
   Tablas:
     - Aquí podremos ver tablas de datos sobre la fauna (1 tabla por el momento).
     - Las categorías dentro de la tabla linkean a las correspondientes categorías dentro de la sección Índice.
+
+  Juegos:
+    - En esta pagina podemos encontrar 2 juegos distintos.
+    - Inicialmente encontraremos un inicio de sesion, con el cual podremos registra un usuario que se guardara de manera local o ingresar como invitado.
+    - Una vez iniciado contaremos con 2 juegos:
+        ¿Que Animal Es?: Un juego en el que se nos presentaran imagenes de fomra aleatoria y el jugador debera responder, el mismo consta de 3 niveles de dificultad.
+
+        Cuanto Sabes...: Un juego en el que el jugador debera responder una serie de preguntas, una vez determinado cuantas preguntas desea responder en el cuentionario. Las respuestas se iran enlistando debajo, resaltando si fueron correctas o no y cuales son las soluciones.
     
   Contacto:
     - Aquí encontraremos accesos directos a las redes sociales del sitio (fb e ig), tambien encontraremos diversas fundaciones encargadas en la preservación de la fauna local, su ubicación y la imagen de sus logos linkean directamente a sus respectivos sitos. Finalmente encontraremos un formulario (a usar en próximos cursos de js), en el cual permitimos a los usuarios de la página que se contacten con nosotros y recopilar algún dato de los mismos.
