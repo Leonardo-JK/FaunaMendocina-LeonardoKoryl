@@ -2,11 +2,21 @@ window.addEventListener('load', function() {
     let individuos = [];
     let espera = 0;
 
-    // -> Solicito datos desde el archivo .json
-    fetch("https://raw.githubusercontent.com/Leonardo-JK/FaunaMendocina-LeonardoKoryl/main/data/animales.json")
-        .then(response => response.json())
-        .then(data => individuos = data)
-    // <-
+    // -> Solicito datos desde el archivo .json mediante AJAX
+    const URL = "https://raw.githubusercontent.com/Leonardo-JK/FaunaMendocina-LeonardoKoryl/main/data/animales.json";
+
+    function obtenerDatos() {
+        $.get(URL, function(response, estado) {
+            if(estado === "success"){
+                individuos = JSON.parse(response);
+            }
+        });
+    }
+
+    // fetch("https://raw.githubusercontent.com/Leonardo-JK/FaunaMendocina-LeonardoKoryl/main/data/animales.json")
+        // .then(response => response.json())
+        // .then(data => individuos = data)
+    // // <-
 
     // -> Genera un loop de espera de respuesta de datos, que se mantiene mientras no se realice ninguna accion
     //      si el array individuos sigue vacio despues de 500 ms se vuelve a ejucutar y comienza un contador,
@@ -31,10 +41,11 @@ window.addEventListener('load', function() {
         alert("Hubo un error al cargar los datos o el tiempo de respuesta de la base de datos fue mayor a la esperada. Por recarga la pagina o espera un poco mas.");
         loopEspera();
     }
-    
-    loopEspera();
     // <-
 
+    function abrirPopup(){
+        $(".popup").fadeIn(300);
+    }
     
     // -> Restablece la pantalla y carga la presentacion del juego y la estrutura principla del mismo.
     function cargarCuantoSabes(){
@@ -44,52 +55,55 @@ window.addEventListener('load', function() {
         limpiar("respuestas");
         limpiar("contenido");
         // <- 
-        
-        if(individuos.length === 0){    // -> Si el usuario inicia el juego y los datos no se han cargado, 
-            error();                    //      envia el mensaje e inicia el loop de espera. <-
-        } else {
-            //-> Genera el encabezado del juego.
-            titulo = document.createElement("h2");
-            titulo.innerHTML = "¿Cuánto Sabes?<br><br>";
-            document.getElementById("encabezado").appendChild(titulo);
-
-            presentacion = "Bienvenido, a continuación te hare unas preguntas para ver cuánto has aprendido sobre nuestra fauna local. ¿Estás listo?";
-            cantPreguntas = "¿Cuántas preguntas deseas responder?";
-
-            let descripcion1 = document.createElement("p");
-            descripcion1.id = "descripcion1";
-            descripcion1.innerHTML = presentacion + "<br><br>";
-            document.getElementById("encabezado").appendChild(descripcion1);
-
-            let descripcion2 = document.createElement("p");
-            descripcion2.id = "descripcion2";
-            descripcion2.innerHTML = cantPreguntas;
-            document.getElementById("encabezado").appendChild(descripcion2);
-            // <- 
-
-            // -> Genera la seccion interactiva.
-            document.getElementById("preguntas").style.flexDirection = "column";
-            preguntas = document.createElement("p");
-            preguntas.innerHTML = "";
-            document.getElementById("preguntas").appendChild(preguntas);
             
-            resp.setAttribute("id", "resp");
-            document.getElementById("preguntas").appendChild(resp);
-                
-            send.innerText = "enviar";
-            send.type = "submit";
-            send.id = "send";
-            send.onclick = comenzarJuego;
-            document.getElementById("preguntas").appendChild(send);
-            // <-
+        //-> Genera el encabezado del juego.
+        titulo = document.createElement("h2");
+        titulo.innerHTML = "¿Cuánto Sabes?<br><br>";
+        document.getElementById("encabezado").appendChild(titulo);
 
-            // -> Genera la lista que presentara los resultados.
-            resultados = document.createElement("ul");
-            resultados.innerHTML = "Resultados";
-            resultados.setAttribute("id", "resultadosLista");
-            document.getElementById("respuestas").appendChild(resultados);    
-            // <-
-        }
+        presentacion = "Bienvenido, a continuación te hare unas preguntas para ver cuánto has aprendido sobre nuestra fauna local. ¿Estás listo?";
+        cantPreguntas = "¿Cuántas preguntas deseas responder?";
+
+        let descripcion1 = document.createElement("p");
+        descripcion1.id = "descripcion1";
+        descripcion1.innerHTML = presentacion + "<br><br>";
+        document.getElementById("encabezado").appendChild(descripcion1);
+
+        let descripcion2 = document.createElement("p");
+        descripcion2.id = "descripcion2";
+        descripcion2.innerHTML = cantPreguntas;
+        document.getElementById("encabezado").appendChild(descripcion2);
+        // <- 
+
+        // -> Genera la seccion interactiva.
+        document.getElementById("preguntas").style.flexDirection = "column";
+        preguntas = document.createElement("p");
+        preguntas.innerHTML = "";
+        document.getElementById("preguntas").appendChild(preguntas);
+        
+        resp.setAttribute("id", "resp");
+        document.getElementById("preguntas").appendChild(resp);
+            
+        send.innerText = "enviar";
+        send.type = "submit";
+        send.id = "send";
+        send.onclick = comenzarJuego;
+        document.getElementById("preguntas").appendChild(send);
+        // <-
+
+        // -> Genera la lista que presentara los resultados.
+        resultados = document.createElement("ul");
+        resultados.innerHTML = "Resultados";
+        resultados.setAttribute("id", "resultadosLista");
+        document.getElementById("respuestas").appendChild(resultados);    
+        // <-
+
+        setTimeout(function(){              // -> 
+            if(individuos.length === 0){    // Si el usuario inicia el juego y los datos no se han cargado, 
+                error();                    // envia el mensaje e inicia el loop de espera. 
+            }                               //
+        }, 1000);                           // <-
+        
     }
 
     // -> Funcion para limpiar elementos.
@@ -106,7 +120,9 @@ window.addEventListener('load', function() {
     function comenzarJuego(){
         numero = parseInt(document.getElementById("resp").value);
         if(isNaN(numero) || numero <= 0 || numero === ""){
-            alert("Ingreso un numero valido.");
+            $("#mensaje1").html("Debes ingresar una respuesta.");
+            $("#mensaje2").html("");
+            abrirPopup()
             cargarCuantoSabes();
         } else {
             cont = 1;
@@ -122,73 +138,41 @@ window.addEventListener('load', function() {
     function next(){
         respuesta = document.getElementById("resp").value;
 
-        itemResultado = document.createElement("ul");
-        itemResultado.id = "itemResultado" + cont;
-        itemResultado.className = "resuladoPreguntas";
-        itemResultado.innerHTML = preg;
-        document.getElementById("resultadosLista").appendChild(itemResultado);
-
-        resultado = document.createElement("li");
-        resultado.className = "resultado" + cont;
-        resultado.innerHTML = "Tu respuesta fue: " + respuesta;
-            
-        if(analizarRespuesta(respuesta, caracteristica, correcto)){
-            resultado.style.color = "#27ad27";
-            resultado.style.fontWeight = "Bolder";
-            respCorr++;
+        if(respuesta.length === 0){
+            $("#mensaje1").html("Debes ingresar una respuesta.");
+            $("#mensaje2").html("");
+            abrirPopup();
         } else {
-            resultado.style.color = "red";
-            resultado.style.fontWeight = "Bolder";
-        }
+            itemResultado = document.createElement("ul");
+            itemResultado.id = "itemResultado" + cont;
+            itemResultado.className = "resuladoPreguntas";
+            itemResultado.innerHTML = preg;
+            document.getElementById("resultadosLista").appendChild(itemResultado);
 
-        document.getElementById("itemResultado" + cont).appendChild(resultado);
-        resultado = document.createElement("li");
-        let solucion;
-        for(const valor of correcto){
-            solucion += valor + " ";
-        }
-        resultado.innerHTML = "Las respuestas posibles son: " + correcto;
-        document.getElementById("itemResultado" + cont).appendChild(resultado);
+            resultado = document.createElement("li");
+            resultado.className = "resultado" + cont;
+            resultado.innerHTML = "Tu respuesta fue: " + respuesta;
+            
+            analizarRespuesta(respuesta, caracteristica, correcto);
         
-        document.getElementById("resp").value = "";
-
-        if(cont <= numero){
-            generarPregunta();
-        } else {
-            let res = (respCorr * 100 / numero);
-            preguntas.innerHTML = "Cuestionario finalizado.<br>Has respondido correctamente el " + res + "% de las preguntas.";
-            document.getElementById("preguntas").removeChild(document.getElementById("preguntas").lastChild);
-            document.getElementById("preguntas").removeChild(document.getElementById("preguntas").lastChild);
-
-            if(res > JSON.parse(sessionStorage.usuarioActivo).puntajeCS){
-                document.getElementById("mensaje1").innerHTML = "Felicidades has mejorado desde tu ultima vez."
-                document.getElementById("mensaje2").innerHTML = "Sigue asi."
-                document.querySelector(".popup").style.visibility = "visible";
-            } else if(res === JSON.parse(sessionStorage.usuarioActivo).puntajeCS){
-                document.getElementById("mensaje1").innerHTML = "Has mantenido tu puntaje."
-                document.getElementById("mensaje2").innerHTML = "Felicidades."
-                document.querySelector(".popup").style.visibility = "visible";
-            } else if(res < JSON.parse(sessionStorage.usuarioActivo).puntajeCS && resultado > 0){
-                document.getElementById("mensaje1").innerHTML = "Has obtenido un puntaje menor al anterior."
-                document.getElementById("mensaje2").innerHTML = "Aun puedes mejorar."
-                document.querySelector(".popup").style.visibility = "visible";
-            } else if(res === 0){
-                document.getElementById("mensaje1").innerHTML = "No has acertado ninguna respuesta."
-                document.getElementById("mensaje2").innerHTML = "Aun puedes mejorar."
-                document.querySelector(".popup").style.visibility = "visible";
+            document.getElementById("itemResultado" + cont).appendChild(resultado);
+            resultado = document.createElement("li");
+            let solucion;
+            for(const valor of correcto){
+                solucion += valor + " ";
             }
+            resultado.innerHTML = "Las respuestas posibles son: " + correcto;
+            document.getElementById("itemResultado" + cont).appendChild(resultado);
             
-            if(JSON.parse(sessionStorage.usuarioActivo).usuario === "invitado"){
-                let sStorage = JSON.parse(sessionStorage.usuarioActivo);
-                sStorage.puntajeCS = res;
-                sessionStorage.usuarioActivo = JSON.stringify(sStorage);
+            document.getElementById("resp").value = "";
+
+            if(cont <= numero){
+                generarPregunta();
             } else {
-                let i = JSON.parse(sessionStorage.usuarioActivo).id - 1;
-                let lStorage = JSON.parse(localStorage.usuariosFM);
-                lStorage[i].puntajeCS = res;
-                localStorage.usuariosFM = JSON.stringify(lStorage);
+                puntaje();
             }
         }
+        
     }
     // <-
 
@@ -259,6 +243,19 @@ window.addEventListener('load', function() {
     }
     // <-
 
+    // -> Se da estilo segun si la respuesta es correcta o no
+    function colorCorrecto(){
+        resultado.style.color = "#27ad27";
+        resultado.style.fontWeight = "Bolder";
+        respCorr++;
+    }
+
+    function colorIncorrecto(){
+        resultado.style.color = "red";
+        resultado.style.fontWeight = "Bolder";
+    }
+    // <-
+
     // -> Determina si una respuesta es correecta cuando hay muchas opciones para dicha condicion
     function respuestaString(res, cor){
         correcto = "";
@@ -267,8 +264,10 @@ window.addEventListener('load', function() {
                 for(const item of cor){
                     correcto += item + " - ";
                 }
-                return true;
-            }  
+                colorCorrecto();
+            } else {
+                colorIncorrecto();
+            } 
         }
 
         for(const valor of cor){
@@ -282,9 +281,10 @@ window.addEventListener('load', function() {
         res = res.toLowerCase();
         if(parseFloat(res) >= cor[0] && parseFloat(res) <= cor[1]){
             correcto = "valores entre " + cor[0] + " y " + cor[1] + ".";
-            return true;
+            colorCorrecto();
         } else {
             correcto = "valores entre " + cor[0] + " y " + cor[1] + ".";
+            colorIncorrecto();
         }
     }
     // <-
@@ -306,11 +306,52 @@ window.addEventListener('load', function() {
             case "familia":
                 res = res.toLowerCase();
                 if(res == cor){
-                    return true;
-                }
-            }
+                    colorCorrecto();
+                } else {
+                    colorIncorrecto();
+                } 
+        }
     }
     // <- 
+
+    // -> Evalua el puntaje obtenido, da un msj acorde al puntaje anterior
+    //      y almacena el ultimo obtenido la session/localStorage.
+    function puntaje(){
+        let res = (respCorr * 100 / numero);
+        preguntas.innerHTML = "Cuestionario finalizado.<br>Has respondido correctamente el " + res + "% de las preguntas.";
+        document.getElementById("preguntas").removeChild(document.getElementById("preguntas").lastChild);
+        document.getElementById("preguntas").removeChild(document.getElementById("preguntas").lastChild);
+
+        if(res > JSON.parse(sessionStorage.usuarioActivo).puntajeCS){
+            $("#mensaje1").html("Felicidades has mejorado desde tu ultima vez.");
+            $("#mensaje2").html("Sigue asi.");
+            abrirPopup();
+        } else if(res === JSON.parse(sessionStorage.usuarioActivo).puntajeCS){
+            $("#mensaje1").html("Has mantenido tu puntaje.");
+            $("#mensaje2").html("Felicidades.");
+            abrirPopup();
+        } else if(res < JSON.parse(sessionStorage.usuarioActivo).puntajeCS && resultado > 0){
+            $("#mensaje1").html("Has obtenido un puntaje menor al anterior.");
+            $("#mensaje2").html("Aun puedes mejorar.");
+            abrirPopup();
+        } else if(res === 0){
+            $("#mensaje1").html("No has acertado ninguna respuesta.");
+            $("#mensaje2").html("Aun puedes mejorar.");
+            abrirPopup();
+        }
+        
+        if(JSON.parse(sessionStorage.usuarioActivo).usuario === "invitado"){
+            let sStorage = JSON.parse(sessionStorage.usuarioActivo);
+            sStorage.puntajeCS = res;
+            sessionStorage.usuarioActivo = JSON.stringify(sStorage);
+        } else {
+            let i = JSON.parse(sessionStorage.usuarioActivo).id - 1;
+            let lStorage = JSON.parse(localStorage.usuariosFM);
+            lStorage[i].puntajeCS = res;
+            localStorage.usuariosFM = JSON.stringify(lStorage);
+        }
+    }
+    // <-
 
     // -> Decalaracion de variables globales.
     let itemResultado;
@@ -335,6 +376,16 @@ window.addEventListener('load', function() {
     // <-
 
     // -> Eventos que determinan lanzan los juegos.
-    cuantoSabes.onclick = cargarCuantoSabes;
+    cuantoSabes.onclick = () => {
+        if(sessionStorage.usuarioActivo === "" || sessionStorage.getItem("usuarioActivo") == undefined){
+            document.getElementById("mensaje1").innerHTML = "Debes ingresar con tu usuario y contraseña o ingresa como invitado si no estas registrado."
+            document.getElementById("mensaje2").innerHTML = ""
+            abrirPopup();
+        } else {
+            obtenerDatos();
+            cargarCuantoSabes(); 
+            setTimeout(loopEspera, 1000);
+        }
+    }
     // <-    
 }, false);
